@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-10-16T03:34:18.865Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="Kn-u2khqnglpy9WjFT8n" version="15.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-16T03:46:15.430Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="GReoUhLqalzWSitAY4C7" version="15.5.2" type="github">
   <diagram name="Page-1" id="0783ab3e-0a74-02c8-0abd-f7b4e66b4bec">
     <mxGraphModel dx="1038" dy="1647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
@@ -10,7 +10,7 @@
         <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-2" value="ACFIT&lt;br&gt;Aplicativo de Acompanhamento Fitness" style="text;html=1;resizable=0;autosize=1;align=center;verticalAlign=middle;points=[];fillColor=none;strokeColor=none;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="1300" y="-60" width="230" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-3" value="Doutor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+        <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-3" value="Nutricionista" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="360" width="40" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-7" value="Fazer Login" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -34,7 +34,7 @@
         <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-15" value="Exibir erro de Login" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="290" y="220" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-16" value="Cadastrar novos Doutores" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-16" value="Cadastrar novos Nutricionistas" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="720" y="500" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-24" value="" style="endArrow=none;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="_-Kw2KSfdPKbc4KW5EaQ-3" target="_-Kw2KSfdPKbc4KW5EaQ-7" edge="1">
@@ -61,7 +61,7 @@
             <mxPoint x="500" y="399" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-43" value="Visualizar página Doutor" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-43" value="Visualizar página Nutricionista" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="440" y="360" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_-Kw2KSfdPKbc4KW5EaQ-44" value="Visualizar página Atendente" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -151,8 +151,41 @@
         <mxCell id="mXlY7KT_1s7woqYxaAOp-6" value="Paciente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
           <mxGeometry x="960" y="360" width="40" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="mXlY7KT_1s7woqYxaAOp-7" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="1215" y="360" width="120" height="80" as="geometry" />
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-7" value="Fazer Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1150" y="440" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-15" value="Verificar Senha" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-16" value="Exibir erro de Login" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="200" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-17" value="&amp;lt;&amp;lt;Incluir&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" target="mXlY7KT_1s7woqYxaAOp-15" source="mXlY7KT_1s7woqYxaAOp-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1270" y="360" as="sourcePoint" />
+            <mxPoint x="1680" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-18" value="&amp;lt;&amp;lt;Estender&amp;gt;&amp;gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mXlY7KT_1s7woqYxaAOp-16" target="mXlY7KT_1s7woqYxaAOp-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1520" y="450" as="sourcePoint" />
+            <mxPoint x="1270" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-19" value="" style="endArrow=none;html=1;rounded=0;entryX=-0.028;entryY=0.418;entryDx=0;entryDy=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="mXlY7KT_1s7woqYxaAOp-6" target="mXlY7KT_1s7woqYxaAOp-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1065" y="330" as="sourcePoint" />
+            <mxPoint x="1215" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-20" value="Nutricionista" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="960" y="520" width="40" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mXlY7KT_1s7woqYxaAOp-21" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="mXlY7KT_1s7woqYxaAOp-20" target="mXlY7KT_1s7woqYxaAOp-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1010" y="558.28" as="sourcePoint" />
+            <mxPoint x="1241.6399999999999" y="561.72" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
