@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PccFit
 {
-    public partial class PgAdmin : Form
+    public partial class PgDoutor : Form
     {
-        public PgAdmin()
+        public PgDoutor()
         {
             InitializeComponent();
         }
