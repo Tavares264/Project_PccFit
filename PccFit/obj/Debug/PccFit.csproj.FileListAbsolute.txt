@@ -1,0 +1,7 @@
+D:\Faculdade\POO3\Project_PccFit\PccFit\obj\Debug\PccFit.csproj.AssemblyReference.cache
+D:\Faculdade\POO3\Project_PccFit\PccFit\obj\Debug\PccFit.Login.resources
+D:\Faculdade\POO3\Project_PccFit\PccFit\obj\Debug\PccFit.PgAtendente.resources
+D:\Faculdade\POO3\Project_PccFit\PccFit\obj\Debug\PccFit.PgDoutor.resources
+D:\Faculdade\POO3\Project_PccFit\PccFit\obj\Debug\PccFit.Properties.Resources.resources
+D:\Faculdade\POO3\Project_PccFit\PccFit\obj\Debug\PccFit.csproj.GenerateResource.cache
+D:\Faculdade\POO3\Project_PccFit\PccFit\obj\Debug\PccFit.csproj.CoreCompileInputs.cache

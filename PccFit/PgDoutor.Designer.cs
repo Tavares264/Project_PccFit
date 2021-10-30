@@ -33,7 +33,7 @@ namespace PccFit
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtIdDoutor = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
             this.listBox9 = new System.Windows.Forms.ListBox();
             this.listBox8 = new System.Windows.Forms.ListBox();
@@ -71,7 +71,7 @@ namespace PccFit
             // 
             this.tabPage1.Controls.Add(this.textBox6);
             this.tabPage1.Controls.Add(this.label47);
-            this.tabPage1.Controls.Add(this.textBox5);
+            this.tabPage1.Controls.Add(this.txtIdDoutor);
             this.tabPage1.Controls.Add(this.label46);
             this.tabPage1.Controls.Add(this.listBox9);
             this.tabPage1.Controls.Add(this.listBox8);
@@ -116,12 +116,12 @@ namespace PccFit
             this.label47.TabIndex = 43;
             this.label47.Text = "Nome Nutricionista:";
             // 
-            // textBox5
+            // txtIdDoutor
             // 
-            this.textBox5.Location = new System.Drawing.Point(153, 34);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(143, 22);
-            this.textBox5.TabIndex = 42;
+            this.txtIdDoutor.Location = new System.Drawing.Point(153, 34);
+            this.txtIdDoutor.Name = "txtIdDoutor";
+            this.txtIdDoutor.Size = new System.Drawing.Size(143, 22);
+            this.txtIdDoutor.TabIndex = 42;
             // 
             // label46
             // 
@@ -317,7 +317,7 @@ namespace PccFit
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtIdDoutor;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.ListBox listBox9;
         private System.Windows.Forms.ListBox listBox8;

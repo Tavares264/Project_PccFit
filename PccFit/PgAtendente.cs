@@ -16,5 +16,14 @@ namespace PccFit
         {
             InitializeComponent();
         }
+
+
+        private void btn_A_Pesquisar_Click(object sender, EventArgs e)
+        {
+            if (msk_A_Cpf != null) 
+            {
+                Pesquisar(msk_A_Cpf);   
+            }
+        }
     }
 }
