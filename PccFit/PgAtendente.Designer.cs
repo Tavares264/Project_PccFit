@@ -36,6 +36,8 @@ namespace PccFit
             this.btn_N_Excluir = new System.Windows.Forms.Button();
             this.btn_N_Salvar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_N_Logradouro = new System.Windows.Forms.TextBox();
+            this.txt_N_Email = new System.Windows.Forms.TextBox();
             this.txt_N_Nome = new System.Windows.Forms.TextBox();
             this.btn_N_Pesquisar = new System.Windows.Forms.Button();
             this.msk_N_DataInicio = new System.Windows.Forms.MaskedTextBox();
@@ -59,6 +61,9 @@ namespace PccFit
             this.label28 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txt_D_Objetivo = new System.Windows.Forms.TextBox();
+            this.txt_D_Quantidade = new System.Windows.Forms.TextBox();
+            this.txt_D_Valor = new System.Windows.Forms.TextBox();
             this.label50 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
@@ -75,6 +80,8 @@ namespace PccFit
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_C_Numero = new System.Windows.Forms.TextBox();
+            this.txt_C_Bairro = new System.Windows.Forms.TextBox();
             this.txt_C_Logradouro = new System.Windows.Forms.TextBox();
             this.txt_C_Email = new System.Windows.Forms.TextBox();
             this.txt_C_Nome = new System.Windows.Forms.TextBox();
@@ -98,8 +105,9 @@ namespace PccFit
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btn_A_Atualizar = new System.Windows.Forms.Button();
             this.btn_A_Excluir = new System.Windows.Forms.Button();
-            this.btn_A_Salvar = new System.Windows.Forms.Button();
+            this.btn_A_Cadastrar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cb_A_Estado = new System.Windows.Forms.ComboBox();
             this.lb_A_cpf = new System.Windows.Forms.Label();
             this.txt_A_Bairro = new System.Windows.Forms.TextBox();
             this.txt_A_Numero = new System.Windows.Forms.TextBox();
@@ -112,8 +120,6 @@ namespace PccFit
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.msk_A_Cep = new System.Windows.Forms.MaskedTextBox();
-            this.List_A_Cidade = new System.Windows.Forms.ListBox();
-            this.List_A_Estado = new System.Windows.Forms.ListBox();
             this.msk_A_Tel = new System.Windows.Forms.MaskedTextBox();
             this.msk_A_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -150,13 +156,7 @@ namespace PccFit
             this.btn_AG_Visualizar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.txt_N_Email = new System.Windows.Forms.TextBox();
-            this.txt_N_Logradouro = new System.Windows.Forms.TextBox();
-            this.txt_C_Bairro = new System.Windows.Forms.TextBox();
-            this.txt_C_Numero = new System.Windows.Forms.TextBox();
-            this.txt_D_Valor = new System.Windows.Forms.TextBox();
-            this.txt_D_Quantidade = new System.Windows.Forms.TextBox();
-            this.txt_D_Objetivo = new System.Windows.Forms.TextBox();
+            this.txt_A_Cidade = new System.Windows.Forms.TextBox();
             txt_N_Numero = new System.Windows.Forms.TextBox();
             txt_N_Bairro = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
@@ -171,6 +171,20 @@ namespace PccFit
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // txt_N_Numero
+            // 
+            txt_N_Numero.Location = new System.Drawing.Point(913, 239);
+            txt_N_Numero.Name = "txt_N_Numero";
+            txt_N_Numero.Size = new System.Drawing.Size(148, 27);
+            txt_N_Numero.TabIndex = 40;
+            // 
+            // txt_N_Bairro
+            // 
+            txt_N_Bairro.Location = new System.Drawing.Point(654, 320);
+            txt_N_Bairro.Name = "txt_N_Bairro";
+            txt_N_Bairro.Size = new System.Drawing.Size(148, 27);
+            txt_N_Bairro.TabIndex = 41;
             // 
             // tabPage2
             // 
@@ -256,6 +270,20 @@ namespace PccFit
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados Pessoais";
+            // 
+            // txt_N_Logradouro
+            // 
+            this.txt_N_Logradouro.Location = new System.Drawing.Point(141, 239);
+            this.txt_N_Logradouro.Name = "txt_N_Logradouro";
+            this.txt_N_Logradouro.Size = new System.Drawing.Size(563, 27);
+            this.txt_N_Logradouro.TabIndex = 39;
+            // 
+            // txt_N_Email
+            // 
+            this.txt_N_Email.Location = new System.Drawing.Point(141, 164);
+            this.txt_N_Email.Name = "txt_N_Email";
+            this.txt_N_Email.Size = new System.Drawing.Size(563, 27);
+            this.txt_N_Email.TabIndex = 38;
             // 
             // txt_N_Nome
             // 
@@ -558,6 +586,30 @@ namespace PccFit
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Quantidade de Consultas Mensais";
             // 
+            // txt_D_Objetivo
+            // 
+            this.txt_D_Objetivo.Location = new System.Drawing.Point(732, 40);
+            this.txt_D_Objetivo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Objetivo.Name = "txt_D_Objetivo";
+            this.txt_D_Objetivo.Size = new System.Drawing.Size(148, 27);
+            this.txt_D_Objetivo.TabIndex = 33;
+            // 
+            // txt_D_Quantidade
+            // 
+            this.txt_D_Quantidade.Location = new System.Drawing.Point(445, 40);
+            this.txt_D_Quantidade.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Quantidade.Name = "txt_D_Quantidade";
+            this.txt_D_Quantidade.Size = new System.Drawing.Size(148, 27);
+            this.txt_D_Quantidade.TabIndex = 32;
+            // 
+            // txt_D_Valor
+            // 
+            this.txt_D_Valor.Location = new System.Drawing.Point(157, 40);
+            this.txt_D_Valor.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Valor.Name = "txt_D_Valor";
+            this.txt_D_Valor.Size = new System.Drawing.Size(148, 27);
+            this.txt_D_Valor.TabIndex = 31;
+            // 
             // label50
             // 
             this.label50.AutoSize = true;
@@ -745,6 +797,22 @@ namespace PccFit
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
+            // 
+            // txt_C_Numero
+            // 
+            this.txt_C_Numero.Location = new System.Drawing.Point(927, 207);
+            this.txt_C_Numero.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_C_Numero.Name = "txt_C_Numero";
+            this.txt_C_Numero.Size = new System.Drawing.Size(139, 27);
+            this.txt_C_Numero.TabIndex = 31;
+            // 
+            // txt_C_Bairro
+            // 
+            this.txt_C_Bairro.Location = new System.Drawing.Point(661, 214);
+            this.txt_C_Bairro.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_C_Bairro.Name = "txt_C_Bairro";
+            this.txt_C_Bairro.Size = new System.Drawing.Size(139, 27);
+            this.txt_C_Bairro.TabIndex = 30;
             // 
             // txt_C_Logradouro
             // 
@@ -1005,7 +1073,7 @@ namespace PccFit
             // 
             this.tabPage3.Controls.Add(this.btn_A_Atualizar);
             this.tabPage3.Controls.Add(this.btn_A_Excluir);
-            this.tabPage3.Controls.Add(this.btn_A_Salvar);
+            this.tabPage3.Controls.Add(this.btn_A_Cadastrar);
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1037,19 +1105,22 @@ namespace PccFit
             this.btn_A_Excluir.Text = "Excluir";
             this.btn_A_Excluir.UseVisualStyleBackColor = true;
             // 
-            // btn_A_Salvar
+            // btn_A_Cadastrar
             // 
-            this.btn_A_Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_A_Salvar.Location = new System.Drawing.Point(123, 631);
-            this.btn_A_Salvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_A_Salvar.Name = "btn_A_Salvar";
-            this.btn_A_Salvar.Size = new System.Drawing.Size(275, 102);
-            this.btn_A_Salvar.TabIndex = 14;
-            this.btn_A_Salvar.Text = "Salvar";
-            this.btn_A_Salvar.UseVisualStyleBackColor = true;
+            this.btn_A_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_A_Cadastrar.Location = new System.Drawing.Point(123, 631);
+            this.btn_A_Cadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_A_Cadastrar.Name = "btn_A_Cadastrar";
+            this.btn_A_Cadastrar.Size = new System.Drawing.Size(275, 102);
+            this.btn_A_Cadastrar.TabIndex = 14;
+            this.btn_A_Cadastrar.Text = "Cadastrar";
+            this.btn_A_Cadastrar.UseVisualStyleBackColor = true;
+            this.btn_A_Cadastrar.Click += new System.EventHandler(this.btn_A_Cadastrar_Click);
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txt_A_Cidade);
+            this.groupBox3.Controls.Add(this.cb_A_Estado);
             this.groupBox3.Controls.Add(this.lb_A_cpf);
             this.groupBox3.Controls.Add(this.txt_A_Bairro);
             this.groupBox3.Controls.Add(this.txt_A_Numero);
@@ -1062,8 +1133,6 @@ namespace PccFit
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.msk_A_Cep);
-            this.groupBox3.Controls.Add(this.List_A_Cidade);
-            this.groupBox3.Controls.Add(this.List_A_Estado);
             this.groupBox3.Controls.Add(this.msk_A_Tel);
             this.groupBox3.Controls.Add(this.msk_A_Cpf);
             this.groupBox3.Controls.Add(this.label29);
@@ -1085,6 +1154,42 @@ namespace PccFit
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados Pessoais";
+            // 
+            // cb_A_Estado
+            // 
+            this.cb_A_Estado.FormattingEnabled = true;
+            this.cb_A_Estado.Items.AddRange(new object[] {
+            "RO",
+            "AC",
+            "AM",
+            "RR",
+            "PA",
+            "AP",
+            "TO",
+            "MA",
+            "PI",
+            "CE",
+            "RN",
+            "PB",
+            "PE",
+            "AL",
+            "SE",
+            "BA",
+            "MG",
+            "ES",
+            "RJ",
+            "SP",
+            "PR",
+            "SC",
+            "RS",
+            "MS",
+            "MT",
+            "GO",
+            "DF"});
+            this.cb_A_Estado.Location = new System.Drawing.Point(167, 333);
+            this.cb_A_Estado.Name = "cb_A_Estado";
+            this.cb_A_Estado.Size = new System.Drawing.Size(115, 28);
+            this.cb_A_Estado.TabIndex = 36;
             // 
             // lb_A_cpf
             // 
@@ -1193,82 +1298,6 @@ namespace PccFit
             this.msk_A_Cep.Size = new System.Drawing.Size(109, 28);
             this.msk_A_Cep.TabIndex = 11;
             // 
-            // List_A_Cidade
-            // 
-            this.List_A_Cidade.FormattingEnabled = true;
-            this.List_A_Cidade.ItemHeight = 20;
-            this.List_A_Cidade.Items.AddRange(new object[] {
-            "RO",
-            "AC",
-            "AM",
-            "RR",
-            "PA",
-            "AP",
-            "TO",
-            "MA",
-            "PI",
-            "CE",
-            "RN",
-            "PB",
-            "PE",
-            "AL",
-            "SE",
-            "BA",
-            "MG",
-            "ES",
-            "RJ",
-            "SP",
-            "PR",
-            "SC",
-            "RS",
-            "MS",
-            "MT",
-            "GO",
-            "DF"});
-            this.List_A_Cidade.Location = new System.Drawing.Point(385, 338);
-            this.List_A_Cidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.List_A_Cidade.Name = "List_A_Cidade";
-            this.List_A_Cidade.Size = new System.Drawing.Size(165, 24);
-            this.List_A_Cidade.TabIndex = 9;
-            // 
-            // List_A_Estado
-            // 
-            this.List_A_Estado.FormattingEnabled = true;
-            this.List_A_Estado.ItemHeight = 20;
-            this.List_A_Estado.Items.AddRange(new object[] {
-            "RO",
-            "AC",
-            "AM",
-            "RR",
-            "PA",
-            "AP",
-            "TO",
-            "MA",
-            "PI",
-            "CE",
-            "RN",
-            "PB",
-            "PE",
-            "AL",
-            "SE",
-            "BA",
-            "MG",
-            "ES",
-            "RJ",
-            "SP",
-            "PR",
-            "SC",
-            "RS",
-            "MS",
-            "MT",
-            "GO",
-            "DF"});
-            this.List_A_Estado.Location = new System.Drawing.Point(169, 339);
-            this.List_A_Estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.List_A_Estado.Name = "List_A_Estado";
-            this.List_A_Estado.Size = new System.Drawing.Size(93, 24);
-            this.List_A_Estado.TabIndex = 8;
-            // 
             // msk_A_Tel
             // 
             this.msk_A_Tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1284,7 +1313,7 @@ namespace PccFit
             this.msk_A_Cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msk_A_Cpf.Location = new System.Drawing.Point(940, 93);
             this.msk_A_Cpf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.msk_A_Cpf.Mask = "000.000.000-00";
+            this.msk_A_Cpf.Mask = "000,000,000-00";
             this.msk_A_Cpf.Name = "msk_A_Cpf";
             this.msk_A_Cpf.Size = new System.Drawing.Size(140, 28);
             this.msk_A_Cpf.TabIndex = 2;
@@ -1640,74 +1669,12 @@ namespace PccFit
             this.tabPage5.Text = "Fluxo de Caixa";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // txt_N_Email
+            // txt_A_Cidade
             // 
-            this.txt_N_Email.Location = new System.Drawing.Point(141, 164);
-            this.txt_N_Email.Name = "txt_N_Email";
-            this.txt_N_Email.Size = new System.Drawing.Size(563, 27);
-            this.txt_N_Email.TabIndex = 38;
-            // 
-            // txt_N_Logradouro
-            // 
-            this.txt_N_Logradouro.Location = new System.Drawing.Point(141, 239);
-            this.txt_N_Logradouro.Name = "txt_N_Logradouro";
-            this.txt_N_Logradouro.Size = new System.Drawing.Size(563, 27);
-            this.txt_N_Logradouro.TabIndex = 39;
-            // 
-            // txt_N_Numero
-            // 
-            txt_N_Numero.Location = new System.Drawing.Point(913, 239);
-            txt_N_Numero.Name = "txt_N_Numero";
-            txt_N_Numero.Size = new System.Drawing.Size(148, 27);
-            txt_N_Numero.TabIndex = 40;
-            // 
-            // txt_N_Bairro
-            // 
-            txt_N_Bairro.Location = new System.Drawing.Point(654, 320);
-            txt_N_Bairro.Name = "txt_N_Bairro";
-            txt_N_Bairro.Size = new System.Drawing.Size(148, 27);
-            txt_N_Bairro.TabIndex = 41;
-            txt_N_Bairro.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
-            // 
-            // txt_C_Bairro
-            // 
-            this.txt_C_Bairro.Location = new System.Drawing.Point(661, 214);
-            this.txt_C_Bairro.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_C_Bairro.Name = "txt_C_Bairro";
-            this.txt_C_Bairro.Size = new System.Drawing.Size(139, 27);
-            this.txt_C_Bairro.TabIndex = 30;
-            // 
-            // txt_C_Numero
-            // 
-            this.txt_C_Numero.Location = new System.Drawing.Point(927, 207);
-            this.txt_C_Numero.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_C_Numero.Name = "txt_C_Numero";
-            this.txt_C_Numero.Size = new System.Drawing.Size(139, 27);
-            this.txt_C_Numero.TabIndex = 31;
-            // 
-            // txt_D_Valor
-            // 
-            this.txt_D_Valor.Location = new System.Drawing.Point(157, 40);
-            this.txt_D_Valor.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_D_Valor.Name = "txt_D_Valor";
-            this.txt_D_Valor.Size = new System.Drawing.Size(148, 27);
-            this.txt_D_Valor.TabIndex = 31;
-            // 
-            // txt_D_Quantidade
-            // 
-            this.txt_D_Quantidade.Location = new System.Drawing.Point(445, 40);
-            this.txt_D_Quantidade.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_D_Quantidade.Name = "txt_D_Quantidade";
-            this.txt_D_Quantidade.Size = new System.Drawing.Size(148, 27);
-            this.txt_D_Quantidade.TabIndex = 32;
-            // 
-            // txt_D_Objetivo
-            // 
-            this.txt_D_Objetivo.Location = new System.Drawing.Point(732, 40);
-            this.txt_D_Objetivo.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_D_Objetivo.Name = "txt_D_Objetivo";
-            this.txt_D_Objetivo.Size = new System.Drawing.Size(148, 27);
-            this.txt_D_Objetivo.TabIndex = 33;
+            this.txt_A_Cidade.Location = new System.Drawing.Point(385, 334);
+            this.txt_A_Cidade.Name = "txt_A_Cidade";
+            this.txt_A_Cidade.Size = new System.Drawing.Size(183, 27);
+            this.txt_A_Cidade.TabIndex = 37;
             // 
             // PgAtendente
             // 
@@ -1798,7 +1765,7 @@ namespace PccFit
         private System.Windows.Forms.Button btn_C_Pesquisar;
         private System.Windows.Forms.Button btn_A_Atualizar;
         private System.Windows.Forms.Button btn_A_Excluir;
-        private System.Windows.Forms.Button btn_A_Salvar;
+        private System.Windows.Forms.Button btn_A_Cadastrar;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btn_A_Pesquisar;
         private System.Windows.Forms.MaskedTextBox msk_A_DtInicio;
@@ -1806,8 +1773,6 @@ namespace PccFit
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.MaskedTextBox msk_A_Cep;
-        private System.Windows.Forms.ListBox List_A_Cidade;
-        private System.Windows.Forms.ListBox List_A_Estado;
         private System.Windows.Forms.MaskedTextBox msk_A_Tel;
         private System.Windows.Forms.MaskedTextBox msk_A_Cpf;
         private System.Windows.Forms.Label label29;
@@ -1867,5 +1832,7 @@ namespace PccFit
         private System.Windows.Forms.TextBox txt_D_Quantidade;
         private System.Windows.Forms.TextBox txt_D_Valor;
         private System.Windows.Forms.ListBox lst_AG_Mes;
+        private System.Windows.Forms.ComboBox cb_A_Estado;
+        private System.Windows.Forms.TextBox txt_A_Cidade;
     }
 }

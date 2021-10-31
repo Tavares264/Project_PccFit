@@ -12,5 +12,8 @@ namespace PccFit
         public string senha;
 
         public void SetCpf()
+        {
+
+        }
     }
 }
