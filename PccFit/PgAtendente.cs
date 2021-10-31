@@ -25,5 +25,10 @@ namespace PccFit
                 Pesquisar(msk_A_Cpf);   
             }
         }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

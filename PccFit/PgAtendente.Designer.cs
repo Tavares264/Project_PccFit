@@ -29,73 +29,67 @@ namespace PccFit
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TextBox txt_N_Numero;
+            System.Windows.Forms.TextBox txt_N_Bairro;
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btn_N_Atualizar = new System.Windows.Forms.Button();
+            this.btn_N_Excluir = new System.Windows.Forms.Button();
+            this.btn_N_Salvar = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.maskedTextBox11 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox12 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_N_Nome = new System.Windows.Forms.TextBox();
+            this.btn_N_Pesquisar = new System.Windows.Forms.Button();
+            this.msk_N_DataInicio = new System.Windows.Forms.MaskedTextBox();
+            this.msk_N_DataFinal = new System.Windows.Forms.MaskedTextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.maskedTextBox16 = new System.Windows.Forms.MaskedTextBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.maskedTextBox17 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox18 = new System.Windows.Forms.MaskedTextBox();
+            this.msk_N_Cep = new System.Windows.Forms.MaskedTextBox();
+            this.lst_N_Cidade = new System.Windows.Forms.ListBox();
+            this.lst_N_Estado = new System.Windows.Forms.ListBox();
+            this.msk_N_Telefone = new System.Windows.Forms.MaskedTextBox();
+            this.msk_n_Cpf = new System.Windows.Forms.MaskedTextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.maskedTextBox19 = new System.Windows.Forms.MaskedTextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.maskedTextBox20 = new System.Windows.Forms.MaskedTextBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.maskedTextBox21 = new System.Windows.Forms.MaskedTextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.maskedTextBox22 = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox34 = new System.Windows.Forms.MaskedTextBox();
             this.label50 = new System.Windows.Forms.Label();
-            this.maskedTextBox33 = new System.Windows.Forms.MaskedTextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.maskedTextBox32 = new System.Windows.Forms.MaskedTextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btn_C_Atualizar = new System.Windows.Forms.Button();
+            this.btn_C_Excluir = new System.Windows.Forms.Button();
+            this.btn_C_Cadastrar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox10 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox13 = new System.Windows.Forms.MaskedTextBox();
+            this.txt_D_Id = new System.Windows.Forms.TextBox();
+            this.txt_D_Nome = new System.Windows.Forms.TextBox();
+            this.msk_D_DataInicio = new System.Windows.Forms.MaskedTextBox();
+            this.msk_D_DataFinal = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtLogradouro = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.button9 = new System.Windows.Forms.Button();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txt_C_Logradouro = new System.Windows.Forms.TextBox();
+            this.txt_C_Email = new System.Windows.Forms.TextBox();
+            this.txt_C_Nome = new System.Windows.Forms.TextBox();
+            this.btn_C_Pesquisar = new System.Windows.Forms.Button();
+            this.msk_C_Cep = new System.Windows.Forms.MaskedTextBox();
+            this.lst_C_Cidade = new System.Windows.Forms.ListBox();
+            this.lst_C_Estado = new System.Windows.Forms.ListBox();
+            this.msk_C_Telefone = new System.Windows.Forms.MaskedTextBox();
+            this.msk_C_CPF = new System.Windows.Forms.MaskedTextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.maskedTextBox8 = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -106,6 +100,12 @@ namespace PccFit
             this.btn_A_Excluir = new System.Windows.Forms.Button();
             this.btn_A_Salvar = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lb_A_cpf = new System.Windows.Forms.Label();
+            this.txt_A_Bairro = new System.Windows.Forms.TextBox();
+            this.txt_A_Numero = new System.Windows.Forms.TextBox();
+            this.txt_A_Logradouro = new System.Windows.Forms.TextBox();
+            this.txt_A_Email = new System.Windows.Forms.TextBox();
+            this.txt_A_Nome = new System.Windows.Forms.TextBox();
             this.btn_A_Pesquisar = new System.Windows.Forms.Button();
             this.msk_A_DtInicio = new System.Windows.Forms.MaskedTextBox();
             this.msk_A_DtFinal = new System.Windows.Forms.MaskedTextBox();
@@ -127,36 +127,38 @@ namespace PccFit
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txt_AG_NomeNutricionista = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txt_AG_Id = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.listBox9 = new System.Windows.Forms.ListBox();
-            this.listBox8 = new System.Windows.Forms.ListBox();
-            this.listBox7 = new System.Windows.Forms.ListBox();
+            this.lst_AG_Ano = new System.Windows.Forms.ListBox();
+            this.lst_AG_Mes = new System.Windows.Forms.ListBox();
+            this.lst_AG_Dia = new System.Windows.Forms.ListBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txt_AG_Minuto = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_AG_Hora = new System.Windows.Forms.TextBox();
+            this.txt_AG_Descrição = new System.Windows.Forms.TextBox();
+            this.txt_AG_Paciente = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btn_AG_Excluir = new System.Windows.Forms.Button();
+            this.btn_AG_Atualizar = new System.Windows.Forms.Button();
+            this.btn_AG_Visualizar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.txt_A_Nome = new System.Windows.Forms.TextBox();
-            this.txt_A_Email = new System.Windows.Forms.TextBox();
-            this.txt_A_Logradouro = new System.Windows.Forms.TextBox();
-            this.txt_A_Numero = new System.Windows.Forms.TextBox();
-            this.txt_A_Bairro = new System.Windows.Forms.TextBox();
-            this.lb_A_cpf = new System.Windows.Forms.Label();
-            this.txt_N_Nome = new System.Windows.Forms.TextBox();
+            this.txt_N_Email = new System.Windows.Forms.TextBox();
+            this.txt_N_Logradouro = new System.Windows.Forms.TextBox();
+            this.txt_C_Bairro = new System.Windows.Forms.TextBox();
+            this.txt_C_Numero = new System.Windows.Forms.TextBox();
+            this.txt_D_Valor = new System.Windows.Forms.TextBox();
+            this.txt_D_Quantidade = new System.Windows.Forms.TextBox();
+            this.txt_D_Objetivo = new System.Windows.Forms.TextBox();
+            txt_N_Numero = new System.Windows.Forms.TextBox();
+            txt_N_Bairro = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -172,9 +174,9 @@ namespace PccFit
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.button4);
-            this.tabPage2.Controls.Add(this.button5);
-            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.btn_N_Atualizar);
+            this.tabPage2.Controls.Add(this.btn_N_Excluir);
+            this.tabPage2.Controls.Add(this.btn_N_Salvar);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -185,64 +187,64 @@ namespace PccFit
             this.tabPage2.Text = "Cadastro de Nutricionistas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_N_Atualizar
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(917, 656);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(275, 102);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Atualizar";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_N_Atualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_N_Atualizar.Location = new System.Drawing.Point(917, 656);
+            this.btn_N_Atualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_N_Atualizar.Name = "btn_N_Atualizar";
+            this.btn_N_Atualizar.Size = new System.Drawing.Size(275, 102);
+            this.btn_N_Atualizar.TabIndex = 10;
+            this.btn_N_Atualizar.Text = "Atualizar";
+            this.btn_N_Atualizar.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_N_Excluir
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(527, 656);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(275, 102);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Excluir";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_N_Excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_N_Excluir.Location = new System.Drawing.Point(527, 656);
+            this.btn_N_Excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_N_Excluir.Name = "btn_N_Excluir";
+            this.btn_N_Excluir.Size = new System.Drawing.Size(275, 102);
+            this.btn_N_Excluir.TabIndex = 9;
+            this.btn_N_Excluir.Text = "Excluir";
+            this.btn_N_Excluir.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn_N_Salvar
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(129, 656);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(275, 102);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Salvar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_N_Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_N_Salvar.Location = new System.Drawing.Point(129, 656);
+            this.btn_N_Salvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_N_Salvar.Name = "btn_N_Salvar";
+            this.btn_N_Salvar.Size = new System.Drawing.Size(275, 102);
+            this.btn_N_Salvar.TabIndex = 8;
+            this.btn_N_Salvar.Text = "Salvar";
+            this.btn_N_Salvar.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(txt_N_Bairro);
+            this.groupBox4.Controls.Add(txt_N_Numero);
+            this.groupBox4.Controls.Add(this.txt_N_Logradouro);
+            this.groupBox4.Controls.Add(this.txt_N_Email);
             this.groupBox4.Controls.Add(this.txt_N_Nome);
-            this.groupBox4.Controls.Add(this.button7);
-            this.groupBox4.Controls.Add(this.maskedTextBox11);
-            this.groupBox4.Controls.Add(this.maskedTextBox12);
+            this.groupBox4.Controls.Add(this.btn_N_Pesquisar);
+            this.groupBox4.Controls.Add(this.msk_N_DataInicio);
+            this.groupBox4.Controls.Add(this.msk_N_DataFinal);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label16);
-            this.groupBox4.Controls.Add(this.maskedTextBox16);
-            this.groupBox4.Controls.Add(this.listBox3);
-            this.groupBox4.Controls.Add(this.listBox4);
-            this.groupBox4.Controls.Add(this.maskedTextBox17);
-            this.groupBox4.Controls.Add(this.maskedTextBox18);
+            this.groupBox4.Controls.Add(this.msk_N_Cep);
+            this.groupBox4.Controls.Add(this.lst_N_Cidade);
+            this.groupBox4.Controls.Add(this.lst_N_Estado);
+            this.groupBox4.Controls.Add(this.msk_N_Telefone);
+            this.groupBox4.Controls.Add(this.msk_n_Cpf);
             this.groupBox4.Controls.Add(this.label19);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.maskedTextBox19);
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.maskedTextBox20);
             this.groupBox4.Controls.Add(this.label25);
-            this.groupBox4.Controls.Add(this.maskedTextBox21);
             this.groupBox4.Controls.Add(this.label26);
-            this.groupBox4.Controls.Add(this.maskedTextBox22);
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Controls.Add(this.label28);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -255,38 +257,45 @@ namespace PccFit
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados Pessoais";
             // 
-            // button7
+            // txt_N_Nome
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1108, 91);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(163, 32);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "Pesquisar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.txt_N_Nome.Location = new System.Drawing.Point(141, 94);
+            this.txt_N_Nome.Name = "txt_N_Nome";
+            this.txt_N_Nome.Size = new System.Drawing.Size(563, 27);
+            this.txt_N_Nome.TabIndex = 37;
             // 
-            // maskedTextBox11
+            // btn_N_Pesquisar
             // 
-            this.maskedTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox11.Location = new System.Drawing.Point(152, 393);
-            this.maskedTextBox11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox11.Mask = "00/00/0000";
-            this.maskedTextBox11.Name = "maskedTextBox11";
-            this.maskedTextBox11.Size = new System.Drawing.Size(109, 28);
-            this.maskedTextBox11.TabIndex = 36;
-            this.maskedTextBox11.ValidatingType = typeof(System.DateTime);
+            this.btn_N_Pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_N_Pesquisar.Location = new System.Drawing.Point(1108, 91);
+            this.btn_N_Pesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_N_Pesquisar.Name = "btn_N_Pesquisar";
+            this.btn_N_Pesquisar.Size = new System.Drawing.Size(163, 32);
+            this.btn_N_Pesquisar.TabIndex = 11;
+            this.btn_N_Pesquisar.Text = "Pesquisar";
+            this.btn_N_Pesquisar.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox12
+            // msk_N_DataInicio
             // 
-            this.maskedTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox12.Location = new System.Drawing.Point(464, 393);
-            this.maskedTextBox12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox12.Mask = "00/00/0000";
-            this.maskedTextBox12.Name = "maskedTextBox12";
-            this.maskedTextBox12.Size = new System.Drawing.Size(109, 28);
-            this.maskedTextBox12.TabIndex = 35;
-            this.maskedTextBox12.ValidatingType = typeof(System.DateTime);
+            this.msk_N_DataInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_N_DataInicio.Location = new System.Drawing.Point(152, 393);
+            this.msk_N_DataInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_N_DataInicio.Mask = "00/00/0000";
+            this.msk_N_DataInicio.Name = "msk_N_DataInicio";
+            this.msk_N_DataInicio.Size = new System.Drawing.Size(109, 28);
+            this.msk_N_DataInicio.TabIndex = 36;
+            this.msk_N_DataInicio.ValidatingType = typeof(System.DateTime);
+            // 
+            // msk_N_DataFinal
+            // 
+            this.msk_N_DataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_N_DataFinal.Location = new System.Drawing.Point(464, 393);
+            this.msk_N_DataFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_N_DataFinal.Mask = "00/00/0000";
+            this.msk_N_DataFinal.Name = "msk_N_DataFinal";
+            this.msk_N_DataFinal.Size = new System.Drawing.Size(109, 28);
+            this.msk_N_DataFinal.TabIndex = 35;
+            this.msk_N_DataFinal.ValidatingType = typeof(System.DateTime);
             // 
             // label15
             // 
@@ -308,21 +317,21 @@ namespace PccFit
             this.label16.TabIndex = 33;
             this.label16.Text = "Data Inicio:";
             // 
-            // maskedTextBox16
+            // msk_N_Cep
             // 
-            this.maskedTextBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox16.Location = new System.Drawing.Point(944, 316);
-            this.maskedTextBox16.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox16.Mask = "00000-000";
-            this.maskedTextBox16.Name = "maskedTextBox16";
-            this.maskedTextBox16.Size = new System.Drawing.Size(109, 28);
-            this.maskedTextBox16.TabIndex = 25;
+            this.msk_N_Cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_N_Cep.Location = new System.Drawing.Point(944, 316);
+            this.msk_N_Cep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_N_Cep.Mask = "00000-000";
+            this.msk_N_Cep.Name = "msk_N_Cep";
+            this.msk_N_Cep.Size = new System.Drawing.Size(109, 28);
+            this.msk_N_Cep.TabIndex = 25;
             // 
-            // listBox3
+            // lst_N_Cidade
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 20;
-            this.listBox3.Items.AddRange(new object[] {
+            this.lst_N_Cidade.FormattingEnabled = true;
+            this.lst_N_Cidade.ItemHeight = 20;
+            this.lst_N_Cidade.Items.AddRange(new object[] {
             "RO",
             "AC",
             "AM",
@@ -350,17 +359,17 @@ namespace PccFit
             "MT",
             "GO",
             "DF"});
-            this.listBox3.Location = new System.Drawing.Point(360, 322);
-            this.listBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(161, 24);
-            this.listBox3.TabIndex = 24;
+            this.lst_N_Cidade.Location = new System.Drawing.Point(360, 322);
+            this.lst_N_Cidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lst_N_Cidade.Name = "lst_N_Cidade";
+            this.lst_N_Cidade.Size = new System.Drawing.Size(161, 24);
+            this.lst_N_Cidade.TabIndex = 24;
             // 
-            // listBox4
+            // lst_N_Estado
             // 
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 20;
-            this.listBox4.Items.AddRange(new object[] {
+            this.lst_N_Estado.FormattingEnabled = true;
+            this.lst_N_Estado.ItemHeight = 20;
+            this.lst_N_Estado.Items.AddRange(new object[] {
             "RO",
             "AC",
             "AM",
@@ -388,31 +397,31 @@ namespace PccFit
             "MT",
             "GO",
             "DF"});
-            this.listBox4.Location = new System.Drawing.Point(143, 320);
-            this.listBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(88, 24);
-            this.listBox4.TabIndex = 23;
+            this.lst_N_Estado.Location = new System.Drawing.Point(143, 320);
+            this.lst_N_Estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lst_N_Estado.Name = "lst_N_Estado";
+            this.lst_N_Estado.Size = new System.Drawing.Size(88, 24);
+            this.lst_N_Estado.TabIndex = 23;
             // 
-            // maskedTextBox17
+            // msk_N_Telefone
             // 
-            this.maskedTextBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox17.Location = new System.Drawing.Point(913, 167);
-            this.maskedTextBox17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox17.Mask = "(00) 00000-0000";
-            this.maskedTextBox17.Name = "maskedTextBox17";
-            this.maskedTextBox17.Size = new System.Drawing.Size(140, 28);
-            this.maskedTextBox17.TabIndex = 22;
+            this.msk_N_Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_N_Telefone.Location = new System.Drawing.Point(913, 167);
+            this.msk_N_Telefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_N_Telefone.Mask = "(00) 00000-0000";
+            this.msk_N_Telefone.Name = "msk_N_Telefone";
+            this.msk_N_Telefone.Size = new System.Drawing.Size(140, 28);
+            this.msk_N_Telefone.TabIndex = 22;
             // 
-            // maskedTextBox18
+            // msk_n_Cpf
             // 
-            this.maskedTextBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox18.Location = new System.Drawing.Point(913, 94);
-            this.maskedTextBox18.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox18.Mask = "000.000.000-00";
-            this.maskedTextBox18.Name = "maskedTextBox18";
-            this.maskedTextBox18.Size = new System.Drawing.Size(140, 28);
-            this.maskedTextBox18.TabIndex = 21;
+            this.msk_n_Cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_n_Cpf.Location = new System.Drawing.Point(913, 94);
+            this.msk_n_Cpf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_n_Cpf.Mask = "000.000.000-00";
+            this.msk_n_Cpf.Name = "msk_n_Cpf";
+            this.msk_n_Cpf.Size = new System.Drawing.Size(140, 28);
+            this.msk_n_Cpf.TabIndex = 21;
             // 
             // label19
             // 
@@ -433,14 +442,6 @@ namespace PccFit
             this.label20.Size = new System.Drawing.Size(73, 20);
             this.label20.TabIndex = 17;
             this.label20.Text = "Cidade:";
-            // 
-            // maskedTextBox19
-            // 
-            this.maskedTextBox19.Location = new System.Drawing.Point(913, 241);
-            this.maskedTextBox19.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox19.Name = "maskedTextBox19";
-            this.maskedTextBox19.Size = new System.Drawing.Size(140, 27);
-            this.maskedTextBox19.TabIndex = 16;
             // 
             // label21
             // 
@@ -482,14 +483,6 @@ namespace PccFit
             this.label24.TabIndex = 9;
             this.label24.Text = "Estado:";
             // 
-            // maskedTextBox20
-            // 
-            this.maskedTextBox20.Location = new System.Drawing.Point(651, 321);
-            this.maskedTextBox20.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox20.Name = "maskedTextBox20";
-            this.maskedTextBox20.Size = new System.Drawing.Size(148, 27);
-            this.maskedTextBox20.TabIndex = 8;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -500,14 +493,6 @@ namespace PccFit
             this.label25.TabIndex = 7;
             this.label25.Text = "Bairro:";
             // 
-            // maskedTextBox21
-            // 
-            this.maskedTextBox21.Location = new System.Drawing.Point(143, 239);
-            this.maskedTextBox21.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox21.Name = "maskedTextBox21";
-            this.maskedTextBox21.Size = new System.Drawing.Size(561, 27);
-            this.maskedTextBox21.TabIndex = 6;
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -517,14 +502,6 @@ namespace PccFit
             this.label26.Size = new System.Drawing.Size(110, 20);
             this.label26.TabIndex = 5;
             this.label26.Text = "Logradouro:";
-            // 
-            // maskedTextBox22
-            // 
-            this.maskedTextBox22.Location = new System.Drawing.Point(143, 167);
-            this.maskedTextBox22.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox22.Name = "maskedTextBox22";
-            this.maskedTextBox22.Size = new System.Drawing.Size(563, 27);
-            this.maskedTextBox22.TabIndex = 4;
             // 
             // label27
             // 
@@ -549,9 +526,9 @@ namespace PccFit
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox5);
-            this.tabPage1.Controls.Add(this.button3);
-            this.tabPage1.Controls.Add(this.button1);
-            this.tabPage1.Controls.Add(this.btnCadastrar);
+            this.tabPage1.Controls.Add(this.btn_C_Atualizar);
+            this.tabPage1.Controls.Add(this.btn_C_Excluir);
+            this.tabPage1.Controls.Add(this.btn_C_Cadastrar);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -566,11 +543,11 @@ namespace PccFit
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.maskedTextBox34);
+            this.groupBox5.Controls.Add(this.txt_D_Objetivo);
+            this.groupBox5.Controls.Add(this.txt_D_Quantidade);
+            this.groupBox5.Controls.Add(this.txt_D_Valor);
             this.groupBox5.Controls.Add(this.label50);
-            this.groupBox5.Controls.Add(this.maskedTextBox33);
             this.groupBox5.Controls.Add(this.label49);
-            this.groupBox5.Controls.Add(this.maskedTextBox32);
             this.groupBox5.Controls.Add(this.label48);
             this.groupBox5.Location = new System.Drawing.Point(3, 501);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -580,14 +557,6 @@ namespace PccFit
             this.groupBox5.TabIndex = 6;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Quantidade de Consultas Mensais";
-            // 
-            // maskedTextBox34
-            // 
-            this.maskedTextBox34.Location = new System.Drawing.Point(731, 36);
-            this.maskedTextBox34.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox34.Name = "maskedTextBox34";
-            this.maskedTextBox34.Size = new System.Drawing.Size(127, 27);
-            this.maskedTextBox34.TabIndex = 32;
             // 
             // label50
             // 
@@ -599,14 +568,6 @@ namespace PccFit
             this.label50.TabIndex = 31;
             this.label50.Text = "Objetivo:";
             // 
-            // maskedTextBox33
-            // 
-            this.maskedTextBox33.Location = new System.Drawing.Point(444, 36);
-            this.maskedTextBox33.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox33.Name = "maskedTextBox33";
-            this.maskedTextBox33.Size = new System.Drawing.Size(127, 27);
-            this.maskedTextBox33.TabIndex = 30;
-            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -617,14 +578,6 @@ namespace PccFit
             this.label49.TabIndex = 29;
             this.label49.Text = "Quantidade:";
             // 
-            // maskedTextBox32
-            // 
-            this.maskedTextBox32.Location = new System.Drawing.Point(157, 36);
-            this.maskedTextBox32.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox32.Name = "maskedTextBox32";
-            this.maskedTextBox32.Size = new System.Drawing.Size(113, 27);
-            this.maskedTextBox32.TabIndex = 29;
-            // 
             // label48
             // 
             this.label48.AutoSize = true;
@@ -634,42 +587,42 @@ namespace PccFit
             this.label48.TabIndex = 0;
             this.label48.Text = "Valor:";
             // 
-            // button3
+            // btn_C_Atualizar
             // 
-            this.button3.Location = new System.Drawing.Point(913, 650);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(275, 102);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Atualizar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_C_Atualizar.Location = new System.Drawing.Point(913, 650);
+            this.btn_C_Atualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_C_Atualizar.Name = "btn_C_Atualizar";
+            this.btn_C_Atualizar.Size = new System.Drawing.Size(275, 102);
+            this.btn_C_Atualizar.TabIndex = 5;
+            this.btn_C_Atualizar.Text = "Atualizar";
+            this.btn_C_Atualizar.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btn_C_Excluir
             // 
-            this.button1.Location = new System.Drawing.Point(517, 650);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(275, 102);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Excluir";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_C_Excluir.Location = new System.Drawing.Point(517, 650);
+            this.btn_C_Excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_C_Excluir.Name = "btn_C_Excluir";
+            this.btn_C_Excluir.Size = new System.Drawing.Size(275, 102);
+            this.btn_C_Excluir.TabIndex = 4;
+            this.btn_C_Excluir.Text = "Excluir";
+            this.btn_C_Excluir.UseVisualStyleBackColor = true;
             // 
-            // btnCadastrar
+            // btn_C_Cadastrar
             // 
-            this.btnCadastrar.Location = new System.Drawing.Point(117, 650);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(275, 102);
-            this.btnCadastrar.TabIndex = 3;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btn_C_Cadastrar.Location = new System.Drawing.Point(117, 650);
+            this.btn_C_Cadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_C_Cadastrar.Name = "btn_C_Cadastrar";
+            this.btn_C_Cadastrar.Size = new System.Drawing.Size(275, 102);
+            this.btn_C_Cadastrar.TabIndex = 3;
+            this.btn_C_Cadastrar.Text = "Cadastrar";
+            this.btn_C_Cadastrar.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.maskedTextBox10);
-            this.groupBox2.Controls.Add(this.maskedTextBox13);
+            this.groupBox2.Controls.Add(this.txt_D_Id);
+            this.groupBox2.Controls.Add(this.txt_D_Nome);
+            this.groupBox2.Controls.Add(this.msk_D_DataInicio);
+            this.groupBox2.Controls.Add(this.msk_D_DataFinal);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
@@ -683,43 +636,43 @@ namespace PccFit
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Doutor(a)";
             // 
-            // textBox8
+            // txt_D_Id
             // 
-            this.textBox8.Location = new System.Drawing.Point(277, 44);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(193, 27);
-            this.textBox8.TabIndex = 30;
+            this.txt_D_Id.Location = new System.Drawing.Point(277, 44);
+            this.txt_D_Id.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Id.Name = "txt_D_Id";
+            this.txt_D_Id.Size = new System.Drawing.Size(193, 27);
+            this.txt_D_Id.TabIndex = 30;
             // 
-            // textBox7
+            // txt_D_Nome
             // 
-            this.textBox7.Location = new System.Drawing.Point(593, 43);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(563, 27);
-            this.textBox7.TabIndex = 29;
+            this.txt_D_Nome.Location = new System.Drawing.Point(593, 43);
+            this.txt_D_Nome.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Nome.Name = "txt_D_Nome";
+            this.txt_D_Nome.Size = new System.Drawing.Size(563, 27);
+            this.txt_D_Nome.TabIndex = 29;
             // 
-            // maskedTextBox10
+            // msk_D_DataInicio
             // 
-            this.maskedTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox10.Location = new System.Drawing.Point(291, 121);
-            this.maskedTextBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox10.Mask = "00/00/0000";
-            this.maskedTextBox10.Name = "maskedTextBox10";
-            this.maskedTextBox10.Size = new System.Drawing.Size(109, 28);
-            this.maskedTextBox10.TabIndex = 28;
-            this.maskedTextBox10.ValidatingType = typeof(System.DateTime);
+            this.msk_D_DataInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_D_DataInicio.Location = new System.Drawing.Point(291, 121);
+            this.msk_D_DataInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_D_DataInicio.Mask = "00/00/0000";
+            this.msk_D_DataInicio.Name = "msk_D_DataInicio";
+            this.msk_D_DataInicio.Size = new System.Drawing.Size(109, 28);
+            this.msk_D_DataInicio.TabIndex = 28;
+            this.msk_D_DataInicio.ValidatingType = typeof(System.DateTime);
             // 
-            // maskedTextBox13
+            // msk_D_DataFinal
             // 
-            this.maskedTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox13.Location = new System.Drawing.Point(603, 121);
-            this.maskedTextBox13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox13.Mask = "00/00/0000";
-            this.maskedTextBox13.Name = "maskedTextBox13";
-            this.maskedTextBox13.Size = new System.Drawing.Size(109, 28);
-            this.maskedTextBox13.TabIndex = 27;
-            this.maskedTextBox13.ValidatingType = typeof(System.DateTime);
+            this.msk_D_DataFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_D_DataFinal.Location = new System.Drawing.Point(603, 121);
+            this.msk_D_DataFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_D_DataFinal.Mask = "00/00/0000";
+            this.msk_D_DataFinal.Name = "msk_D_DataFinal";
+            this.msk_D_DataFinal.Size = new System.Drawing.Size(109, 28);
+            this.msk_D_DataFinal.TabIndex = 27;
+            this.msk_D_DataFinal.ValidatingType = typeof(System.DateTime);
             // 
             // label14
             // 
@@ -763,23 +716,23 @@ namespace PccFit
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtLogradouro);
-            this.groupBox1.Controls.Add(this.txtEmail);
-            this.groupBox1.Controls.Add(this.txtNome);
-            this.groupBox1.Controls.Add(this.button9);
-            this.groupBox1.Controls.Add(this.maskedTextBox5);
-            this.groupBox1.Controls.Add(this.listBox2);
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.maskedTextBox6);
-            this.groupBox1.Controls.Add(this.mskCPF);
+            this.groupBox1.Controls.Add(this.txt_C_Numero);
+            this.groupBox1.Controls.Add(this.txt_C_Bairro);
+            this.groupBox1.Controls.Add(this.txt_C_Logradouro);
+            this.groupBox1.Controls.Add(this.txt_C_Email);
+            this.groupBox1.Controls.Add(this.txt_C_Nome);
+            this.groupBox1.Controls.Add(this.btn_C_Pesquisar);
+            this.groupBox1.Controls.Add(this.msk_C_Cep);
+            this.groupBox1.Controls.Add(this.lst_C_Cidade);
+            this.groupBox1.Controls.Add(this.lst_C_Estado);
+            this.groupBox1.Controls.Add(this.msk_C_Telefone);
+            this.groupBox1.Controls.Add(this.msk_C_CPF);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.maskedTextBox8);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.maskedTextBox4);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -793,56 +746,56 @@ namespace PccFit
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
             // 
-            // txtLogradouro
+            // txt_C_Logradouro
             // 
-            this.txtLogradouro.Location = new System.Drawing.Point(163, 150);
-            this.txtLogradouro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtLogradouro.Name = "txtLogradouro";
-            this.txtLogradouro.Size = new System.Drawing.Size(563, 27);
-            this.txtLogradouro.TabIndex = 29;
+            this.txt_C_Logradouro.Location = new System.Drawing.Point(163, 150);
+            this.txt_C_Logradouro.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_C_Logradouro.Name = "txt_C_Logradouro";
+            this.txt_C_Logradouro.Size = new System.Drawing.Size(563, 27);
+            this.txt_C_Logradouro.TabIndex = 29;
             // 
-            // txtEmail
+            // txt_C_Email
             // 
-            this.txtEmail.Location = new System.Drawing.Point(163, 96);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(563, 27);
-            this.txtEmail.TabIndex = 28;
+            this.txt_C_Email.Location = new System.Drawing.Point(163, 96);
+            this.txt_C_Email.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_C_Email.Name = "txt_C_Email";
+            this.txt_C_Email.Size = new System.Drawing.Size(563, 27);
+            this.txt_C_Email.TabIndex = 28;
             // 
-            // txtNome
+            // txt_C_Nome
             // 
-            this.txtNome.Location = new System.Drawing.Point(163, 44);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(563, 27);
-            this.txtNome.TabIndex = 27;
+            this.txt_C_Nome.Location = new System.Drawing.Point(163, 44);
+            this.txt_C_Nome.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_C_Nome.Name = "txt_C_Nome";
+            this.txt_C_Nome.Size = new System.Drawing.Size(563, 27);
+            this.txt_C_Nome.TabIndex = 27;
             // 
-            // button9
+            // btn_C_Pesquisar
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(1048, 47);
-            this.button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(163, 32);
-            this.button9.TabIndex = 26;
-            this.button9.Text = "Pesquisar";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_C_Pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_C_Pesquisar.Location = new System.Drawing.Point(1048, 47);
+            this.btn_C_Pesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_C_Pesquisar.Name = "btn_C_Pesquisar";
+            this.btn_C_Pesquisar.Size = new System.Drawing.Size(163, 32);
+            this.btn_C_Pesquisar.TabIndex = 26;
+            this.btn_C_Pesquisar.Text = "Pesquisar";
+            this.btn_C_Pesquisar.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox5
+            // msk_C_Cep
             // 
-            this.maskedTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox5.Location = new System.Drawing.Point(863, 149);
-            this.maskedTextBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox5.Mask = "00000-000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(109, 28);
-            this.maskedTextBox5.TabIndex = 25;
+            this.msk_C_Cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_C_Cep.Location = new System.Drawing.Point(863, 149);
+            this.msk_C_Cep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_C_Cep.Mask = "00000-000";
+            this.msk_C_Cep.Name = "msk_C_Cep";
+            this.msk_C_Cep.Size = new System.Drawing.Size(109, 28);
+            this.msk_C_Cep.TabIndex = 25;
             // 
-            // listBox2
+            // lst_C_Cidade
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 20;
-            this.listBox2.Items.AddRange(new object[] {
+            this.lst_C_Cidade.FormattingEnabled = true;
+            this.lst_C_Cidade.ItemHeight = 20;
+            this.lst_C_Cidade.Items.AddRange(new object[] {
             "RO",
             "AC",
             "AM",
@@ -870,17 +823,17 @@ namespace PccFit
             "MT",
             "GO",
             "DF"});
-            this.listBox2.Location = new System.Drawing.Point(384, 217);
-            this.listBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(139, 24);
-            this.listBox2.TabIndex = 24;
+            this.lst_C_Cidade.Location = new System.Drawing.Point(384, 217);
+            this.lst_C_Cidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lst_C_Cidade.Name = "lst_C_Cidade";
+            this.lst_C_Cidade.Size = new System.Drawing.Size(139, 24);
+            this.lst_C_Cidade.TabIndex = 24;
             // 
-            // listBox1
+            // lst_C_Estado
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Items.AddRange(new object[] {
+            this.lst_C_Estado.FormattingEnabled = true;
+            this.lst_C_Estado.ItemHeight = 20;
+            this.lst_C_Estado.Items.AddRange(new object[] {
             "RO",
             "AC",
             "AM",
@@ -908,31 +861,31 @@ namespace PccFit
             "MT",
             "GO",
             "DF"});
-            this.listBox1.Location = new System.Drawing.Point(157, 217);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(79, 24);
-            this.listBox1.TabIndex = 23;
+            this.lst_C_Estado.Location = new System.Drawing.Point(157, 217);
+            this.lst_C_Estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lst_C_Estado.Name = "lst_C_Estado";
+            this.lst_C_Estado.Size = new System.Drawing.Size(79, 24);
+            this.lst_C_Estado.TabIndex = 23;
             // 
-            // maskedTextBox6
+            // msk_C_Telefone
             // 
-            this.maskedTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox6.Location = new System.Drawing.Point(863, 102);
-            this.maskedTextBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox6.Mask = "(00) 00000-0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(140, 28);
-            this.maskedTextBox6.TabIndex = 22;
+            this.msk_C_Telefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_C_Telefone.Location = new System.Drawing.Point(863, 102);
+            this.msk_C_Telefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_C_Telefone.Mask = "(00) 00000-0000";
+            this.msk_C_Telefone.Name = "msk_C_Telefone";
+            this.msk_C_Telefone.Size = new System.Drawing.Size(140, 28);
+            this.msk_C_Telefone.TabIndex = 22;
             // 
-            // mskCPF
+            // msk_C_CPF
             // 
-            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCPF.Location = new System.Drawing.Point(863, 50);
-            this.mskCPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.mskCPF.Mask = "000.000.000-00";
-            this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(140, 28);
-            this.mskCPF.TabIndex = 21;
+            this.msk_C_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_C_CPF.Location = new System.Drawing.Point(863, 50);
+            this.msk_C_CPF.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.msk_C_CPF.Mask = "000.000.000-00";
+            this.msk_C_CPF.Name = "msk_C_CPF";
+            this.msk_C_CPF.Size = new System.Drawing.Size(140, 28);
+            this.msk_C_CPF.TabIndex = 21;
             // 
             // label10
             // 
@@ -953,14 +906,6 @@ namespace PccFit
             this.label9.Size = new System.Drawing.Size(73, 20);
             this.label9.TabIndex = 17;
             this.label9.Text = "Cidade:";
-            // 
-            // maskedTextBox8
-            // 
-            this.maskedTextBox8.Location = new System.Drawing.Point(925, 209);
-            this.maskedTextBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox8.Name = "maskedTextBox8";
-            this.maskedTextBox8.Size = new System.Drawing.Size(140, 27);
-            this.maskedTextBox8.TabIndex = 16;
             // 
             // label8
             // 
@@ -1001,14 +946,6 @@ namespace PccFit
             this.label5.Size = new System.Drawing.Size(73, 20);
             this.label5.TabIndex = 9;
             this.label5.Text = "Estado:";
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(660, 209);
-            this.maskedTextBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(148, 27);
-            this.maskedTextBox4.TabIndex = 8;
             // 
             // label4
             // 
@@ -1148,6 +1085,49 @@ namespace PccFit
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados Pessoais";
+            // 
+            // lb_A_cpf
+            // 
+            this.lb_A_cpf.AutoSize = true;
+            this.lb_A_cpf.Location = new System.Drawing.Point(935, 133);
+            this.lb_A_cpf.Name = "lb_A_cpf";
+            this.lb_A_cpf.Size = new System.Drawing.Size(0, 20);
+            this.lb_A_cpf.TabIndex = 35;
+            // 
+            // txt_A_Bairro
+            // 
+            this.txt_A_Bairro.Location = new System.Drawing.Point(679, 335);
+            this.txt_A_Bairro.Name = "txt_A_Bairro";
+            this.txt_A_Bairro.Size = new System.Drawing.Size(183, 27);
+            this.txt_A_Bairro.TabIndex = 10;
+            // 
+            // txt_A_Numero
+            // 
+            this.txt_A_Numero.Location = new System.Drawing.Point(939, 242);
+            this.txt_A_Numero.Name = "txt_A_Numero";
+            this.txt_A_Numero.Size = new System.Drawing.Size(141, 27);
+            this.txt_A_Numero.TabIndex = 7;
+            // 
+            // txt_A_Logradouro
+            // 
+            this.txt_A_Logradouro.Location = new System.Drawing.Point(171, 240);
+            this.txt_A_Logradouro.Name = "txt_A_Logradouro";
+            this.txt_A_Logradouro.Size = new System.Drawing.Size(561, 27);
+            this.txt_A_Logradouro.TabIndex = 6;
+            // 
+            // txt_A_Email
+            // 
+            this.txt_A_Email.Location = new System.Drawing.Point(169, 167);
+            this.txt_A_Email.Name = "txt_A_Email";
+            this.txt_A_Email.Size = new System.Drawing.Size(561, 27);
+            this.txt_A_Email.TabIndex = 4;
+            // 
+            // txt_A_Nome
+            // 
+            this.txt_A_Nome.Location = new System.Drawing.Point(170, 96);
+            this.txt_A_Nome.Name = "txt_A_Nome";
+            this.txt_A_Nome.Size = new System.Drawing.Size(561, 27);
+            this.txt_A_Nome.TabIndex = 1;
             // 
             // btn_A_Pesquisar
             // 
@@ -1411,27 +1391,27 @@ namespace PccFit
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.textBox6);
+            this.tabPage4.Controls.Add(this.txt_AG_NomeNutricionista);
             this.tabPage4.Controls.Add(this.label47);
-            this.tabPage4.Controls.Add(this.textBox5);
+            this.tabPage4.Controls.Add(this.txt_AG_Id);
             this.tabPage4.Controls.Add(this.label46);
-            this.tabPage4.Controls.Add(this.listBox9);
-            this.tabPage4.Controls.Add(this.listBox8);
-            this.tabPage4.Controls.Add(this.listBox7);
+            this.tabPage4.Controls.Add(this.lst_AG_Ano);
+            this.tabPage4.Controls.Add(this.lst_AG_Mes);
+            this.tabPage4.Controls.Add(this.lst_AG_Dia);
             this.tabPage4.Controls.Add(this.label45);
-            this.tabPage4.Controls.Add(this.textBox4);
+            this.tabPage4.Controls.Add(this.txt_AG_Minuto);
             this.tabPage4.Controls.Add(this.label44);
-            this.tabPage4.Controls.Add(this.textBox3);
-            this.tabPage4.Controls.Add(this.textBox2);
-            this.tabPage4.Controls.Add(this.textBox1);
+            this.tabPage4.Controls.Add(this.txt_AG_Hora);
+            this.tabPage4.Controls.Add(this.txt_AG_Descrição);
+            this.tabPage4.Controls.Add(this.txt_AG_Paciente);
             this.tabPage4.Controls.Add(this.label43);
             this.tabPage4.Controls.Add(this.label42);
             this.tabPage4.Controls.Add(this.label41);
             this.tabPage4.Controls.Add(this.label40);
             this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Controls.Add(this.button15);
-            this.tabPage4.Controls.Add(this.button14);
-            this.tabPage4.Controls.Add(this.button13);
+            this.tabPage4.Controls.Add(this.btn_AG_Excluir);
+            this.tabPage4.Controls.Add(this.btn_AG_Atualizar);
+            this.tabPage4.Controls.Add(this.btn_AG_Visualizar);
             this.tabPage4.Controls.Add(this.dataGridView1);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -1441,13 +1421,13 @@ namespace PccFit
             this.tabPage4.Text = "Agenda";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txt_AG_NomeNutricionista
             // 
-            this.textBox6.Location = new System.Drawing.Point(215, 118);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(495, 22);
-            this.textBox6.TabIndex = 22;
+            this.txt_AG_NomeNutricionista.Location = new System.Drawing.Point(215, 118);
+            this.txt_AG_NomeNutricionista.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_AG_NomeNutricionista.Name = "txt_AG_NomeNutricionista";
+            this.txt_AG_NomeNutricionista.Size = new System.Drawing.Size(495, 22);
+            this.txt_AG_NomeNutricionista.TabIndex = 22;
             // 
             // label47
             // 
@@ -1459,13 +1439,13 @@ namespace PccFit
             this.label47.TabIndex = 21;
             this.label47.Text = "Nome Nutricionista:";
             // 
-            // textBox5
+            // txt_AG_Id
             // 
-            this.textBox5.Location = new System.Drawing.Point(152, 55);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(143, 22);
-            this.textBox5.TabIndex = 20;
+            this.txt_AG_Id.Location = new System.Drawing.Point(152, 55);
+            this.txt_AG_Id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_AG_Id.Name = "txt_AG_Id";
+            this.txt_AG_Id.Size = new System.Drawing.Size(143, 22);
+            this.txt_AG_Id.TabIndex = 20;
             // 
             // label46
             // 
@@ -1477,35 +1457,35 @@ namespace PccFit
             this.label46.TabIndex = 19;
             this.label46.Text = "ID Doutor:";
             // 
-            // listBox9
+            // lst_AG_Ano
             // 
-            this.listBox9.FormattingEnabled = true;
-            this.listBox9.ItemHeight = 16;
-            this.listBox9.Location = new System.Drawing.Point(1143, 50);
-            this.listBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox9.Name = "listBox9";
-            this.listBox9.Size = new System.Drawing.Size(81, 20);
-            this.listBox9.TabIndex = 18;
+            this.lst_AG_Ano.FormattingEnabled = true;
+            this.lst_AG_Ano.ItemHeight = 16;
+            this.lst_AG_Ano.Location = new System.Drawing.Point(1143, 50);
+            this.lst_AG_Ano.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lst_AG_Ano.Name = "lst_AG_Ano";
+            this.lst_AG_Ano.Size = new System.Drawing.Size(81, 20);
+            this.lst_AG_Ano.TabIndex = 18;
             // 
-            // listBox8
+            // lst_AG_Mes
             // 
-            this.listBox8.FormattingEnabled = true;
-            this.listBox8.ItemHeight = 16;
-            this.listBox8.Location = new System.Drawing.Point(924, 50);
-            this.listBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(81, 20);
-            this.listBox8.TabIndex = 17;
+            this.lst_AG_Mes.FormattingEnabled = true;
+            this.lst_AG_Mes.ItemHeight = 16;
+            this.lst_AG_Mes.Location = new System.Drawing.Point(924, 50);
+            this.lst_AG_Mes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lst_AG_Mes.Name = "lst_AG_Mes";
+            this.lst_AG_Mes.Size = new System.Drawing.Size(81, 20);
+            this.lst_AG_Mes.TabIndex = 17;
             // 
-            // listBox7
+            // lst_AG_Dia
             // 
-            this.listBox7.FormattingEnabled = true;
-            this.listBox7.ItemHeight = 16;
-            this.listBox7.Location = new System.Drawing.Point(669, 54);
-            this.listBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.listBox7.Name = "listBox7";
-            this.listBox7.Size = new System.Drawing.Size(81, 20);
-            this.listBox7.TabIndex = 16;
+            this.lst_AG_Dia.FormattingEnabled = true;
+            this.lst_AG_Dia.ItemHeight = 16;
+            this.lst_AG_Dia.Location = new System.Drawing.Point(669, 54);
+            this.lst_AG_Dia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lst_AG_Dia.Name = "lst_AG_Dia";
+            this.lst_AG_Dia.Size = new System.Drawing.Size(81, 20);
+            this.lst_AG_Dia.TabIndex = 16;
             // 
             // label45
             // 
@@ -1517,13 +1497,13 @@ namespace PccFit
             this.label45.TabIndex = 15;
             this.label45.Text = "Minuto:";
             // 
-            // textBox4
+            // txt_AG_Minuto
             // 
-            this.textBox4.Location = new System.Drawing.Point(1083, 114);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(143, 22);
-            this.textBox4.TabIndex = 14;
+            this.txt_AG_Minuto.Location = new System.Drawing.Point(1083, 114);
+            this.txt_AG_Minuto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_AG_Minuto.Name = "txt_AG_Minuto";
+            this.txt_AG_Minuto.Size = new System.Drawing.Size(143, 22);
+            this.txt_AG_Minuto.TabIndex = 14;
             // 
             // label44
             // 
@@ -1535,29 +1515,29 @@ namespace PccFit
             this.label44.TabIndex = 13;
             this.label44.Text = "Hora:";
             // 
-            // textBox3
+            // txt_AG_Hora
             // 
-            this.textBox3.Location = new System.Drawing.Point(825, 114);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(143, 22);
-            this.textBox3.TabIndex = 12;
+            this.txt_AG_Hora.Location = new System.Drawing.Point(825, 114);
+            this.txt_AG_Hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_AG_Hora.Name = "txt_AG_Hora";
+            this.txt_AG_Hora.Size = new System.Drawing.Size(143, 22);
+            this.txt_AG_Hora.TabIndex = 12;
             // 
-            // textBox2
+            // txt_AG_Descrição
             // 
-            this.textBox2.Location = new System.Drawing.Point(472, 172);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(415, 22);
-            this.textBox2.TabIndex = 11;
+            this.txt_AG_Descrição.Location = new System.Drawing.Point(472, 172);
+            this.txt_AG_Descrição.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_AG_Descrição.Name = "txt_AG_Descrição";
+            this.txt_AG_Descrição.Size = new System.Drawing.Size(415, 22);
+            this.txt_AG_Descrição.TabIndex = 11;
             // 
-            // textBox1
+            // txt_AG_Paciente
             // 
-            this.textBox1.Location = new System.Drawing.Point(432, 55);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(143, 22);
-            this.textBox1.TabIndex = 10;
+            this.txt_AG_Paciente.Location = new System.Drawing.Point(432, 55);
+            this.txt_AG_Paciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_AG_Paciente.Name = "txt_AG_Paciente";
+            this.txt_AG_Paciente.Size = new System.Drawing.Size(143, 22);
+            this.txt_AG_Paciente.TabIndex = 10;
             // 
             // label43
             // 
@@ -1609,35 +1589,35 @@ namespace PccFit
             this.label39.TabIndex = 4;
             this.label39.Text = "Descrição:";
             // 
-            // button15
+            // btn_AG_Excluir
             // 
-            this.button15.Location = new System.Drawing.Point(813, 242);
-            this.button15.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(237, 47);
-            this.button15.TabIndex = 3;
-            this.button15.Text = "Excluir";
-            this.button15.UseVisualStyleBackColor = true;
+            this.btn_AG_Excluir.Location = new System.Drawing.Point(813, 242);
+            this.btn_AG_Excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_AG_Excluir.Name = "btn_AG_Excluir";
+            this.btn_AG_Excluir.Size = new System.Drawing.Size(237, 47);
+            this.btn_AG_Excluir.TabIndex = 3;
+            this.btn_AG_Excluir.Text = "Excluir";
+            this.btn_AG_Excluir.UseVisualStyleBackColor = true;
             // 
-            // button14
+            // btn_AG_Atualizar
             // 
-            this.button14.Location = new System.Drawing.Point(537, 242);
-            this.button14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(237, 47);
-            this.button14.TabIndex = 2;
-            this.button14.Text = "Atualizar";
-            this.button14.UseVisualStyleBackColor = true;
+            this.btn_AG_Atualizar.Location = new System.Drawing.Point(537, 242);
+            this.btn_AG_Atualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_AG_Atualizar.Name = "btn_AG_Atualizar";
+            this.btn_AG_Atualizar.Size = new System.Drawing.Size(237, 47);
+            this.btn_AG_Atualizar.TabIndex = 2;
+            this.btn_AG_Atualizar.Text = "Atualizar";
+            this.btn_AG_Atualizar.UseVisualStyleBackColor = true;
             // 
-            // button13
+            // btn_AG_Visualizar
             // 
-            this.button13.Location = new System.Drawing.Point(244, 242);
-            this.button13.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(237, 47);
-            this.button13.TabIndex = 1;
-            this.button13.Text = "Visualizar";
-            this.button13.UseVisualStyleBackColor = true;
+            this.btn_AG_Visualizar.Location = new System.Drawing.Point(244, 242);
+            this.btn_AG_Visualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_AG_Visualizar.Name = "btn_AG_Visualizar";
+            this.btn_AG_Visualizar.Size = new System.Drawing.Size(237, 47);
+            this.btn_AG_Visualizar.TabIndex = 1;
+            this.btn_AG_Visualizar.Text = "Visualizar";
+            this.btn_AG_Visualizar.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -1660,55 +1640,74 @@ namespace PccFit
             this.tabPage5.Text = "Fluxo de Caixa";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // txt_A_Nome
+            // txt_N_Email
             // 
-            this.txt_A_Nome.Location = new System.Drawing.Point(170, 96);
-            this.txt_A_Nome.Name = "txt_A_Nome";
-            this.txt_A_Nome.Size = new System.Drawing.Size(561, 27);
-            this.txt_A_Nome.TabIndex = 1;
+            this.txt_N_Email.Location = new System.Drawing.Point(141, 164);
+            this.txt_N_Email.Name = "txt_N_Email";
+            this.txt_N_Email.Size = new System.Drawing.Size(563, 27);
+            this.txt_N_Email.TabIndex = 38;
             // 
-            // txt_A_Email
+            // txt_N_Logradouro
             // 
-            this.txt_A_Email.Location = new System.Drawing.Point(169, 167);
-            this.txt_A_Email.Name = "txt_A_Email";
-            this.txt_A_Email.Size = new System.Drawing.Size(561, 27);
-            this.txt_A_Email.TabIndex = 4;
+            this.txt_N_Logradouro.Location = new System.Drawing.Point(141, 239);
+            this.txt_N_Logradouro.Name = "txt_N_Logradouro";
+            this.txt_N_Logradouro.Size = new System.Drawing.Size(563, 27);
+            this.txt_N_Logradouro.TabIndex = 39;
             // 
-            // txt_A_Logradouro
+            // txt_N_Numero
             // 
-            this.txt_A_Logradouro.Location = new System.Drawing.Point(171, 240);
-            this.txt_A_Logradouro.Name = "txt_A_Logradouro";
-            this.txt_A_Logradouro.Size = new System.Drawing.Size(561, 27);
-            this.txt_A_Logradouro.TabIndex = 6;
+            txt_N_Numero.Location = new System.Drawing.Point(913, 239);
+            txt_N_Numero.Name = "txt_N_Numero";
+            txt_N_Numero.Size = new System.Drawing.Size(148, 27);
+            txt_N_Numero.TabIndex = 40;
             // 
-            // txt_A_Numero
+            // txt_N_Bairro
             // 
-            this.txt_A_Numero.Location = new System.Drawing.Point(939, 242);
-            this.txt_A_Numero.Name = "txt_A_Numero";
-            this.txt_A_Numero.Size = new System.Drawing.Size(141, 27);
-            this.txt_A_Numero.TabIndex = 7;
+            txt_N_Bairro.Location = new System.Drawing.Point(654, 320);
+            txt_N_Bairro.Name = "txt_N_Bairro";
+            txt_N_Bairro.Size = new System.Drawing.Size(148, 27);
+            txt_N_Bairro.TabIndex = 41;
+            txt_N_Bairro.TextChanged += new System.EventHandler(this.textBox9_TextChanged);
             // 
-            // txt_A_Bairro
+            // txt_C_Bairro
             // 
-            this.txt_A_Bairro.Location = new System.Drawing.Point(679, 335);
-            this.txt_A_Bairro.Name = "txt_A_Bairro";
-            this.txt_A_Bairro.Size = new System.Drawing.Size(183, 27);
-            this.txt_A_Bairro.TabIndex = 10;
+            this.txt_C_Bairro.Location = new System.Drawing.Point(661, 214);
+            this.txt_C_Bairro.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_C_Bairro.Name = "txt_C_Bairro";
+            this.txt_C_Bairro.Size = new System.Drawing.Size(139, 27);
+            this.txt_C_Bairro.TabIndex = 30;
             // 
-            // lb_A_cpf
+            // txt_C_Numero
             // 
-            this.lb_A_cpf.AutoSize = true;
-            this.lb_A_cpf.Location = new System.Drawing.Point(935, 133);
-            this.lb_A_cpf.Name = "lb_A_cpf";
-            this.lb_A_cpf.Size = new System.Drawing.Size(0, 20);
-            this.lb_A_cpf.TabIndex = 35;
+            this.txt_C_Numero.Location = new System.Drawing.Point(927, 207);
+            this.txt_C_Numero.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_C_Numero.Name = "txt_C_Numero";
+            this.txt_C_Numero.Size = new System.Drawing.Size(139, 27);
+            this.txt_C_Numero.TabIndex = 31;
             // 
-            // txt_N_Nome
+            // txt_D_Valor
             // 
-            this.txt_N_Nome.Location = new System.Drawing.Point(141, 92);
-            this.txt_N_Nome.Name = "txt_N_Nome";
-            this.txt_N_Nome.Size = new System.Drawing.Size(563, 27);
-            this.txt_N_Nome.TabIndex = 37;
+            this.txt_D_Valor.Location = new System.Drawing.Point(157, 40);
+            this.txt_D_Valor.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Valor.Name = "txt_D_Valor";
+            this.txt_D_Valor.Size = new System.Drawing.Size(148, 27);
+            this.txt_D_Valor.TabIndex = 31;
+            // 
+            // txt_D_Quantidade
+            // 
+            this.txt_D_Quantidade.Location = new System.Drawing.Point(445, 40);
+            this.txt_D_Quantidade.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Quantidade.Name = "txt_D_Quantidade";
+            this.txt_D_Quantidade.Size = new System.Drawing.Size(148, 27);
+            this.txt_D_Quantidade.TabIndex = 32;
+            // 
+            // txt_D_Objetivo
+            // 
+            this.txt_D_Objetivo.Location = new System.Drawing.Point(732, 40);
+            this.txt_D_Objetivo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_D_Objetivo.Name = "txt_D_Objetivo";
+            this.txt_D_Objetivo.Size = new System.Drawing.Size(148, 27);
+            this.txt_D_Objetivo.TabIndex = 33;
             // 
             // PgAtendente
             // 
@@ -1743,66 +1742,60 @@ namespace PccFit
         #endregion
 
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btn_N_Atualizar;
+        private System.Windows.Forms.Button btn_N_Excluir;
+        private System.Windows.Forms.Button btn_N_Salvar;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox11;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox12;
+        private System.Windows.Forms.MaskedTextBox msk_N_DataInicio;
+        private System.Windows.Forms.MaskedTextBox msk_N_DataFinal;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox16;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox17;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox18;
+        private System.Windows.Forms.MaskedTextBox msk_N_Cep;
+        private System.Windows.Forms.ListBox lst_N_Cidade;
+        private System.Windows.Forms.ListBox lst_N_Estado;
+        private System.Windows.Forms.MaskedTextBox msk_N_Telefone;
+        private System.Windows.Forms.MaskedTextBox msk_n_Cpf;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox19;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox20;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox21;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox22;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btn_C_Atualizar;
+        private System.Windows.Forms.Button btn_C_Excluir;
+        private System.Windows.Forms.Button btn_C_Cadastrar;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox10;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox13;
+        private System.Windows.Forms.MaskedTextBox msk_D_DataInicio;
+        private System.Windows.Forms.MaskedTextBox msk_D_DataFinal;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
-        private System.Windows.Forms.MaskedTextBox mskCPF;
+        private System.Windows.Forms.MaskedTextBox msk_C_Cep;
+        private System.Windows.Forms.ListBox lst_C_Cidade;
+        private System.Windows.Forms.ListBox lst_C_Estado;
+        private System.Windows.Forms.MaskedTextBox msk_C_Telefone;
+        private System.Windows.Forms.MaskedTextBox msk_C_CPF;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox8;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btn_N_Pesquisar;
+        private System.Windows.Forms.Button btn_C_Pesquisar;
         private System.Windows.Forms.Button btn_A_Atualizar;
         private System.Windows.Forms.Button btn_A_Excluir;
         private System.Windows.Forms.Button btn_A_Salvar;
@@ -1828,41 +1821,37 @@ namespace PccFit
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_AG_Hora;
+        private System.Windows.Forms.TextBox txt_AG_Descrição;
+        private System.Windows.Forms.TextBox txt_AG_Paciente;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btn_AG_Excluir;
+        private System.Windows.Forms.Button btn_AG_Atualizar;
+        private System.Windows.Forms.Button btn_AG_Visualizar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.ListBox listBox9;
-        private System.Windows.Forms.ListBox listBox8;
-        private System.Windows.Forms.ListBox listBox7;
+        private System.Windows.Forms.ListBox lst_AG_Ano;
+        private System.Windows.Forms.ListBox lst_AG_Dia;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txt_AG_Minuto;
+        private System.Windows.Forms.TextBox txt_AG_NomeNutricionista;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txt_AG_Id;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox34;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox33;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox32;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox txtLogradouro;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txt_D_Id;
+        private System.Windows.Forms.TextBox txt_D_Nome;
+        private System.Windows.Forms.TextBox txt_C_Logradouro;
+        private System.Windows.Forms.TextBox txt_C_Email;
+        private System.Windows.Forms.TextBox txt_C_Nome;
         private System.Windows.Forms.TextBox txt_A_Bairro;
         private System.Windows.Forms.TextBox txt_A_Numero;
         private System.Windows.Forms.TextBox txt_A_Logradouro;
@@ -1870,5 +1859,13 @@ namespace PccFit
         private System.Windows.Forms.TextBox txt_A_Nome;
         private System.Windows.Forms.Label lb_A_cpf;
         private System.Windows.Forms.TextBox txt_N_Nome;
+        private System.Windows.Forms.TextBox txt_N_Logradouro;
+        private System.Windows.Forms.TextBox txt_N_Email;
+        private System.Windows.Forms.TextBox txt_C_Numero;
+        private System.Windows.Forms.TextBox txt_C_Bairro;
+        private System.Windows.Forms.TextBox txt_D_Objetivo;
+        private System.Windows.Forms.TextBox txt_D_Quantidade;
+        private System.Windows.Forms.TextBox txt_D_Valor;
+        private System.Windows.Forms.ListBox lst_AG_Mes;
     }
 }
