@@ -20,10 +20,13 @@ namespace PccFit
             InitializeComponent();
         }
 
-
+        //Login lg = new Login();
+        //lg.Show();
+        //    this.Hide();
         string myconn = ConfigurationManager.AppSettings["msconn"];
 
         MySqlDataReader reader;
+        MySqlDataReader reader2;
 
         // Aba Atendentes =========================================================================================================================
 
@@ -356,7 +359,7 @@ namespace PccFit
                 string cpf = msk_C_Cpf.Text;
 
                 string sqlquery = "SELECT * FROM tb_paciente WHERE cpf = '" + cpf + "';";
-
+                string sqlquery2 = "";
 
                 MySqlConnection conexao = new MySqlConnection(myconn);
 
@@ -372,28 +375,32 @@ namespace PccFit
                     msk_C_Tel.Text = Convert.ToString(reader["telefone"]);
                     txt_C_Logradouro.Text = Convert.ToString(reader["logradouro"]);
                     txt_C_Numero.Text = Convert.ToString(reader["numero"]);
-                    cb_C_Estado.Text = Convert.ToString(reader["estado"]);
+                    cbc_C_Estado.Text = Convert.ToString(reader["estado"]);
                     txt_C_Cidade.Text = Convert.ToString(reader["cidade"]);
                     txt_C_Bairro.Text = Convert.ToString(reader["bairro"]);
                     msk_C_Cep.Text = Convert.ToString(reader["cep"]);
                     msk_C_DtInicio.Text = Convert.ToString(reader["dt_inicio"]);
                     msk_C_DtFinal.Text = Convert.ToString(reader["dt_final"]);
-                    txt_D_Nome.Text = Convert.ToString(reader["nome"]);
+                    msk_C_DtNascimento.Text = Convert.ToString(reader["dt_nascimento"]);
+                    txt_C_Altura.Text = Convert.ToString(reader["altura"]);
+                    txt_C_Peso.Text = Convert.ToString(reader["peso"]);
+                    txt_D_Valor.Text = Convert.ToString(reader["valor"]);
+                    txt_D_Quantidade.Text = Convert.ToString(reader["quantidade"]);
+                    txt_D_Objetivo.Text = Convert.ToString(reader["objetivo"]);
 
+                    sqlquery2 = "SELECT id, nome FROM tb_nutricionista WHERE id = " + reader["id_nutricionista"] + ";";
+                    
+                }
 
-                    string id = Convert.ToString(reader["id"]);
+                reader.Close();
+                
+                command = new MySqlCommand(sqlquery2, conexao);
+                reader2 = command.ExecuteReader();
 
-                    sqlquery = "SELECT id, nome FROM tb_nutricionista WHERE id = " + id + ";";
-                    command = new MySqlCommand(sqlquery, conexao);
-
-                    conexao.Open();
-                    reader = command.ExecuteReader();
-
-                    while (reader.Read())
-                    {
-                        txt_D_Id.Text = Convert.ToString(reader["id"]);
-                        txt_D_Nome.Text = Convert.ToString(reader["nome"]);
-                    }
+                while (reader2.Read())
+                {
+                    txt_D_Id.Text = Convert.ToString(reader2["id"]);
+                    txt_D_Nome.Text = Convert.ToString(reader2["nome"]);
                 }
 
                 conexao.Close();
@@ -487,25 +494,19 @@ namespace PccFit
                 if (msk_C_DtInicio.Text != "  /  /")
                 {
                     sqlcampos += ", dt_inicio";
-                    sqlvalues += ", " + Convert.ToDateTime(msk_C_DtInicio.Text);
+                    sqlvalues += ", @dt_inicio";
                 }
 
                 if (msk_C_DtFinal.Text != "  /  /")
                 {
                     sqlcampos += ", dt_final";
-                    sqlvalues += ", " + Convert.ToDateTime(msk_C_DtFinal.Text);
+                    sqlvalues += ", dt_final";
                 }
 
                 if (txt_D_Id.Text != "")
                 {
-                    sqlcampos += ", id";
+                    sqlcampos += ", id_nutricionista";
                     sqlvalues += ", " + Convert.ToInt32(txt_D_Id.Text);
-                }
-
-                if (txt_D_Nome.Text != "")
-                {
-                    sqlcampos += ", nome";
-                    sqlvalues += ", " + txt_D_Nome.Text;
                 }
 
                 if (txt_D_Valor.Text != "")
@@ -523,7 +524,7 @@ namespace PccFit
                 if (txt_D_Objetivo.Text != "")
                 {
                     sqlcampos += ", objetivo";
-                    sqlvalues += ", " + txt_D_Objetivo.Text;
+                    sqlvalues += ", '" + txt_D_Objetivo.Text + "'";
                 }
 
                 sqlcampos = sqlcampos + ") ";
@@ -532,23 +533,269 @@ namespace PccFit
 
                 if (camposvazio == "")
                 {
-                    //try
-                    //{
-                    MySqlCommand command = new MySqlCommand(sqlquery, conexao);
-                    command.Parameters.AddWithValue("@Cpf", msk_C_Cpf.Text);
-                    command.Parameters.AddWithValue("@Nome", txt_C_Nome.Text);
-                    command.Parameters.AddWithValue("@Email", txt_C_Email.Text);
-                    command.Parameters.AddWithValue("@Cep", msk_C_Cep.Text);
-                    command.Parameters.AddWithValue("@Logradouro", txt_C_Logradouro.Text);
-                    command.Parameters.AddWithValue("@Bairro", txt_C_Bairro.Text);
-                    command.Parameters.AddWithValue("@Cidade", txt_C_Cidade.Text);
-                    command.Parameters.AddWithValue("@Estado", cb_C_Estado.Text);
-                    command.Parameters.AddWithValue("@Telefone", msk_C_Tel.Text);
-                    command.Parameters.AddWithValue("@Altura", txt_C_Altura.Text);
-                    command.Parameters.AddWithValue("@Peso", txt_C_Peso.Text);
-                    command.Parameters.AddWithValue("@DtNascimento", Convert.ToDateTime(msk_C_DtNascimento.Text));
+                    try
+                    {
+                        MySqlCommand command = new MySqlCommand(sqlquery, conexao);
+                        command.Parameters.AddWithValue("@Cpf", msk_C_Cpf.Text);
+                        command.Parameters.AddWithValue("@Nome", txt_C_Nome.Text);
+                        command.Parameters.AddWithValue("@Email", txt_C_Email.Text);
+                        command.Parameters.AddWithValue("@Cep", msk_C_Cep.Text);
+                        command.Parameters.AddWithValue("@Logradouro", txt_C_Logradouro.Text);
+                        command.Parameters.AddWithValue("@Bairro", txt_C_Bairro.Text);
+                        command.Parameters.AddWithValue("@Cidade", txt_C_Cidade.Text);
+                        command.Parameters.AddWithValue("@Estado", cbc_C_Estado.Text);
+                        command.Parameters.AddWithValue("@Telefone", msk_C_Tel.Text);
+                        command.Parameters.AddWithValue("@Altura", txt_C_Altura.Text);
+                        command.Parameters.AddWithValue("@Peso", txt_C_Peso.Text);
+                        command.Parameters.AddWithValue("@DtNascimento", Convert.ToDateTime(msk_C_DtNascimento.Text));
 
-                    MessageBox.Show(command.CommandText);
+                        if (msk_C_DtInicio.Text != "  /  /")
+                        {
+                            command.Parameters.AddWithValue("@dt_inicio", Convert.ToDateTime(msk_C_DtInicio.Text));
+                        }
+
+                        if (msk_C_DtFinal.Text != "  /  /")
+                        {
+                            command.Parameters.AddWithValue("@dt_final", Convert.ToDateTime(msk_C_DtFinal.Text));
+                        }
+
+                        MessageBox.Show(command.CommandText);
+                        conexao.Open();
+                        command.ExecuteNonQuery();
+                        conexao.Close();
+                    
+
+                        msk_C_Cpf.Text = null;
+                        txt_C_Nome.Text = null;
+                        txt_C_Email.Text = null;
+                        msk_C_Cep.Text = null;
+                        txt_C_Logradouro.Text = null;
+                        txt_C_Numero.Text = null;
+                        txt_C_Bairro.Text = null;
+                        txt_C_Cidade.Text = null;
+                        cbc_C_Estado.Text = null;
+                        msk_C_Tel.Text = null;
+                        msk_C_DtInicio.Text = null;
+                        msk_C_DtFinal.Text = null;
+                        txt_D_Id.Text = null;
+                        txt_D_Nome.Text = null;
+                        txt_D_Valor.Text = null;
+                        txt_D_Quantidade.Text = null;
+                        txt_D_Objetivo.Text = null;
+                        txt_C_Altura.Text = null;
+                        txt_C_Peso.Text = null;
+                        msk_C_DtNascimento = null;
+
+                        MessageBox.Show("O PACIENTE FOI CADASTRADO");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("ERRO NO CADASTRO");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(camposvazio);
+                }
+            }
+        }
+
+        private void btn_C_Excluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (msk_C_Cpf.Text == "   .   .   -")
+                {
+                    MessageBox.Show("Digite o CPF do Paciente");
+                }
+                else
+                {
+                    string sqlquery = "DELETE FROM tb_paciente WHERE cpf = @Cpf;";
+
+                    using (MySqlConnection conexao = new MySqlConnection(myconn))
+                    {
+                        MySqlCommand command = new MySqlCommand(sqlquery, conexao);
+                        command.Parameters.AddWithValue("@Cpf", msk_C_Cpf.Text);
+
+                        conexao.Open();
+                        command.ExecuteNonQuery();
+
+                        conexao.Close();
+
+                        msk_C_Cpf.Text = null;
+                        txt_C_Nome.Text = null;
+                        txt_C_Email.Text = null;
+                        msk_C_Cep.Text = null;
+                        txt_C_Logradouro.Text = null;
+                        txt_C_Numero.Text = null;
+                        txt_C_Bairro.Text = null;
+                        txt_C_Cidade.Text = null;
+                        cbc_C_Estado.Text = null;
+                        msk_C_Tel.Text = null;
+                        msk_C_DtInicio.Text = null;
+                        msk_C_DtFinal.Text = null;
+                        txt_D_Id.Text = null;
+                        txt_D_Nome.Text = null;
+                        txt_D_Valor.Text = null;
+                        txt_D_Quantidade.Text = null;
+                        txt_D_Objetivo.Text = null;
+                        txt_C_Altura.Text = null;
+                        txt_C_Peso.Text = null;
+                        msk_C_DtNascimento = null;
+                        MessageBox.Show("PACIENTE EXCLUIDO");
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERRO AO EXCLUIR PACIENTE");
+            }
+        }
+
+        private void btn_C_Atualizar_Click(object sender, EventArgs e)
+        {
+            string concat = "";
+            string sqlquery = "UPDATE tb_paciente SET ";
+
+            using (MySqlConnection conexao = new MySqlConnection(myconn))
+            {
+                //try
+                //{
+
+                if (msk_C_Cpf.Text == "   .   .   -")
+                {
+                    MessageBox.Show("Campo CPF é obrigatorio");
+                }
+                else
+                {
+                    if (txt_C_Nome.Text != "")
+                    {
+                        sqlquery += "nome = '" + txt_C_Nome.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (txt_C_Email.Text != "")
+                    {
+                        sqlquery += concat + " email = '" + txt_C_Email.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (msk_C_Tel.Text != "(  )     -")
+                    {
+                        sqlquery += concat + " telefone = '" + msk_C_Tel.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (txt_C_Logradouro.Text != "")
+                    {
+                        sqlquery += concat + " logradouro = '" + txt_C_Logradouro.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (cbc_C_Estado.Text != "")
+                    {
+                        sqlquery += concat + " estado = '" + cbc_C_Estado.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (txt_C_Cidade.Text != "")
+                    {
+                        sqlquery += concat + " cidade = '" + txt_C_Cidade.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (txt_C_Bairro.Text != "")
+                    {
+                        sqlquery += concat + " bairro = '" + txt_C_Bairro.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (msk_C_Cep.Text != "     -")
+                    {
+                        sqlquery += concat + " cep = '" + msk_C_Cep.Text + "'";
+                        concat = ", ";
+                    }
+
+
+                    if (txt_C_Numero.Text != "")
+                    {
+                        sqlquery += concat + " numero = '" + txt_C_Numero.Text + "'";
+                        concat = ", ";
+                    }
+
+
+                    if (txt_D_Id.Text != "")
+                    {
+                        sqlquery += concat + " id_nutricionista = " + Convert.ToInt32(txt_D_Id.Text);
+                        concat = ", ";
+                    }
+
+                    if (txt_D_Valor.Text != "")
+                    {
+                        sqlquery += concat + " valor = " + Convert.ToDouble(txt_D_Valor.Text);
+                        concat = ", ";
+                    }
+
+                    if (txt_D_Quantidade.Text != "")
+                    {
+                        sqlquery += concat + " quantidade = " + Convert.ToInt32(txt_D_Quantidade.Text);
+                        concat = ", ";
+                    }
+
+                    if (txt_D_Objetivo.Text != "")
+                    {
+                        sqlquery += concat + " objetivo = '" + txt_D_Objetivo.Text + "'";
+                        concat = ", ";
+                    }
+
+                    if (txt_C_Altura.Text != "")
+                    {
+                        sqlquery += concat + " altura = " + txt_C_Altura.Text;
+                        concat = ", ";
+                    }
+
+                    if (txt_C_Peso.Text != "")
+                    {
+                        sqlquery += concat + " peso = " + txt_C_Peso.Text;
+                        concat = ", ";
+                    }
+
+                    if (msk_C_DtNascimento.Text != "  /  /")
+                    {
+                        sqlquery += concat + " dt_nascimento = @Dt_nascimento";
+                        concat = ", ";
+                    }
+
+                    if (msk_C_DtInicio.Text != "  /  /")
+                    {
+                        sqlquery += concat + " dt_inicio = @Dt_inicio";
+                        concat = ", ";
+                    }
+
+                    if (msk_C_DtFinal.Text != "  /  /")
+                    {
+                        sqlquery += concat + " dt_final = @Dt_final";
+                    }
+
+                    sqlquery += " WHERE cpf = '" + msk_C_Cpf.Text + "';";
+
+
+                    MySqlCommand command = new MySqlCommand(sqlquery, conexao);
+
+                    if (msk_C_DtInicio.Text != "  /  /")
+                    {
+                        command.Parameters.AddWithValue("@Dt_inicio", Convert.ToDateTime(msk_C_DtInicio.Text));
+                    }
+
+                    if (msk_C_DtFinal.Text != "  /  /")
+                    {
+                        command.Parameters.AddWithValue("@Dt_final", Convert.ToDateTime(msk_C_DtFinal.Text));
+                    }
+
+                    if (msk_C_DtNascimento.Text != "  /  /")
+                    {
+                        command.Parameters.AddWithValue("@Dt_nascimento", Convert.ToDateTime(msk_C_DtNascimento.Text));
+                    }
                     conexao.Open();
                     command.ExecuteNonQuery();
 
@@ -562,7 +809,7 @@ namespace PccFit
                     txt_C_Numero.Text = null;
                     txt_C_Bairro.Text = null;
                     txt_C_Cidade.Text = null;
-                    cb_C_Estado.Text = null;
+                    cbc_C_Estado.Text = null;
                     msk_C_Tel.Text = null;
                     msk_C_DtInicio.Text = null;
                     msk_C_DtFinal.Text = null;
@@ -575,186 +822,13 @@ namespace PccFit
                     txt_C_Peso.Text = null;
                     msk_C_DtNascimento = null;
 
-                    MessageBox.Show("O PACIENTE FOI CADASTRADO");
-                    //}
-                    //catch
-                    //{
-                    //    MessageBox.Show("ERRO NO CADASTRO");
-                    //}
+                    MessageBox.Show("O PACIENTE FOI ATUALIZADO");
                 }
-                else
-                {
-                    MessageBox.Show(camposvazio);
-                }
-            }
-        }
-
-        private void btn_C_Excluir_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (msk_A_Cpf.Text == "   .   .   -")
-                {
-                    MessageBox.Show("Digite o CPF do Atendente");
-                }
-                else
-                {
-                    string sqlquery = "DELETE FROM tb_atendente WHERE cpf = @Cpf;";
-
-                    using (MySqlConnection conexao = new MySqlConnection(myconn))
-                    {
-                        MySqlCommand command = new MySqlCommand(sqlquery, conexao);
-                        command.Parameters.AddWithValue("@Cpf", msk_A_Cpf.Text);
-
-                        conexao.Open();
-                        command.ExecuteNonQuery();
-
-                        conexao.Close();
-
-                        msk_A_Cpf.Text = null;
-                        txt_A_Nome.Text = null;
-                        txt_A_Email.Text = null;
-                        msk_A_Cep.Text = null;
-                        txt_A_Logradouro.Text = null;
-                        txt_A_Numero.Text = null;
-                        txt_A_Bairro.Text = null;
-                        txt_A_Cidade.Text = null;
-                        cb_A_Estado.Text = null;
-                        msk_A_Tel.Text = null;
-                        msk_A_DtInicio.Text = null;
-                        msk_A_DtFinal.Text = null;
-                        MessageBox.Show("ATENDENTE EXCLUIDO");
-                    }
-                }
-            }
-            catch
-            {
-                MessageBox.Show("ERRO AO EXCLUIR ATENDENTE");
-            }
-        }
-
-        private void btn_C_Atualizar_Click(object sender, EventArgs e)
-        {
-            string concat = "";
-            string sqlquery = "UPDATE tb_atendente SET ";
-
-            using (MySqlConnection conexao = new MySqlConnection(myconn))
-            {
-                try
-                {
-
-                    if (msk_A_Cpf.Text == "   .   .   -")
-                    {
-                        MessageBox.Show("Campo CPF é obrigatorio");
-                    }
-                    else
-                    {
-                        if (txt_A_Nome.Text != "")
-                        {
-                            sqlquery += "nome = '" + txt_A_Nome.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (txt_A_Email.Text != "")
-                        {
-                            sqlquery += concat + " email = '" + txt_A_Email.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (msk_A_Tel.Text != "(  )     -")
-                        {
-                            sqlquery += concat + " telefone = '" + msk_A_Tel.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (txt_A_Logradouro.Text != "")
-                        {
-                            sqlquery += concat + " logradouro = '" + txt_A_Logradouro.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (cb_A_Estado.Text != "")
-                        {
-                            sqlquery += concat + " estado = '" + cb_A_Estado.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (txt_A_Cidade.Text != "")
-                        {
-                            sqlquery += concat + " cidade = '" + txt_A_Cidade.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (txt_A_Bairro.Text != "")
-                        {
-                            sqlquery += concat + " bairro = '" + txt_A_Bairro.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (msk_A_Cep.Text != "     -")
-                        {
-                            sqlquery += concat + " cep = '" + msk_A_Cep.Text + "'";
-                            concat = ", ";
-                        }
-
-
-                        if (txt_A_Numero.Text != "")
-                        {
-                            sqlquery += concat + " numero = '" + txt_A_Numero.Text + "'";
-                            concat = ", ";
-                        }
-
-                        if (msk_A_DtInicio.Text != "  /  /")
-                        {
-                            sqlquery += concat + " dt_inicio = @Dt_inicio";
-                            concat = ", ";
-                        }
-
-                        if (msk_A_DtFinal.Text != "  /  /")
-                        {
-                            sqlquery += concat + " dt_final = @Dt_final";
-                        }
-
-                        sqlquery += " WHERE cpf = '" + msk_A_Cpf.Text + "';";
-
-
-                        MySqlCommand command = new MySqlCommand(sqlquery, conexao);
-
-                        if (msk_A_DtInicio.Text != "  /  /")
-                        {
-                            command.Parameters.AddWithValue("@Dt_inicio", Convert.ToDateTime(msk_A_DtInicio.Text));
-                        }
-
-                        if (msk_A_DtFinal.Text != "  /  /")
-                        {
-                            command.Parameters.AddWithValue("@Dt_final", Convert.ToDateTime(msk_A_DtFinal.Text));
-                        }
-
-                        conexao.Open();
-                        command.ExecuteNonQuery();
-
-                        conexao.Close();
-
-                        msk_A_Cpf.Text = null;
-                        txt_A_Nome.Text = null;
-                        txt_A_Email.Text = null;
-                        msk_A_Cep.Text = null;
-                        txt_A_Logradouro.Text = null;
-                        txt_A_Numero.Text = null;
-                        txt_A_Bairro.Text = null;
-                        txt_A_Cidade.Text = null;
-                        cb_A_Estado.Text = null;
-                        msk_A_Tel.Text = null;
-                        msk_A_DtInicio.Text = null;
-                        msk_A_DtFinal.Text = null;
-
-                        MessageBox.Show("O ATENDENTE FOI ATUALIZADO");
-                    }
-                }
-                catch
-                {
-                    MessageBox.Show("ERRO AO ATUALIZAR INFORMAÇÕES");
-                }
+                //}
+                //catch
+                //{
+                //    MessageBox.Show("ERRO AO ATUALIZAR INFORMAÇÕES");
+                //}
             }
         }
 
