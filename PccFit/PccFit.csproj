@@ -90,6 +90,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Atendente.cs" />
+    <Compile Include="Conexao.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,11 +99,11 @@
     </Compile>
     <Compile Include="LoginProp.cs" />
     <Compile Include="Pessoa.cs" />
-    <Compile Include="PgAtendente.cs">
+    <Compile Include="PgPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PgAtendente.Designer.cs">
-      <DependentUpon>PgAtendente.cs</DependentUpon>
+    <Compile Include="PgPrincipal.Designer.cs">
+      <DependentUpon>PgPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="PgDoutor.cs">
       <SubType>Form</SubType>
@@ -115,8 +116,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PgAtendente.resx">
-      <DependentUpon>PgAtendente.cs</DependentUpon>
+    <EmbeddedResource Include="PgPrincipal.resx">
+      <DependentUpon>PgPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PgDoutor.resx">
       <DependentUpon>PgDoutor.cs</DependentUpon>

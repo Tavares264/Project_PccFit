@@ -1,7 +1,7 @@
 ﻿
 namespace PccFit
 {
-    partial class PgAtendente
+    partial class PgPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -1501,7 +1501,7 @@ namespace PccFit
             // 
             // txt_AG_Id
             // 
-            this.txt_AG_Id.Location = new System.Drawing.Point(152, 55);
+            this.txt_AG_Id.Location = new System.Drawing.Point(183, 54);
             this.txt_AG_Id.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_AG_Id.Name = "txt_AG_Id";
             this.txt_AG_Id.Size = new System.Drawing.Size(143, 22);
@@ -1511,11 +1511,11 @@ namespace PccFit
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(43, 57);
+            this.label46.Location = new System.Drawing.Point(9, 57);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(111, 20);
+            this.label46.Size = new System.Drawing.Size(168, 20);
             this.label46.TabIndex = 19;
-            this.label46.Text = "ID Doutor:";
+            this.label46.Text = "ID Nutricionista:";
             // 
             // lst_AG_Ano
             // 
@@ -1531,6 +1531,19 @@ namespace PccFit
             // 
             this.lst_AG_Mes.FormattingEnabled = true;
             this.lst_AG_Mes.ItemHeight = 16;
+            this.lst_AG_Mes.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
             this.lst_AG_Mes.Location = new System.Drawing.Point(924, 50);
             this.lst_AG_Mes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lst_AG_Mes.Name = "lst_AG_Mes";
@@ -1541,7 +1554,39 @@ namespace PccFit
             // 
             this.lst_AG_Dia.FormattingEnabled = true;
             this.lst_AG_Dia.ItemHeight = 16;
-            this.lst_AG_Dia.Location = new System.Drawing.Point(669, 54);
+            this.lst_AG_Dia.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
+            this.lst_AG_Dia.Location = new System.Drawing.Point(721, 56);
             this.lst_AG_Dia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lst_AG_Dia.Name = "lst_AG_Dia";
             this.lst_AG_Dia.Size = new System.Drawing.Size(81, 20);
@@ -1593,7 +1638,7 @@ namespace PccFit
             // 
             // txt_AG_Paciente
             // 
-            this.txt_AG_Paciente.Location = new System.Drawing.Point(432, 55);
+            this.txt_AG_Paciente.Location = new System.Drawing.Point(483, 54);
             this.txt_AG_Paciente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_AG_Paciente.Name = "txt_AG_Paciente";
             this.txt_AG_Paciente.Size = new System.Drawing.Size(143, 22);
@@ -1613,7 +1658,7 @@ namespace PccFit
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(608, 50);
+            this.label42.Location = new System.Drawing.Point(668, 56);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(47, 20);
             this.label42.TabIndex = 7;
@@ -1623,7 +1668,7 @@ namespace PccFit
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(323, 50);
+            this.label41.Location = new System.Drawing.Point(380, 56);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(97, 20);
             this.label41.TabIndex = 6;
@@ -1690,15 +1735,15 @@ namespace PccFit
             this.dataGridView1.Size = new System.Drawing.Size(1299, 486);
             this.dataGridView1.TabIndex = 0;
             // 
-            // PgAtendente
+            // PgPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1323, 830);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "PgAtendente";
-            this.Text = "PGAtendente";
+            this.Name = "PgPrincipal";
+            this.Text = "Pagina Principal";
             this.tabPage2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

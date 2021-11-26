@@ -13,9 +13,9 @@ using static PccFit.Atendente;
 
 namespace PccFit
 {
-    public partial class PgAtendente : Form
+    public partial class PgPrincipal : Form
     {
-        public PgAtendente()
+        public PgPrincipal()
         {
             InitializeComponent();
         }
@@ -357,6 +357,7 @@ namespace PccFit
             if (msk_C_Cpf.Text != "   .   .   -")
             {
                 string cpf = msk_C_Cpf.Text;
+                string idnutri = "";
 
                 string sqlquery = "SELECT * FROM tb_paciente WHERE cpf = '" + cpf + "';";
                 string sqlquery2 = "";
@@ -367,6 +368,7 @@ namespace PccFit
 
                 conexao.Open();
                 reader = command.ExecuteReader();
+
 
                 while (reader.Read())
                 {
@@ -388,19 +390,25 @@ namespace PccFit
                     txt_D_Quantidade.Text = Convert.ToString(reader["quantidade"]);
                     txt_D_Objetivo.Text = Convert.ToString(reader["objetivo"]);
 
-                    sqlquery2 = "SELECT id, nome FROM tb_nutricionista WHERE id = " + reader["id_nutricionista"] + ";";
-                    
+                    idnutri = Convert.ToString(reader["id_nutricionista"]);
+
                 }
 
-                reader.Close();
                 
-                command = new MySqlCommand(sqlquery2, conexao);
-                reader2 = command.ExecuteReader();
+                reader.Close();
 
-                while (reader2.Read())
+
+                if (idnutri != "")
                 {
-                    txt_D_Id.Text = Convert.ToString(reader2["id"]);
-                    txt_D_Nome.Text = Convert.ToString(reader2["nome"]);
+                    sqlquery2 = "SELECT id, nome FROM tb_nutricionista WHERE id = " + idnutri + ";";
+                    command = new MySqlCommand(sqlquery2, conexao);
+                    reader2 = command.ExecuteReader();
+
+                    while (reader2.Read())
+                    {
+                        txt_D_Id.Text = Convert.ToString(reader2["id"]);
+                        txt_D_Nome.Text = Convert.ToString(reader2["nome"]);
+                    }
                 }
 
                 conexao.Close();
