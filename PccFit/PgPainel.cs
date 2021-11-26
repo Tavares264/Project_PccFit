@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PccFit
 {
-    public partial class PgPrincipal : Form
+    public partial class PgPainel : Form
     {
-        public PgPrincipal()
+        public PgPainel()
         {
             InitializeComponent();
         }
