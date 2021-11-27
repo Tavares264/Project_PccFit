@@ -16,5 +16,30 @@ namespace PccFit
         {
             InitializeComponent();
         }
+
+        private void btn_C_Atualizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_C_Excluir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_C_Cadastrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_NP_Pesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_C_Pesquisar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

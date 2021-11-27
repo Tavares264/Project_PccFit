@@ -99,11 +99,35 @@
     </Compile>
     <Compile Include="LoginProp.cs" />
     <Compile Include="Pessoa.cs" />
-    <Compile Include="PgPrincipal.cs">
+    <Compile Include="PgAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PgPrincipal.Designer.cs">
-      <DependentUpon>PgPrincipal.cs</DependentUpon>
+    <Compile Include="PgAgenda.Designer.cs">
+      <DependentUpon>PgAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PgAtendente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgAtendente.Designer.cs">
+      <DependentUpon>PgAtendente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PgCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgCliente.Designer.cs">
+      <DependentUpon>PgCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PgNutricionista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgNutricionista.Designer.cs">
+      <DependentUpon>PgNutricionista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PgAntigoPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgAntigoPrincipal.Designer.cs">
+      <DependentUpon>PgAntigoPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="PgDoutor.cs">
       <SubType>Form</SubType>
@@ -111,16 +135,46 @@
     <Compile Include="PgDoutor.Designer.cs">
       <DependentUpon>PgDoutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="PgPainel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgPainel.Designer.cs">
+      <DependentUpon>PgPainel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PgPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PgPrincipal.Designer.cs">
+      <DependentUpon>PgPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PgPrincipal.resx">
-      <DependentUpon>PgPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="PgAgenda.resx">
+      <DependentUpon>PgAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgAntigoPrincipal.resx">
+      <DependentUpon>PgAntigoPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgAtendente.resx">
+      <DependentUpon>PgAtendente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgCliente.resx">
+      <DependentUpon>PgCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PgDoutor.resx">
       <DependentUpon>PgDoutor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgNutricionista.resx">
+      <DependentUpon>PgNutricionista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgPainel.resx">
+      <DependentUpon>PgPainel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PgPrincipal.resx">
+      <DependentUpon>PgPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

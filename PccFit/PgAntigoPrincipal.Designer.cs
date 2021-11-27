@@ -1,7 +1,7 @@
 ﻿
 namespace PccFit
 {
-    partial class PgPrincipal
+    partial class PgAntigoPrincipal
     {
         /// <summary>
         /// Required designer variable.

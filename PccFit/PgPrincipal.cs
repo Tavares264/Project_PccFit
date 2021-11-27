@@ -16,5 +16,10 @@ namespace PccFit
         {
             InitializeComponent();
         }
+
+        private void PgPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

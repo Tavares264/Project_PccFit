@@ -13,9 +13,9 @@ using static PccFit.Atendente;
 
 namespace PccFit
 {
-    public partial class PgPrincipal : Form
+    public partial class PgAntigoPrincipal : Form
     {
-        public PgPrincipal()
+        public PgAntigoPrincipal()
         {
             InitializeComponent();
         }
