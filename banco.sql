@@ -88,11 +88,8 @@ primary key(id)
 
 drop table if exists tb_login;
 create table tb_login(
-cpf int not null auto_increment unique,
+cpf varchar(14) not null unique,
 senha varchar(20) not null,
 acesso varchar(20) not null,
 primary key(cpf)
 );
-
-
-
