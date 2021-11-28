@@ -186,6 +186,7 @@ namespace PccFit
             this.btn_N_Pesquisar.TabIndex = 3;
             this.btn_N_Pesquisar.Text = "Pesquisar";
             this.btn_N_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_N_Pesquisar.Click += new System.EventHandler(this.btn_N_Pesquisar_Click);
             // 
             // msk_N_DtInicio
             // 
@@ -369,6 +370,7 @@ namespace PccFit
             this.btn_N_Atualizar.TabIndex = 19;
             this.btn_N_Atualizar.Text = "Atualizar";
             this.btn_N_Atualizar.UseVisualStyleBackColor = true;
+            this.btn_N_Atualizar.Click += new System.EventHandler(this.btn_N_Atualizar_Click);
             // 
             // btn_N_Excluir
             // 
@@ -380,6 +382,7 @@ namespace PccFit
             this.btn_N_Excluir.TabIndex = 18;
             this.btn_N_Excluir.Text = "Excluir";
             this.btn_N_Excluir.UseVisualStyleBackColor = true;
+            this.btn_N_Excluir.Click += new System.EventHandler(this.btn_N_Excluir_Click);
             // 
             // btn_N_Salvar
             // 
@@ -391,6 +394,7 @@ namespace PccFit
             this.btn_N_Salvar.TabIndex = 17;
             this.btn_N_Salvar.Text = "Cadastrar";
             this.btn_N_Salvar.UseVisualStyleBackColor = true;
+            this.btn_N_Salvar.Click += new System.EventHandler(this.btn_N_Salvar_Click);
             // 
             // PgNutricionista
             // 

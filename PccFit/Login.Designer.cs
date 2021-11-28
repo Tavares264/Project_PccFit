@@ -31,8 +31,8 @@ namespace PccFit
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.mskCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.msk_CPF = new System.Windows.Forms.MaskedTextBox();
+            this.txt_Senha = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -56,21 +56,21 @@ namespace PccFit
             this.label2.TabIndex = 1;
             this.label2.Text = "Senha:";
             // 
-            // mskCPF
+            // msk_CPF
             // 
-            this.mskCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mskCPF.Location = new System.Drawing.Point(228, 209);
-            this.mskCPF.Mask = "000.000.000-00";
-            this.mskCPF.Name = "mskCPF";
-            this.mskCPF.Size = new System.Drawing.Size(160, 27);
-            this.mskCPF.TabIndex = 1;
+            this.msk_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msk_CPF.Location = new System.Drawing.Point(228, 209);
+            this.msk_CPF.Mask = "000,000,000-00";
+            this.msk_CPF.Name = "msk_CPF";
+            this.msk_CPF.Size = new System.Drawing.Size(160, 27);
+            this.msk_CPF.TabIndex = 1;
             // 
-            // txtSenha
+            // txt_Senha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(228, 286);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(160, 22);
-            this.txtSenha.TabIndex = 2;
+            this.txt_Senha.Location = new System.Drawing.Point(228, 286);
+            this.txt_Senha.Name = "txt_Senha";
+            this.txt_Senha.Size = new System.Drawing.Size(160, 22);
+            this.txt_Senha.TabIndex = 2;
             // 
             // btnLogin
             // 
@@ -89,8 +89,8 @@ namespace PccFit
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 632);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.mskCPF);
+            this.Controls.Add(this.txt_Senha);
+            this.Controls.Add(this.msk_CPF);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
@@ -104,8 +104,8 @@ namespace PccFit
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox mskCPF;
-        private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.MaskedTextBox msk_CPF;
+        private System.Windows.Forms.TextBox txt_Senha;
         private System.Windows.Forms.Button btnLogin;
     }
 }

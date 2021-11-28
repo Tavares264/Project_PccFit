@@ -196,6 +196,7 @@ namespace PccFit
             this.btn_A_Pesquisar.TabIndex = 3;
             this.btn_A_Pesquisar.Text = "Pesquisar";
             this.btn_A_Pesquisar.UseVisualStyleBackColor = true;
+            this.btn_A_Pesquisar.Click += new System.EventHandler(this.btn_A_Pesquisar_Click);
             // 
             // msk_A_DtInicio
             // 
@@ -379,6 +380,7 @@ namespace PccFit
             this.btn_A_Atualizar.TabIndex = 19;
             this.btn_A_Atualizar.Text = "Atualizar";
             this.btn_A_Atualizar.UseVisualStyleBackColor = true;
+            this.btn_A_Atualizar.Click += new System.EventHandler(this.btn_A_Atualizar_Click);
             // 
             // btn_A_Excluir
             // 
@@ -390,6 +392,7 @@ namespace PccFit
             this.btn_A_Excluir.TabIndex = 18;
             this.btn_A_Excluir.Text = "Excluir";
             this.btn_A_Excluir.UseVisualStyleBackColor = true;
+            this.btn_A_Excluir.Click += new System.EventHandler(this.btn_A_Excluir_Click);
             // 
             // btn_A_Cadastrar
             // 
@@ -401,6 +404,7 @@ namespace PccFit
             this.btn_A_Cadastrar.TabIndex = 17;
             this.btn_A_Cadastrar.Text = "Cadastrar";
             this.btn_A_Cadastrar.UseVisualStyleBackColor = true;
+            this.btn_A_Cadastrar.Click += new System.EventHandler(this.btn_A_Cadastrar_Click);
             // 
             // PgAtendente
             // 

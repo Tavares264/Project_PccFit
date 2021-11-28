@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace PccFit
 {
-    class Pessoa
+    class Pessoa : Conexao
     {
         int id;
         String cpf;
@@ -37,8 +38,11 @@ namespace PccFit
         public string Dt_final { get => dt_final; set => dt_final = value; }
 
 
-        public void Cadastro(string n1, string n2, string n3, string n4, string n5, string n6, string n7, string n8, string n9, string n10, string n11, string n12)
+        public Boolean Cadastrar(string query, string n1, string n2, string n3, string n4, string n5, string n6, string n7, string n8, string n9, string n10, string n11, string n12)
         {
+            Boolean msg;
+            string myconn = conectar();
+
             Cpf = n1;
             Nome = n2;
             Email = n3;
@@ -51,6 +55,29 @@ namespace PccFit
             Telefone = n10;
             Dt_final = n11;
             Dt_inicio = n12;
+
+            string sqlquery = "INSERT INTO tb_atendente (cpf, nome, email, cep, logradouro, numero, bairro, cidade, estado, telefone, dt_inicio) VALUES (@Cpf, @Nome, @Email, @Cep, @Logradouro, @Numero, @Bairro, @Cidade, @Estado, @Telefone, @Dt_inicio);";
+
+            using (MySqlConnection conexao = new MySqlConnection(myconn))
+            {
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(sqlquery, conexao);
+
+                    conexao.Open();
+                    command.ExecuteNonQuery();
+
+                    conexao.Close();
+
+                    msg = true;
+                }
+                catch
+                {
+                    msg = false;
+                }
+                conexao.Close();
+            }
+            return msg;
         }
 
         public void Pesquisar(string n1)

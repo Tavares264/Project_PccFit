@@ -30,68 +30,72 @@ namespace PccFit
         private void InitializeComponent()
         {
             this.PanelPrincipal = new System.Windows.Forms.Panel();
-            this.btnCadastroCliente = new System.Windows.Forms.Button();
-            this.btnDoutor = new System.Windows.Forms.Button();
-            this.btnCadastrarNutricionista = new System.Windows.Forms.Button();
+            this.btnCad_Cliente = new System.Windows.Forms.Button();
+            this.btnCad_Atendente = new System.Windows.Forms.Button();
+            this.btnCad_Nutricionista = new System.Windows.Forms.Button();
             this.btnAgenda = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // PanelPrincipal
             // 
-            this.PanelPrincipal.Location = new System.Drawing.Point(243, 12);
+            this.PanelPrincipal.Location = new System.Drawing.Point(234, -1);
             this.PanelPrincipal.Name = "PanelPrincipal";
-            this.PanelPrincipal.Size = new System.Drawing.Size(1075, 770);
+            this.PanelPrincipal.Size = new System.Drawing.Size(1329, 910);
             this.PanelPrincipal.TabIndex = 0;
             // 
-            // btnCadastroCliente
+            // btnCad_Cliente
             // 
-            this.btnCadastroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastroCliente.Location = new System.Drawing.Point(12, 98);
-            this.btnCadastroCliente.Name = "btnCadastroCliente";
-            this.btnCadastroCliente.Size = new System.Drawing.Size(225, 101);
-            this.btnCadastroCliente.TabIndex = 0;
-            this.btnCadastroCliente.Text = "Cadastrar Cliente";
-            this.btnCadastroCliente.UseVisualStyleBackColor = true;
+            this.btnCad_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCad_Cliente.Location = new System.Drawing.Point(-2, -1);
+            this.btnCad_Cliente.Name = "btnCad_Cliente";
+            this.btnCad_Cliente.Size = new System.Drawing.Size(239, 209);
+            this.btnCad_Cliente.TabIndex = 0;
+            this.btnCad_Cliente.Text = "Cadastrar Cliente";
+            this.btnCad_Cliente.UseVisualStyleBackColor = true;
+            this.btnCad_Cliente.Click += new System.EventHandler(this.btnCad_Cliente_Click);
             // 
-            // btnDoutor
+            // btnCad_Atendente
             // 
-            this.btnDoutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoutor.Location = new System.Drawing.Point(12, 253);
-            this.btnDoutor.Name = "btnDoutor";
-            this.btnDoutor.Size = new System.Drawing.Size(225, 101);
-            this.btnDoutor.TabIndex = 1;
-            this.btnDoutor.Text = "Cadastrar Atendente";
-            this.btnDoutor.UseVisualStyleBackColor = true;
+            this.btnCad_Atendente.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCad_Atendente.Location = new System.Drawing.Point(-2, 230);
+            this.btnCad_Atendente.Name = "btnCad_Atendente";
+            this.btnCad_Atendente.Size = new System.Drawing.Size(239, 222);
+            this.btnCad_Atendente.TabIndex = 1;
+            this.btnCad_Atendente.Text = "Cadastrar Atendente";
+            this.btnCad_Atendente.UseVisualStyleBackColor = true;
+            this.btnCad_Atendente.Click += new System.EventHandler(this.btnCad_Atendente_Click);
             // 
-            // btnCadastrarNutricionista
+            // btnCad_Nutricionista
             // 
-            this.btnCadastrarNutricionista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarNutricionista.Location = new System.Drawing.Point(12, 415);
-            this.btnCadastrarNutricionista.Name = "btnCadastrarNutricionista";
-            this.btnCadastrarNutricionista.Size = new System.Drawing.Size(225, 101);
-            this.btnCadastrarNutricionista.TabIndex = 2;
-            this.btnCadastrarNutricionista.Text = "Cadastrar Nutricionista";
-            this.btnCadastrarNutricionista.UseVisualStyleBackColor = true;
+            this.btnCad_Nutricionista.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCad_Nutricionista.Location = new System.Drawing.Point(-2, 479);
+            this.btnCad_Nutricionista.Name = "btnCad_Nutricionista";
+            this.btnCad_Nutricionista.Size = new System.Drawing.Size(239, 193);
+            this.btnCad_Nutricionista.TabIndex = 2;
+            this.btnCad_Nutricionista.Text = "Cadastrar Nutricionista";
+            this.btnCad_Nutricionista.UseVisualStyleBackColor = true;
+            this.btnCad_Nutricionista.Click += new System.EventHandler(this.btnCad_Nutricionista_Click);
             // 
             // btnAgenda
             // 
             this.btnAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgenda.Location = new System.Drawing.Point(12, 574);
+            this.btnAgenda.Location = new System.Drawing.Point(-2, 702);
             this.btnAgenda.Name = "btnAgenda";
-            this.btnAgenda.Size = new System.Drawing.Size(225, 101);
+            this.btnAgenda.Size = new System.Drawing.Size(239, 181);
             this.btnAgenda.TabIndex = 3;
             this.btnAgenda.Text = "Agenda";
             this.btnAgenda.UseVisualStyleBackColor = true;
+            this.btnAgenda.Click += new System.EventHandler(this.btnAgenda_Click);
             // 
             // PgPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1330, 794);
+            this.ClientSize = new System.Drawing.Size(1562, 910);
             this.Controls.Add(this.btnAgenda);
-            this.Controls.Add(this.btnCadastrarNutricionista);
-            this.Controls.Add(this.btnDoutor);
-            this.Controls.Add(this.btnCadastroCliente);
+            this.Controls.Add(this.btnCad_Nutricionista);
+            this.Controls.Add(this.btnCad_Atendente);
+            this.Controls.Add(this.btnCad_Cliente);
             this.Controls.Add(this.PanelPrincipal);
             this.Name = "PgPrincipal";
             this.Text = "PgPrincipal";
@@ -103,9 +107,9 @@ namespace PccFit
         #endregion
 
         private System.Windows.Forms.Panel PanelPrincipal;
-        private System.Windows.Forms.Button btnCadastroCliente;
-        private System.Windows.Forms.Button btnDoutor;
-        private System.Windows.Forms.Button btnCadastrarNutricionista;
+        private System.Windows.Forms.Button btnCad_Cliente;
+        private System.Windows.Forms.Button btnCad_Atendente;
+        private System.Windows.Forms.Button btnCad_Nutricionista;
         private System.Windows.Forms.Button btnAgenda;
     }
 }
