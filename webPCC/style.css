@@ -154,10 +154,50 @@ font-family: Arial, Helvetica, sans-serif;
 
 .container{
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    padding-bottom: auto;
     position: absolute;
     top: 90px;
     right: 8%;
     left: 8%;
-    bottom: 0%;
+    bottom: 5%;
+}
+
+.indicacao{
+    position: absolute;
+    top: 120px;
+    left: 700px;
+}
+
+.containerpdp{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 2950px;
+    position: absolute;
+    top: 90px;
+    right: 8%;
+    left: 8%;
+    bottom: 5%;
+}
+
+.txtpdp{
+    position: absolute;
+    top: 10px;
+    right: 8%;
+    left: 8%;
+}
+
+.containerQuem{
+    background-color: rgba(255, 255, 255, 0.8);
+    padding-bottom: 1220px;
+    position: absolute;
+    top: 90px;
+    right: 8%;
+    left: 8%;
+    bottom: 5%;
+}
+
+.txtQuem{
+    position: absolute;
+    top: 10px;
+    right: 8%;
+    left: 8%;
 }
