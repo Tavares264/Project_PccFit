@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Web.Http;
 using MySql.Data.MySqlClient;
 using System.Configuration;
+using System.Web.Script.Serialization;
 
 namespace PccAPI.Controllers
 {
@@ -26,7 +27,7 @@ namespace PccAPI.Controllers
             if (!string.IsNullOrEmpty(cpf) && !string.IsNullOrEmpty(senha))
             {
                 string acesso = "";
-                
+
                 string query = "SELECT * FROM tb_login WHERE cpf = " + cpf + " AND senha = " + senha + ";";
                 using (MySqlConnection conexao = new MySqlConnection(myconn))
                 {
@@ -44,24 +45,27 @@ namespace PccAPI.Controllers
                         }
                         if (acesso == "nutricionista")
                         {
-                            return "{'acesso':" + acesso + "}";
+                            return @"{""acesso"":""nutricionista""}";
                         }
                         else if (acesso == "atendente")
                         {
-                            return "{'acesso':" + acesso + "}";
+                            return @"{""acesso"":""atendente""}";
                         }
                         else
                         {
-                            return "{'acesso': 'VAZIO'}";
+                            return @"{""acesso"": ""VAZIO""}";
                         }
                     }
                     else
                     {
-                        return "{'acesso': 'INVALIDO'}";
+                        return @"{""acesso"": ""INVALIDO""}";
                     }
                 }
             }
-            return "{'estatos':'RUIM'}";
+            else
+            {
+                return @"{""estatos"":""RUIM""}";
+            }
         }
     }
 }
