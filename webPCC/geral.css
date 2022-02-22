@@ -15,9 +15,9 @@ body{
     margin-right: 5%;
 }
 
-nav { width: max-content; background-color:rgba(0, 0, 0, 0.8);border-radius: 15px;padding: 10px; margin-left: 3%; margin-right: 3%;}
-nav ul { list-style:none; margin:0; padding:4px; text-align: center; }
-nav ul li { display:inline-block }
+nav {background-color:rgba(0, 0, 0, 0.8);border-radius: 15px;padding: 10px; margin: 0 auto; display: flex; flex-wrap: wrap;text-align: center;}
+nav ul { list-style:none; margin:0; padding:4px; }
+nav ul li { display:inline-block; }
 nav ul li a { font-size: large; text-decoration: none; color: #FFF; padding: 4px 20px }
 
 footer { clear:both; width:700px; margin:0 auto; font-size:0.75em; text-align:center; background-color:#ECECEC; padding:5px }
