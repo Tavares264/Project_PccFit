@@ -285,12 +285,13 @@ namespace PccFit
             {
                 string id = txt_D_Id.Text;
 
-                string sqlquery = "SELECT id, nome FROM tb_nutricionista WHERE id = " + id + ";";
+                string sqlquery = "SELECT id, nome FROM tb_nutricionista WHERE id = @id;";
 
 
                 MySqlConnection conexao = new MySqlConnection(myconn.conectar());
 
                 MySqlCommand command = new MySqlCommand(sqlquery, conexao);
+                command.Parameters.AddWithValue("@id", id);
 
                 conexao.Open();
                 reader = command.ExecuteReader();

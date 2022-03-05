@@ -72,3 +72,5 @@ D:\Faculdade\Project_PccFit\PccFit\obj\Debug\PccFit.PgCliente.resources
 D:\Faculdade\Project_PccFit\PccFit\obj\Debug\PccFit.PgNutricionista.resources
 D:\Faculdade\Project_PccFit\PccFit\obj\Debug\PccFit.PgPainel.resources
 D:\Faculdade\Project_PccFit\PccFit\obj\Debug\PccFit.PgPrincipal.resources
+D:\Faculdade\Project_PccFit\PccFit\obj\Debug\PccFit.csproj.SuggestedBindingRedirects.cache
+D:\Faculdade\Project_PccFit\PccFit\obj\Debug\PccFit.csproj.CopyComplete

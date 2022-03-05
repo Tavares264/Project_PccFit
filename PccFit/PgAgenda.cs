@@ -13,133 +13,128 @@ namespace PccFit
 {
     public partial class PgAgenda : Form
     {
+        string sqlquery;
+        string query;
+        MySqlDataReader reader;
+
         public PgAgenda()
         {
             InitializeComponent();
         }
 
         Conexao myconn = new Conexao();
-        MySqlDataReader reader;
 
-        private void btn_AG_Visualizar_Click(object sender, EventArgs e)
+        private void btn_AG_DtPesquisar_Click(object sender, EventArgs e)
         {
-            string query = "SELECT * FROM tb_agenda where ";
+            if (msk_AG_Data.Text.Replace("/", "").Replace(" ", "") != "")
+            {
+                using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+                {
+                    if (msk_AG_Horario.Text.Replace(":", "").Replace(" ", "") != "")
+                    {
+                        query = "SELECT id_nutricionista, nutricionista, id_paciente, paciente, horario, dt_agenda, descricao FROM vw_agenda where dt_agenda = @Agenda and horario = @Horario;";
+                        
+                        MySqlCommand command = new MySqlCommand(query, conexao);
 
+                        command.Parameters.AddWithValue("@Agenda", Convert.ToDateTime(msk_AG_Data.Text));
+                        command.Parameters.AddWithValue("@Horario", Convert.ToDateTime(msk_AG_Horario.Text));
 
+                        conexao.Open();
+                        MySqlDataAdapter returnVal = new MySqlDataAdapter(command);
+                        DataTable dtgrid = new DataTable();
+
+                        returnVal.Fill(dtgrid);
+                        dtGridAgenda.DataSource = dtgrid;
+                        
+                        conexao.Close();
+                    }
+                    else
+                    {
+                        query = "SELECT id_nutricionista, nutricionista, id_paciente, paciente, horario, dt_agenda, descricao FROM vw_agenda where dt_agenda = @Agenda;";
+                        
+                        
+                        MySqlCommand command = new MySqlCommand(query, conexao);
+
+                        command.Parameters.AddWithValue("@Agenda", Convert.ToDateTime(msk_AG_Data.Text));
+
+                        conexao.Open();
+                        MySqlDataAdapter returnVal = new MySqlDataAdapter(command);
+                        DataTable dtgrid = new DataTable();
+
+                        returnVal.Fill(dtgrid);
+                        dtGridAgenda.DataSource = dtgrid;
+
+                        conexao.Close();
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Digite a Data");
+            }
         }
 
         private void btn_AG_Agendar_Click(object sender, EventArgs e)
         {
-            string sqlquery = "INSERT INTO tb_nutricionista (cpf, nome, email, cep, logradouro, numero, bairro, cidade, estado, telefone, dt_inicio) VALUES (@Cpf, @Nome, @Email, @Cep, @Logradouro, @Numero, @Bairro, @Cidade, @Estado, @Telefone, @Dt_inicio);";
-            string query = "INSERT INTO tb_login (cpf, senha, acesso) VALUE (@cpf, @senha, 'nutricionista')";
-
+            sqlquery = "INSERT INTO tb_agenda (id_nutricionista, id_paciente, dt_agenda, horario, descricao) VALUES (@Id_nutricionista, @Id_paciente, @Dt_agenda, @Horario, @Descricao);";
+            string camposvazio = "";
             using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
             {
-
-                string camposvazio = "";
-
-
-                if (txt_N_Nome.Text == "")
+                if (txt_AG_IDNutricionista.Text == "")
                 {
-                    camposvazio = camposvazio + "Campo Nome é obrigatorio \n";
+                    camposvazio = camposvazio + "Campo Id Nutricionista é obrigatorio \n";
                 }
 
-                if (msk_N_Cpf.Text == "   .   .   -")
+                if (txt_AG_IDPaciente.Text == "")
                 {
-                    camposvazio = camposvazio + "Campo CPF é obrigatorio \n";
+                    camposvazio = camposvazio + "Campo Id Paciente é obrigatorio \n";
                 }
 
-                if (txt_N_Email.Text == "")
-                {
-                    camposvazio = camposvazio + "Campo Email é obrigatorio \n";
-                }
-
-                if (msk_N_Tel.Text == "(  )     -")
-                {
-                    camposvazio = camposvazio + "Campo Telefone é obrigatorio \n";
-                }
-
-                if (txt_N_Logradouro.Text == "")
+                if (txt_AG_Descrição.Text == "")
                 {
                     camposvazio = camposvazio + "Campo Logradouro é obrigatorio \n";
                 }
 
-                if (cb_N_Estado.Text == "")
+                if (msk_AG_Data.Text.Replace("/", "").Replace(" ", "") == "")
                 {
-                    camposvazio = camposvazio + "Campo Estado é obrigatorio \n";
+                    camposvazio = camposvazio + "Campo Data é obrigatorio \n";
                 }
 
-                if (txt_N_Cidade.Text == "")
+                if (msk_AG_Horario.Text.Replace(":", "").Replace(" ", "") == "")
                 {
-                    camposvazio = camposvazio + "Campo Cidade é obrigatorio \n";
-                }
-
-                if (txt_N_Bairro.Text == "")
-                {
-                    camposvazio = camposvazio + "Campo Bairro é obrigatorio \n";
-                }
-
-                if (msk_N_Cep.Text == "     -")
-                {
-                    camposvazio = camposvazio + "Campo CEP é obrigatorio \n";
-                }
-
-                if (msk_N_DtInicio.Text == "  /  /")
-                {
-                    camposvazio = camposvazio + "Campo Data de inicio é obrigatorio \n";
-                }
-
-                if (txt_N_Numero.Text == "")
-                {
-                    sqlquery = "INSERT INTO tb_nutricionista (cpf, nome, email, cep, logradouro, bairro, cidade, estado, telefone, dt_inicio) VALUES (@Cpf, @Nome, @Email, @Cep, @Logradouro, @Bairro, @Cidade, @Estado, @Telefone, @Dt_inicio);";
+                    camposvazio = camposvazio + "Campo Horario é obrigatorio \n";
                 }
 
 
                 if (camposvazio == "")
                 {
-                    string senha = msk_N_Cpf.Text.Substring(9).Replace("-", "");
-
                     try
                     {
-                        MySqlCommand command2 = new MySqlCommand(query, conexao);
-                        command2.Parameters.AddWithValue("@cpf", msk_N_Cpf.Text);
-                        command2.Parameters.AddWithValue("@senha", senha);
-
                         MySqlCommand command = new MySqlCommand(sqlquery, conexao);
-                        command.Parameters.AddWithValue("@Cpf", msk_N_Cpf.Text);
-                        command.Parameters.AddWithValue("@Nome", txt_N_Nome.Text);
-                        command.Parameters.AddWithValue("@Email", txt_N_Email.Text);
-                        command.Parameters.AddWithValue("@Cep", msk_N_Cep.Text);
-                        command.Parameters.AddWithValue("@Logradouro", txt_N_Logradouro.Text);
-                        command.Parameters.AddWithValue("@Numero", txt_N_Numero.Text);
-                        command.Parameters.AddWithValue("@Bairro", txt_N_Bairro.Text);
-                        command.Parameters.AddWithValue("@Cidade", txt_N_Cidade.Text);
-                        command.Parameters.AddWithValue("@Estado", cb_N_Estado.Text);
-                        command.Parameters.AddWithValue("@Telefone", msk_N_Tel.Text);
-                        command.Parameters.AddWithValue("@Dt_inicio", Convert.ToDateTime(msk_N_DtInicio.Text));
+                        command.Parameters.AddWithValue("@Id_nutricionista", txt_AG_IDNutricionista.Text);
+                        command.Parameters.AddWithValue("@Id_paciente", txt_AG_IDPaciente.Text);
+                        command.Parameters.AddWithValue("@Dt_agenda", Convert.ToDateTime(msk_AG_Data.Text));
+                        command.Parameters.AddWithValue("@Horario", Convert.ToDateTime(msk_AG_Horario.Text));
+                        command.Parameters.AddWithValue("@Descricao", txt_AG_Descrição.Text);
 
                         conexao.Open();
                         command.ExecuteNonQuery();
-                        command2.ExecuteNonQuery();
                         conexao.Close();
 
-                        msk_N_Cpf.Text = null;
-                        txt_N_Nome.Text = null;
-                        txt_N_Email.Text = null;
-                        msk_N_Cep.Text = null;
-                        txt_N_Logradouro.Text = null;
-                        txt_N_Numero.Text = null;
-                        txt_N_Bairro.Text = null;
-                        txt_N_Cidade.Text = null;
-                        cb_N_Estado.Text = null;
-                        msk_N_Tel.Text = null;
-                        msk_N_DtInicio.Text = null;
-                        msk_N_DtFinal.Text = null;
-                        MessageBox.Show("O NUTRICIONISTA FOI CADASTRADO");
+                        
+                        txt_AG_IDNutricionista.Text = null;
+                        cb_AG_Nutricionista.Text = null;
+                        txt_AG_IDPaciente.Text = null;
+                        cb_AG_Paciente.Text = null;
+                        msk_AG_Data.Text = null;
+                        msk_AG_Horario.Text = null;
+                        txt_AG_Descrição.Text = null;
+                        
+                        MessageBox.Show("Consulta Agendada");
                     }
                     catch
                     {
-                        MessageBox.Show("ERRO NO CADASTRO");
+                        MessageBox.Show("ERRO AO AGENDAR");
                     }
                 }
                 else
@@ -151,56 +146,264 @@ namespace PccFit
 
         private void btn_AG_NPesquisar_Click(object sender, EventArgs e)
         {
-            if (txt_AG_IDNutricionista.Text != "")
+            if (txt_AG_IDNutricionista.Text == "")
             {
-                string id = txt_AG_IDNutricionista.Text;
-
-                string sqlquery = "SELECT id, nome FROM tb_nutricionista WHERE id = " + id + ";";
-
-
-                MySqlConnection conexao = new MySqlConnection(myconn.conectar());
-
-                MySqlCommand command = new MySqlCommand(sqlquery, conexao);
-
-                conexao.Open();
-                reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    txt_D_Id.Text = Convert.ToString(reader["id"]);
-                    txt_D_Nome.Text = Convert.ToString(reader["nome"]);
-                }
-            }
-            else if (txt_D_Nome.Text != "")
-            {
-                string nome = txt_D_Nome.Text;
-
-                string sqlquery = "SELECT id, nome FROM tb_nutricionista WHERE nome = '" + nome + "';";
-
-
-                MySqlConnection conexao = new MySqlConnection(myconn.conectar());
-
-                MySqlCommand command = new MySqlCommand(sqlquery, conexao);
-
-                conexao.Open();
-                reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    txt_D_Id.Text = Convert.ToString(reader["id"]);
-                    txt_D_Nome.Text = Convert.ToString(reader["nome"]);
-                }
-                conexao.Close();
+                MessageBox.Show("Digite o Id ou Nome para pesquisar");
             }
             else
             {
-                MessageBox.Show("Digite o Id ou Nome para pesquisar");
+                using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+                {
+                    query = "SELECT id_nutricionista, nutricionista, id_paciente, paciente, horario, dt_agenda, descricao FROM vw_agenda where id_nutricionista = @IDN;";
+
+                    MySqlCommand command = new MySqlCommand(query, conexao);
+
+                    command.Parameters.AddWithValue("@IDN", txt_AG_IDNutricionista.Text);
+
+                    conexao.Open();
+                    MySqlDataAdapter returnVal = new MySqlDataAdapter(command);
+                    DataTable dtgrid = new DataTable();
+
+                    returnVal.Fill(dtgrid);
+                    dtGridAgenda.DataSource = dtgrid;
+
+                    conexao.Close();
+                }
             }
         }
 
         private void btn_AG_PPesquisar_Click(object sender, EventArgs e)
         {
+            if (txt_AG_IDPaciente.Text == "")
+            {
+                MessageBox.Show("Digite o Id ou Nome para pesquisar");
+            }
+            else
+            {
+                using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+                {
+                    query = "SELECT id_nutricionista, nutricionista, id_paciente, paciente, horario, dt_agenda, descricao FROM vw_agenda where id_paciente = @IDP;";
 
+                    MySqlCommand command = new MySqlCommand(query, conexao);
+
+                    command.Parameters.AddWithValue("@IDP", txt_AG_IDPaciente.Text);
+
+                    conexao.Open();
+                    MySqlDataAdapter returnVal = new MySqlDataAdapter(command);
+                    DataTable dtgrid = new DataTable();
+
+                    returnVal.Fill(dtgrid);
+                    dtGridAgenda.DataSource = dtgrid;
+
+                    conexao.Close();
+                }
+            }
+        }
+
+        private void Btn_AG_Hoje_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+            {
+                query = "SELECT id_nutricionista, nutricionista, id_paciente, paciente, horario, dt_agenda, descricao FROM vw_agenda where dt_agenda = @Agenda;";
+
+                MySqlCommand command = new MySqlCommand(query, conexao);
+
+                command.Parameters.AddWithValue("@Agenda", DateTime.Today);
+
+                conexao.Open();
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(command);
+                DataTable dtgrid = new DataTable();
+
+                returnVal.Fill(dtgrid);
+                dtGridAgenda.DataSource = dtgrid;
+
+                conexao.Close();
+            }
+        }
+
+        private void btn_AG_Excluir_Click(object sender, EventArgs e)
+        {
+            string camposvazio = "";
+            using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+            {
+                try
+                {
+                    if (txt_AG_IDPaciente.Text == "")
+                    {
+                        camposvazio = camposvazio + "Campo Id Paciente é obrigatorio \n";
+                    }
+                
+                    if (msk_AG_Data.Text.Replace("/", "").Replace(" ", "") == "")
+                    {
+                        camposvazio = camposvazio + "Campo Data é obrigatorio \n";
+                    }
+
+                    if (msk_AG_Horario.Text.Replace(":", "").Replace(" ", "") == "")
+                    {
+                        camposvazio = camposvazio + "Campo Horario é obrigatorio \n";
+                    }
+
+                    if (camposvazio != "")
+                    {
+                        MessageBox.Show(camposvazio);
+                    }
+                    else
+                    {
+                        MessageBox.Show(camposvazio);
+                        sqlquery = "DELETE FROM tb_agenda WHERE id_paciente = @IDP and dt_agenda = @DT and horario = @Horario;";
+                    
+                        MySqlCommand command = new MySqlCommand(sqlquery, conexao);
+
+
+                        command.Parameters.AddWithValue("@IDP", txt_AG_IDPaciente.Text);
+                        command.Parameters.AddWithValue("@DT", Convert.ToDateTime(msk_AG_Data.Text));
+                        command.Parameters.AddWithValue("@Horario", Convert.ToDateTime(msk_AG_Horario.Text));
+
+
+                        conexao.Open();
+                        command.ExecuteNonQuery();
+
+                        conexao.Close();
+
+                        txt_AG_IDNutricionista.Text = null;
+                        cb_AG_Nutricionista.Text = null;
+                        txt_AG_IDPaciente.Text = null;
+                        cb_AG_Paciente.Text = null;
+                        msk_AG_Data.Text = null;
+                        msk_AG_Horario.Text = null;
+                        txt_AG_Descrição.Text = null;
+
+                        MessageBox.Show("Agendamento Excluido");
+                    }
+                }
+                    catch
+                {
+                    MessageBox.Show("ERRO AO EXCLUIR AGENDAMENTO");
+                }
+            }
+        }
+
+        private void dtGridAgenda_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_AG_IDNutricionista.Text = dtGridAgenda.Rows[e.RowIndex].Cells[0].Value.ToString();
+            cb_AG_Nutricionista.Text = dtGridAgenda.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_AG_IDPaciente.Text = dtGridAgenda.Rows[e.RowIndex].Cells[2].Value.ToString();
+            cb_AG_Paciente.Text = dtGridAgenda.Rows[e.RowIndex].Cells[3].Value.ToString();
+            msk_AG_Horario.Text = dtGridAgenda.Rows[e.RowIndex].Cells[4].Value.ToString();
+            msk_AG_Data.Text = dtGridAgenda.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txt_AG_Descrição.Text = dtGridAgenda.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void PgAgenda_Load(object sender, EventArgs e)
+        {
+            using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+            {
+                conexao.Open();
+
+                query = "SELECT id, nome FROM tb_nutricionista;";
+
+                MySqlCommand command = new MySqlCommand(query, conexao);
+
+                
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(command);
+                DataTable dtgrid = new DataTable();
+
+                returnVal.Fill(dtgrid);
+
+                cb_AG_Nutricionista.DataSource = dtgrid;
+                cb_AG_Nutricionista.ValueMember = "nome";
+                cb_AG_Nutricionista.DisplayMember = "descricao";
+                cb_AG_Nutricionista.SelectedItem = "";
+                cb_AG_Nutricionista.Refresh();
+
+
+                string query2 = "SELECT id, nome FROM tb_paciente;";
+
+                MySqlCommand command2 = new MySqlCommand(query2, conexao);
+
+
+                MySqlDataAdapter returnVal2 = new MySqlDataAdapter(command2);
+                DataTable dtgrid2 = new DataTable();
+
+                returnVal2.Fill(dtgrid2);
+
+                cb_AG_Paciente.DataSource = dtgrid2;
+                cb_AG_Paciente.ValueMember = "nome";
+                cb_AG_Paciente.DisplayMember = "descricao";
+                cb_AG_Paciente.SelectedItem = "";
+                cb_AG_Paciente.Refresh();
+
+
+                string query3 = "SELECT id_nutricionista, nutricionista, id_paciente, paciente, horario, dt_agenda, descricao FROM vw_agenda where dt_agenda = @Agenda;";
+
+                MySqlCommand command3 = new MySqlCommand(query3, conexao);
+
+                command3.Parameters.AddWithValue("@Agenda", DateTime.Today);
+
+                
+                MySqlDataAdapter returnVal3 = new MySqlDataAdapter(command3);
+                DataTable dtgrid3 = new DataTable();
+
+                returnVal3.Fill(dtgrid3);
+                dtGridAgenda.DataSource = dtgrid3;
+
+
+                conexao.Close();
+            }
+        }
+
+        private void cb_AG_Nutricionista_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+            {
+                query = "SELECT id FROM tb_nutricionista where nome = @Nome;";
+
+                MySqlCommand command = new MySqlCommand(query, conexao);
+
+                command.Parameters.AddWithValue("@Nome", cb_AG_Nutricionista.Text);
+
+                conexao.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txt_AG_IDNutricionista.Text = Convert.ToString(reader["id"]);
+                }
+
+                conexao.Close();
+            }
+        }
+
+        private void cb_AG_Paciente_TextUpdate(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cb_AG_Nutricionista_TextUpdate(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cb_AG_Paciente_Click(object sender, EventArgs e)
+        {
+            using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+            {
+                query = "SELECT id FROM tb_paciente where nome = @Nome;";
+
+                MySqlCommand command = new MySqlCommand(query, conexao);
+
+                command.Parameters.AddWithValue("@Nome", cb_AG_Paciente.Text);
+
+                conexao.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txt_AG_IDPaciente.Text = Convert.ToString(reader["id"]);
+                }
+
+                conexao.Close();
+            }
         }
     }
 }

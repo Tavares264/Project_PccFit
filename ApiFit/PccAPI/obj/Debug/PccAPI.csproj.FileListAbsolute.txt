@@ -89,3 +89,4 @@ D:\Faculdade\Project_PccFit\ApiFit\PccAPI\bin\System.Buffers.xml
 D:\Faculdade\Project_PccFit\ApiFit\PccAPI\bin\System.Memory.xml
 D:\Faculdade\Project_PccFit\ApiFit\PccAPI\bin\System.Numerics.Vectors.xml
 D:\Faculdade\Project_PccFit\ApiFit\PccAPI\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\Faculdade\Project_PccFit\ApiFit\PccAPI\obj\Debug\PccAPI.csproj.CopyComplete

@@ -40,7 +40,7 @@ namespace PccFit
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 212);
+            this.label1.Location = new System.Drawing.Point(153, 147);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@ namespace PccFit
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(155, 288);
+            this.label2.Location = new System.Drawing.Point(137, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 20);
             this.label2.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace PccFit
             // msk_CPF
             // 
             this.msk_CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_CPF.Location = new System.Drawing.Point(228, 209);
+            this.msk_CPF.Location = new System.Drawing.Point(210, 144);
             this.msk_CPF.Mask = "000,000,000-00";
             this.msk_CPF.Name = "msk_CPF";
             this.msk_CPF.Size = new System.Drawing.Size(160, 27);
@@ -67,7 +67,7 @@ namespace PccFit
             // 
             // txt_Senha
             // 
-            this.txt_Senha.Location = new System.Drawing.Point(228, 286);
+            this.txt_Senha.Location = new System.Drawing.Point(210, 221);
             this.txt_Senha.Name = "txt_Senha";
             this.txt_Senha.Size = new System.Drawing.Size(160, 22);
             this.txt_Senha.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace PccFit
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(159, 369);
+            this.btnLogin.Location = new System.Drawing.Point(141, 304);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(246, 33);
             this.btnLogin.TabIndex = 3;
@@ -85,9 +85,9 @@ namespace PccFit
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(563, 632);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(516, 512);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txt_Senha);
             this.Controls.Add(this.msk_CPF);

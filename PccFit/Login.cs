@@ -43,8 +43,8 @@ namespace PccFit
                         }
                         if(acesso == "nutricionista")
                         {
-                            PgDoutor pp = new PgDoutor();
-                            pp.Show();
+                            PgAgenda pa = new PgAgenda();
+                            pa.Show();
                             this.Hide();
                         }
                         else if (acesso == "atendente")
@@ -66,7 +66,7 @@ namespace PccFit
             }
             else
             {
-                MessageBox.Show("Digite o Usuario e Senha");
+                MessageBox.Show("Digite o CPF e Senha");
             }
         }
     }

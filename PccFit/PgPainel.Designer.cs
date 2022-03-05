@@ -34,20 +34,25 @@ namespace PccFit
             // 
             // panel1
             // 
+            this.panel1.AutoSize = true;
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1302, 769);
+            this.panel1.Size = new System.Drawing.Size(1578, 837);
             this.panel1.TabIndex = 0;
             // 
             // PgPainel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1326, 793);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1602, 861);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.Name = "PgPainel";
             this.Text = "PgPainel";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
