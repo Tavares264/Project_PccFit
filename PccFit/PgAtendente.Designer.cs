@@ -32,7 +32,6 @@ namespace PccFit
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txt_A_Cidade = new System.Windows.Forms.TextBox();
             this.cb_A_Estado = new System.Windows.Forms.ComboBox();
-            this.lb_A_cpf = new System.Windows.Forms.Label();
             this.txt_A_Bairro = new System.Windows.Forms.TextBox();
             this.txt_A_Numero = new System.Windows.Forms.TextBox();
             this.txt_A_Logradouro = new System.Windows.Forms.TextBox();
@@ -66,7 +65,6 @@ namespace PccFit
             // 
             this.groupBox3.Controls.Add(this.txt_A_Cidade);
             this.groupBox3.Controls.Add(this.cb_A_Estado);
-            this.groupBox3.Controls.Add(this.lb_A_cpf);
             this.groupBox3.Controls.Add(this.txt_A_Bairro);
             this.groupBox3.Controls.Add(this.txt_A_Numero);
             this.groupBox3.Controls.Add(this.txt_A_Logradouro);
@@ -95,14 +93,14 @@ namespace PccFit
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox3.Size = new System.Drawing.Size(1299, 558);
+            this.groupBox3.Size = new System.Drawing.Size(1193, 558);
             this.groupBox3.TabIndex = 8;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dados Pessoais";
             // 
             // txt_A_Cidade
             // 
-            this.txt_A_Cidade.Location = new System.Drawing.Point(422, 369);
+            this.txt_A_Cidade.Location = new System.Drawing.Point(333, 286);
             this.txt_A_Cidade.Name = "txt_A_Cidade";
             this.txt_A_Cidade.Size = new System.Drawing.Size(183, 27);
             this.txt_A_Cidade.TabIndex = 37;
@@ -138,50 +136,42 @@ namespace PccFit
             "MT",
             "GO",
             "DF"});
-            this.cb_A_Estado.Location = new System.Drawing.Point(204, 368);
+            this.cb_A_Estado.Location = new System.Drawing.Point(115, 285);
             this.cb_A_Estado.Name = "cb_A_Estado";
             this.cb_A_Estado.Size = new System.Drawing.Size(115, 28);
             this.cb_A_Estado.TabIndex = 36;
             // 
-            // lb_A_cpf
-            // 
-            this.lb_A_cpf.AutoSize = true;
-            this.lb_A_cpf.Location = new System.Drawing.Point(896, 119);
-            this.lb_A_cpf.Name = "lb_A_cpf";
-            this.lb_A_cpf.Size = new System.Drawing.Size(0, 20);
-            this.lb_A_cpf.TabIndex = 35;
-            // 
             // txt_A_Bairro
             // 
-            this.txt_A_Bairro.Location = new System.Drawing.Point(716, 370);
+            this.txt_A_Bairro.Location = new System.Drawing.Point(627, 287);
             this.txt_A_Bairro.Name = "txt_A_Bairro";
             this.txt_A_Bairro.Size = new System.Drawing.Size(183, 27);
             this.txt_A_Bairro.TabIndex = 10;
             // 
             // txt_A_Numero
             // 
-            this.txt_A_Numero.Location = new System.Drawing.Point(916, 270);
+            this.txt_A_Numero.Location = new System.Drawing.Point(897, 209);
             this.txt_A_Numero.Name = "txt_A_Numero";
-            this.txt_A_Numero.Size = new System.Drawing.Size(163, 27);
+            this.txt_A_Numero.Size = new System.Drawing.Size(121, 27);
             this.txt_A_Numero.TabIndex = 7;
             // 
             // txt_A_Logradouro
             // 
-            this.txt_A_Logradouro.Location = new System.Drawing.Point(176, 270);
+            this.txt_A_Logradouro.Location = new System.Drawing.Point(157, 209);
             this.txt_A_Logradouro.Name = "txt_A_Logradouro";
             this.txt_A_Logradouro.Size = new System.Drawing.Size(561, 27);
             this.txt_A_Logradouro.TabIndex = 6;
             // 
             // txt_A_Email
             // 
-            this.txt_A_Email.Location = new System.Drawing.Point(176, 172);
+            this.txt_A_Email.Location = new System.Drawing.Point(111, 139);
             this.txt_A_Email.Name = "txt_A_Email";
             this.txt_A_Email.Size = new System.Drawing.Size(561, 27);
             this.txt_A_Email.TabIndex = 4;
             // 
             // txt_A_Nome
             // 
-            this.txt_A_Nome.Location = new System.Drawing.Point(176, 66);
+            this.txt_A_Nome.Location = new System.Drawing.Point(112, 65);
             this.txt_A_Nome.Name = "txt_A_Nome";
             this.txt_A_Nome.Size = new System.Drawing.Size(561, 27);
             this.txt_A_Nome.TabIndex = 1;
@@ -189,7 +179,7 @@ namespace PccFit
             // btn_A_Pesquisar
             // 
             this.btn_A_Pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_A_Pesquisar.Location = new System.Drawing.Point(1110, 59);
+            this.btn_A_Pesquisar.Location = new System.Drawing.Point(1006, 60);
             this.btn_A_Pesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_A_Pesquisar.Name = "btn_A_Pesquisar";
             this.btn_A_Pesquisar.Size = new System.Drawing.Size(163, 32);
@@ -201,7 +191,7 @@ namespace PccFit
             // msk_A_DtInicio
             // 
             this.msk_A_DtInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_A_DtInicio.Location = new System.Drawing.Point(495, 460);
+            this.msk_A_DtInicio.Location = new System.Drawing.Point(406, 377);
             this.msk_A_DtInicio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.msk_A_DtInicio.Mask = "00/00/0000";
             this.msk_A_DtInicio.Name = "msk_A_DtInicio";
@@ -212,7 +202,7 @@ namespace PccFit
             // msk_A_DtFinal
             // 
             this.msk_A_DtFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_A_DtFinal.Location = new System.Drawing.Point(785, 460);
+            this.msk_A_DtFinal.Location = new System.Drawing.Point(696, 377);
             this.msk_A_DtFinal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.msk_A_DtFinal.Mask = "00/00/0000";
             this.msk_A_DtFinal.Name = "msk_A_DtFinal";
@@ -224,7 +214,7 @@ namespace PccFit
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(623, 468);
+            this.label17.Location = new System.Drawing.Point(534, 385);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(134, 20);
             this.label17.TabIndex = 34;
@@ -234,7 +224,7 @@ namespace PccFit
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(331, 468);
+            this.label18.Location = new System.Drawing.Point(242, 385);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(132, 20);
             this.label18.TabIndex = 33;
@@ -243,7 +233,7 @@ namespace PccFit
             // msk_A_Cep
             // 
             this.msk_A_Cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_A_Cep.Location = new System.Drawing.Point(1006, 369);
+            this.msk_A_Cep.Location = new System.Drawing.Point(917, 286);
             this.msk_A_Cep.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.msk_A_Cep.Mask = "00000-000";
             this.msk_A_Cep.Name = "msk_A_Cep";
@@ -253,17 +243,17 @@ namespace PccFit
             // msk_A_Tel
             // 
             this.msk_A_Tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_A_Tel.Location = new System.Drawing.Point(904, 169);
+            this.msk_A_Tel.Location = new System.Drawing.Point(796, 138);
             this.msk_A_Tel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.msk_A_Tel.Mask = "(00)00000-0000";
             this.msk_A_Tel.Name = "msk_A_Tel";
-            this.msk_A_Tel.Size = new System.Drawing.Size(163, 28);
+            this.msk_A_Tel.Size = new System.Drawing.Size(167, 28);
             this.msk_A_Tel.TabIndex = 5;
             // 
             // msk_A_Cpf
             // 
             this.msk_A_Cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_A_Cpf.Location = new System.Drawing.Point(900, 63);
+            this.msk_A_Cpf.Location = new System.Drawing.Point(796, 64);
             this.msk_A_Cpf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.msk_A_Cpf.Mask = "000,000,000-00";
             this.msk_A_Cpf.Name = "msk_A_Cpf";
@@ -274,7 +264,7 @@ namespace PccFit
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(812, 177);
+            this.label29.Location = new System.Drawing.Point(704, 146);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(87, 20);
             this.label29.TabIndex = 19;
@@ -284,7 +274,7 @@ namespace PccFit
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(343, 377);
+            this.label30.Location = new System.Drawing.Point(254, 294);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(73, 20);
             this.label30.TabIndex = 17;
@@ -294,7 +284,7 @@ namespace PccFit
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(803, 277);
+            this.label31.Location = new System.Drawing.Point(784, 216);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(80, 20);
             this.label31.TabIndex = 15;
@@ -304,7 +294,7 @@ namespace PccFit
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(948, 374);
+            this.label32.Location = new System.Drawing.Point(859, 291);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(52, 20);
             this.label32.TabIndex = 13;
@@ -314,7 +304,7 @@ namespace PccFit
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(843, 71);
+            this.label33.Location = new System.Drawing.Point(739, 72);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(51, 20);
             this.label33.TabIndex = 11;
@@ -324,7 +314,7 @@ namespace PccFit
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(125, 378);
+            this.label34.Location = new System.Drawing.Point(36, 295);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(73, 20);
             this.label34.TabIndex = 9;
@@ -334,7 +324,7 @@ namespace PccFit
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(643, 374);
+            this.label35.Location = new System.Drawing.Point(554, 291);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(67, 20);
             this.label35.TabIndex = 7;
@@ -344,7 +334,7 @@ namespace PccFit
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(35, 277);
+            this.label36.Location = new System.Drawing.Point(16, 216);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(110, 20);
             this.label36.TabIndex = 5;
@@ -354,7 +344,7 @@ namespace PccFit
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(108, 179);
+            this.label37.Location = new System.Drawing.Point(43, 146);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(62, 20);
             this.label37.TabIndex = 3;
@@ -364,7 +354,7 @@ namespace PccFit
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(107, 73);
+            this.label38.Location = new System.Drawing.Point(43, 72);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(63, 20);
             this.label38.TabIndex = 0;
@@ -373,7 +363,7 @@ namespace PccFit
             // btn_A_Atualizar
             // 
             this.btn_A_Atualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_A_Atualizar.Location = new System.Drawing.Point(909, 632);
+            this.btn_A_Atualizar.Location = new System.Drawing.Point(844, 585);
             this.btn_A_Atualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_A_Atualizar.Name = "btn_A_Atualizar";
             this.btn_A_Atualizar.Size = new System.Drawing.Size(275, 102);
@@ -385,7 +375,7 @@ namespace PccFit
             // btn_A_Excluir
             // 
             this.btn_A_Excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_A_Excluir.Location = new System.Drawing.Point(520, 632);
+            this.btn_A_Excluir.Location = new System.Drawing.Point(455, 585);
             this.btn_A_Excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_A_Excluir.Name = "btn_A_Excluir";
             this.btn_A_Excluir.Size = new System.Drawing.Size(275, 102);
@@ -397,7 +387,7 @@ namespace PccFit
             // btn_A_Cadastrar
             // 
             this.btn_A_Cadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_A_Cadastrar.Location = new System.Drawing.Point(123, 632);
+            this.btn_A_Cadastrar.Location = new System.Drawing.Point(81, 585);
             this.btn_A_Cadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_A_Cadastrar.Name = "btn_A_Cadastrar";
             this.btn_A_Cadastrar.Size = new System.Drawing.Size(275, 102);
@@ -410,7 +400,7 @@ namespace PccFit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1324, 776);
+            this.ClientSize = new System.Drawing.Size(1228, 715);
             this.Controls.Add(this.btn_A_Atualizar);
             this.Controls.Add(this.btn_A_Excluir);
             this.Controls.Add(this.btn_A_Cadastrar);
@@ -428,7 +418,6 @@ namespace PccFit
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_A_Cidade;
         private System.Windows.Forms.ComboBox cb_A_Estado;
-        private System.Windows.Forms.Label lb_A_cpf;
         private System.Windows.Forms.TextBox txt_A_Bairro;
         private System.Windows.Forms.TextBox txt_A_Numero;
         private System.Windows.Forms.TextBox txt_A_Logradouro;

@@ -87,7 +87,7 @@ namespace PccFit
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(834, 93);
+            this.label44.Location = new System.Drawing.Point(774, 103);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(87, 20);
             this.label44.TabIndex = 34;
@@ -97,8 +97,9 @@ namespace PccFit
             // 
             this.txt_AG_Descrição.Location = new System.Drawing.Point(825, 182);
             this.txt_AG_Descrição.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_AG_Descrição.Multiline = true;
             this.txt_AG_Descrição.Name = "txt_AG_Descrição";
-            this.txt_AG_Descrição.Size = new System.Drawing.Size(415, 22);
+            this.txt_AG_Descrição.Size = new System.Drawing.Size(233, 83);
             this.txt_AG_Descrição.TabIndex = 32;
             // 
             // txt_AG_IDPaciente
@@ -131,7 +132,7 @@ namespace PccFit
             // 
             // btn_AG_Excluir
             // 
-            this.btn_AG_Excluir.Location = new System.Drawing.Point(569, 339);
+            this.btn_AG_Excluir.Location = new System.Drawing.Point(409, 338);
             this.btn_AG_Excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AG_Excluir.Name = "btn_AG_Excluir";
             this.btn_AG_Excluir.Size = new System.Drawing.Size(237, 47);
@@ -142,7 +143,7 @@ namespace PccFit
             // 
             // btn_AG_DtPesquisar
             // 
-            this.btn_AG_DtPesquisar.Location = new System.Drawing.Point(1098, 59);
+            this.btn_AG_DtPesquisar.Location = new System.Drawing.Point(983, 30);
             this.btn_AG_DtPesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AG_DtPesquisar.Name = "btn_AG_DtPesquisar";
             this.btn_AG_DtPesquisar.Size = new System.Drawing.Size(155, 47);
@@ -160,7 +161,7 @@ namespace PccFit
             this.dtGridAgenda.Name = "dtGridAgenda";
             this.dtGridAgenda.RowHeadersWidth = 51;
             this.dtGridAgenda.RowTemplate.Height = 24;
-            this.dtGridAgenda.Size = new System.Drawing.Size(1357, 442);
+            this.dtGridAgenda.Size = new System.Drawing.Size(1199, 350);
             this.dtGridAgenda.TabIndex = 44;
             this.dtGridAgenda.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridAgenda_CellDoubleClick);
             // 
@@ -185,7 +186,7 @@ namespace PccFit
             this.groupBox1.Controls.Add(this.label39);
             this.groupBox1.Location = new System.Drawing.Point(48, 28);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1298, 294);
+            this.groupBox1.Size = new System.Drawing.Size(1163, 294);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados";
@@ -203,7 +204,7 @@ namespace PccFit
             // msk_AG_Horario
             // 
             this.msk_AG_Horario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_AG_Horario.Location = new System.Drawing.Point(927, 88);
+            this.msk_AG_Horario.Location = new System.Drawing.Point(867, 98);
             this.msk_AG_Horario.Mask = "00:00";
             this.msk_AG_Horario.Name = "msk_AG_Horario";
             this.msk_AG_Horario.Size = new System.Drawing.Size(76, 27);
@@ -213,7 +214,7 @@ namespace PccFit
             // msk_AG_Data
             // 
             this.msk_AG_Data.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_AG_Data.Location = new System.Drawing.Point(894, 30);
+            this.msk_AG_Data.Location = new System.Drawing.Point(798, 30);
             this.msk_AG_Data.Mask = "00/00/0000";
             this.msk_AG_Data.Name = "msk_AG_Data";
             this.msk_AG_Data.Size = new System.Drawing.Size(145, 27);
@@ -223,7 +224,7 @@ namespace PccFit
             // cb_AG_Nutricionista
             // 
             this.cb_AG_Nutricionista.FormattingEnabled = true;
-            this.cb_AG_Nutricionista.Location = new System.Drawing.Point(237, 101);
+            this.cb_AG_Nutricionista.Location = new System.Drawing.Point(249, 105);
             this.cb_AG_Nutricionista.Name = "cb_AG_Nutricionista";
             this.cb_AG_Nutricionista.Size = new System.Drawing.Size(495, 24);
             this.cb_AG_Nutricionista.TabIndex = 49;
@@ -266,7 +267,7 @@ namespace PccFit
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(822, 32);
+            this.label42.Location = new System.Drawing.Point(726, 32);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(60, 20);
             this.label42.TabIndex = 29;
@@ -274,7 +275,7 @@ namespace PccFit
             // 
             // btn_AG_Agendar
             // 
-            this.btn_AG_Agendar.Location = new System.Drawing.Point(220, 339);
+            this.btn_AG_Agendar.Location = new System.Drawing.Point(60, 338);
             this.btn_AG_Agendar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_AG_Agendar.Name = "btn_AG_Agendar";
             this.btn_AG_Agendar.Size = new System.Drawing.Size(237, 47);
@@ -285,7 +286,7 @@ namespace PccFit
             // 
             // Btn_AG_Hoje
             // 
-            this.Btn_AG_Hoje.Location = new System.Drawing.Point(902, 339);
+            this.Btn_AG_Hoje.Location = new System.Drawing.Point(742, 338);
             this.Btn_AG_Hoje.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_AG_Hoje.Name = "Btn_AG_Hoje";
             this.Btn_AG_Hoje.Size = new System.Drawing.Size(237, 47);
@@ -298,7 +299,7 @@ namespace PccFit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1381, 867);
+            this.ClientSize = new System.Drawing.Size(1233, 775);
             this.Controls.Add(this.dtGridAgenda);
             this.Controls.Add(this.Btn_AG_Hoje);
             this.Controls.Add(this.btn_AG_Agendar);

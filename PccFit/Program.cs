@@ -16,7 +16,7 @@ namespace PccFit
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PgPrincipal());
+            Application.Run(new Login());
         }
     }
 }
