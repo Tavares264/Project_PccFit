@@ -238,7 +238,6 @@ namespace PccFit
                             command.Parameters.AddWithValue("@dt_final", Convert.ToDateTime(msk_C_DtFinal.Text));
                         }
 
-                        MessageBox.Show(command.CommandText);
                         conexao.Open();
                         command.ExecuteNonQuery();
                         conexao.Close();

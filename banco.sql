@@ -76,20 +76,26 @@ descricao text not null,
 primary key(id)
 );
 
-
-drop table if exists tb_caixa;
-create table tb_caixa(
-id int not null auto_increment,
-id_paciente int not null,
-dt_vencimento date not null,
-primary key(id)
-);
-
-
 drop table if exists tb_login;
 create table tb_login(
 cpf varchar(14) not null unique,
 senha varchar(20) not null,
 acesso varchar(20) not null,
 primary key(cpf)
+);
+INSERT INTO tb_login (cpf, senha, acesso) VALUES ("000.000.000-00","admin","atendente");
+
+create view Vw_Agenda as SELECT nut.nome as nutricionista, pac.nome as paciente, ag.* FROM tb_agenda ag
+LEFT JOIN tb_nutricionista nut ON nut.id = ag.id_nutricionista
+LEFT JOIN tb_paciente pac ON pac.id = ag.id_paciente;
+
+
+drop table if exists tb_comentarios;
+create table tb_comentarios(
+id int not null auto_increment,
+nome varchar(100),
+email varchar(50),
+comentario text,
+assunto varchar(100),
+primary key(id)
 );
