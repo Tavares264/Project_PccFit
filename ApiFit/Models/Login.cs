@@ -7,12 +7,12 @@ namespace PccAPI.Models
 {
     public class Login
     {
-        public string Cpf { get; set; }
+        public string CPF { get; set; }
         public string Senha { get; set; }
 
-        public Login(string r1, string r2)
+        public Login(string r1, string r2, string r3, string r4)
         {
-            this.Cpf = r1;
+            this.CPF = r1;
             this.Senha = r2;
         }
     }
