@@ -1,6 +1,6 @@
 $(document).ready(function () 
 {
-    consultar('calcio')
+    consultar(document.getElementById("assunto").value)
 });
 
 function postar(a){
@@ -17,6 +17,10 @@ function postar(a){
     xhttp.send();
 
     console.log(xhttp.responseText);
+
+    consultar(document.getElementById("assunto").value)
+
+    $("#exampleModal").modal("hide");
 }
 
 function consultar(a){
@@ -33,18 +37,19 @@ function consultar(a){
                 <div class="ms-3">
                     <div class="fw-bold">${dados[index].nome}</div>
                     ${dados[index].comentario}
+                    <br>
+                    <a onclick = "window.open('mailto:${dados[index].email}')" class="small">Responder</a>
                 </div>
             </div><br>`
         });
 
         document.getElementById("comentario").innerHTML =div;
     })
-    
     //json = JSON.parse(JSON.parse(valor));
     //console.log(json);
  
     
 
-    //"{'nome':'Tavares', 'email':'Tavas@gmail.com', 'comentario':'Teste Web', 'assunto':'Teste Web'}"
+    //"{'nome':'Tavares', 'email':'Tavas@gmail.com', 'comentario':'Teste Web', 'assunto':'Teste Web'}"t
 }
 
