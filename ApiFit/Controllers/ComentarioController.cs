@@ -9,6 +9,7 @@ using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Web.Script.Serialization;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace PccAPI.Controllers
 {
@@ -68,11 +69,9 @@ namespace PccAPI.Controllers
                             conexao.Open();
                             reader = command.ExecuteReader();
 
-                            int t = 0;
-                            string virg = "";
-                            string Json = "";
+                            List<dynamic> list = new List<dynamic>();
 
-                            while (reader.Read())
+                        while (reader.Read())
                             {
 
                                 string Nome = Convert.ToString(reader["nome"]);
@@ -80,19 +79,10 @@ namespace PccAPI.Controllers
                                 string Comentario = Convert.ToString(reader["comentario"]);
                                 string Assunto = Convert.ToString(reader["assunto"]);
 
-
-                                if (t >= 1)
-                                {
-                                    Json += ",{'nome':'" + Nome + "', 'email':'" + Email + "', 'comentario':'" + Comentario + "', 'assunto':'" + Assunto + "'}";
-                                }
-                                else
-                                {
-                                    Json += "{'nome':'" + Nome + "', 'email':'" + Email + "', 'comentario':'" + Comentario + "', 'assunto':'" + Assunto + "'}";
-                                }
-                                t++;
+                                list.Add(new { nome = Nome, email = Email, comentario = Comentario, assunto = Assunto });
                             }
                             conexao.Close();
-                            return Json;
+                            return JsonConvert.SerializeObject(list);
                           
                         }
                     }
