@@ -97,5 +97,6 @@ nome varchar(100),
 email varchar(50),
 comentario text,
 assunto varchar(100),
+datahora timestamp default now(),
 primary key(id)
 );
