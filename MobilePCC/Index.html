@@ -7,17 +7,26 @@
   <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
   <style> 
   .telahome{
-    width: 150px;
-    padding: 30px;
+    padding: 10px;
     margin-top: 55%;
   }
+  body{
+    background-color: rgb(158, 253, 253);
+  }
+  /* body {
+    background-image: linear-gradient(to bottom right, rgb(0, 217, 255), yellow);
+  } */
   </style>
   <title>Home</title>
 </head>
 <body>
   <div class="text-center">
-    <button class="btn-dark telahome">Agenda</button>
-    <button class="btn-dark telahome">Rotina</button>
+    <img  class="telahome" id="imgAgenda" src="./img/agenda.png" width="150px" onclick="window.location.href=''">
+    <img class="telahome" id="imgRotina" src="./img/rotina.png" width="150px" onclick="window.location.href=''">
   </div>
+  <!-- <div>
+    <label class="align-bottom" for="imgAgenda">Agenda</label>
+    <label class="align-bottom" for="imgRotina">Rotina</label>
+  </div> -->
 </body>
 </html>

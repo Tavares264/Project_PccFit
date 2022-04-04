@@ -19,8 +19,6 @@ function postar(a){
     console.log(xhttp.responseText);
 
     consultar(document.getElementById("assunto").value)
-
-    $("#exampleModal").modal("hide");
 }
 
 function consultar(a){
@@ -33,12 +31,11 @@ function consultar(a){
         $(dados).each(function (index) {
             
             div += `<div class="d-flex">
-                <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                <div class="flex-shrink-0"><img class="rounded-circle" src="./img/perfil.jpg" weight="50px" height="50px" alt="..." /></div>
                 <div class="ms-3">
                     <div class="fw-bold">${dados[index].nome}</div>
-                    ${dados[index].comentario}
-                    <br>
-                    <a onclick = "window.open('mailto:${dados[index].email}')" class="small">Responder</a>
+                        &nbsp;&nbsp${dados[index].comentario}<br>
+                    <a href="mailto:${dados[index].email}" class="small">Responder</a>
                 </div>
             </div><br>`
         });
