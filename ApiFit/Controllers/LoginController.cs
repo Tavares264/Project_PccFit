@@ -11,7 +11,7 @@ using System.Web.Script.Serialization;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace PccAPI.Controller
+namespace PccAPI.Controllers
 {
     public class LoginController : ApiController
     {
@@ -29,7 +29,10 @@ namespace PccAPI.Controller
             {
                 string acesso = "";
 
-                string query = "SELECT * FROM tb_login WHERE cpf = " + cpf + " AND senha = " + senha + ";";
+                string query = "SELECT * FROM tb_login WHERE cpf = '" + cpf + "' AND senha = '" + senha + "';";
+
+
+                Console.WriteLine(myconn);
                 using (MySqlConnection conexao = new MySqlConnection(myconn))
                 {
                     MySqlCommand command = new MySqlCommand(query, conexao);
@@ -62,6 +65,8 @@ namespace PccAPI.Controller
                         return @"{""acesso"": ""INVALIDO""}";
                     }
                 }
+
+                //return @"{""acesso"": ""INVALIDO""}";
             }
             else
             {
