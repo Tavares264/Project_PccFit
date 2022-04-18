@@ -1,4 +1,8 @@
+var cpf;
 
+window.onload = function() {
+    console.log(cpf);
+}
 
 function pegar(){
     var url = "https://localhost:44333/api/Login";//Sua URL
@@ -30,6 +34,7 @@ function postar(){
 function Verificar(){
     var input_cpf = document.querySelector("#cpf").value;
     console.log(input_cpf);
+    cpf = input_cpf;
 
     var input_senha = document.querySelector("#senha").value;
     console.log(input_senha);
@@ -57,5 +62,6 @@ function Verificar(){
     }
     else{
         window.location.replace("Index.html")
+        sessionStorage.setItem('cpf', cpf);
     }
 }
