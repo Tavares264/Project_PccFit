@@ -121,7 +121,7 @@ LEFT JOIN tb_nutricionista nut ON nut.id = ag.id_nutricionista
 LEFT JOIN tb_paciente pac ON pac.id = ag.id_paciente;
 
 drop view if exists vw_rotina;
-create view vw_rotina as SELECT nut.nome as nutricionista, pac.nome as paciente, ro.* FROM tb_rotina ro
+create view vw_rotina as SELECT nut.nome as nutricionista, nut.cpf as nut_cpf, pac.nome as paciente, pac.cpf as pac_cpf, ro.* FROM tb_rotina ro
 LEFT JOIN tb_nutricionista nut ON nut.id = ro.id_nutricionista
 LEFT JOIN tb_paciente pac ON pac.id = ro.id_paciente;
 
@@ -147,5 +147,5 @@ select * from tb_nutricionista;
 select * from tb_paciente;
 select * from tb_rotina;
 select * from vw_agenda;
-
+desc vw_rotina;
 */
