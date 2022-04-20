@@ -85,11 +85,6 @@ primary key(cpf)
 );
 INSERT INTO tb_login (cpf, senha, acesso) VALUES ("000.000.000-00","admin","atendente");
 
-create view Vw_Agenda as SELECT nut.nome as nutricionista, pac.nome as paciente, ag.* FROM tb_agenda ag
-LEFT JOIN tb_nutricionista nut ON nut.id = ag.id_nutricionista
-LEFT JOIN tb_paciente pac ON pac.id = ag.id_paciente;
-
-
 drop table if exists tb_comentarios;
 create table tb_comentarios(
 id int not null auto_increment,
@@ -97,6 +92,60 @@ nome varchar(100),
 email varchar(50),
 comentario text,
 assunto varchar(100),
-datahora timestamp default now(),
 primary key(id)
 );
+
+drop table if exists tb_rotina;
+create table tb_rotina(
+id int not null auto_increment,
+id_nutricionista int not null,
+id_paciente int not null,
+item varchar(200) not null,
+feito boolean,
+primary key(id)
+);
+
+drop view if exists vw_agenda;
+create view vw_agenda as SELECT nut.nome as nutricionista, nut.cpf as nut_cpf, pac.nome as paciente, pac.cpf as pac_cpf, ag.* FROM tb_agenda ag
+LEFT JOIN tb_nutricionista nut ON nut.id = ag.id_nutricionista
+LEFT JOIN tb_paciente pac ON pac.id = ag.id_paciente;
+
+drop view if exists vw_acessoNutricionista;
+create view vw_acessoNutricionista as SELECT nut.nome as nutricionista, pac.nome as paciente, ag.* FROM tb_agenda ag
+LEFT JOIN tb_nutricionista nut ON nut.id = ag.id_nutricionista
+LEFT JOIN tb_paciente pac ON pac.id = ag.id_paciente;
+
+drop view if exists vw_acessoPaciente;
+create view vw_acessoPaciente as SELECT nut.nome as nutricionista, pac.nome as paciente, ag.* FROM tb_agenda ag
+LEFT JOIN tb_nutricionista nut ON nut.id = ag.id_nutricionista
+LEFT JOIN tb_paciente pac ON pac.id = ag.id_paciente;
+
+drop view if exists vw_rotina;
+create view vw_rotina as SELECT nut.nome as nutricionista, pac.nome as paciente, ro.* FROM tb_rotina ro
+LEFT JOIN tb_nutricionista nut ON nut.id = ro.id_nutricionista
+LEFT JOIN tb_paciente pac ON pac.id = ro.id_paciente;
+
+
+/*
+DELIMITER $
+CREATE TRIGGER acesso_nutri before insert
+ON tb_nutricionista
+FOR EACH ROW
+BEGIN
+	set @senha = LEFT(new.cpf, 3);
+	insert into tb_login values (new.cpf, @senha, 'nutricionista');
+END $
+DELIMITER ;
+
+
+select * from tb_agenda;
+select * from tb_atendente;
+select * from tb_caixa;
+select * from tb_comentarios;
+select * from tb_login;
+select * from tb_nutricionista;
+select * from tb_paciente;
+select * from tb_rotina;
+select * from vw_agenda;
+
+*/
