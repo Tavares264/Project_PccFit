@@ -352,7 +352,7 @@ namespace PccFit
             }
         }
 
-        private void cb_AG_Nutricionista_Click(object sender, EventArgs e)
+        private void cb_AG_Nutricionista_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
             {
@@ -374,17 +374,7 @@ namespace PccFit
             }
         }
 
-        private void cb_AG_Paciente_TextUpdate(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cb_AG_Nutricionista_TextUpdate(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cb_AG_Paciente_Click(object sender, EventArgs e)
+        private void cb_AG_Paciente_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
             {

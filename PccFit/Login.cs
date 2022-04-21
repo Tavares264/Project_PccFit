@@ -45,7 +45,7 @@ namespace PccFit
                         }
                         if(acesso == "nutricionista")
                         {
-                            PgAgenda pa = new PgAgenda();
+                            PgPrincipalNut pa = new PgPrincipalNut();
                             pa.Show();
                             this.Hide();
                         }

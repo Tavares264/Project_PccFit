@@ -193,13 +193,13 @@ namespace PccFit
             // 
             // cb_AG_Paciente
             // 
+            this.cb_AG_Paciente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_AG_Paciente.FormattingEnabled = true;
             this.cb_AG_Paciente.Location = new System.Drawing.Point(237, 241);
             this.cb_AG_Paciente.Name = "cb_AG_Paciente";
             this.cb_AG_Paciente.Size = new System.Drawing.Size(495, 24);
             this.cb_AG_Paciente.TabIndex = 52;
-            this.cb_AG_Paciente.TextUpdate += new System.EventHandler(this.cb_AG_Paciente_TextUpdate);
-            this.cb_AG_Paciente.Click += new System.EventHandler(this.cb_AG_Paciente_Click);
+            this.cb_AG_Paciente.SelectedIndexChanged += new System.EventHandler(this.cb_AG_Paciente_SelectedIndexChanged);
             // 
             // msk_AG_Horario
             // 
@@ -223,13 +223,13 @@ namespace PccFit
             // 
             // cb_AG_Nutricionista
             // 
+            this.cb_AG_Nutricionista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_AG_Nutricionista.FormattingEnabled = true;
             this.cb_AG_Nutricionista.Location = new System.Drawing.Point(249, 105);
             this.cb_AG_Nutricionista.Name = "cb_AG_Nutricionista";
             this.cb_AG_Nutricionista.Size = new System.Drawing.Size(495, 24);
             this.cb_AG_Nutricionista.TabIndex = 49;
-            this.cb_AG_Nutricionista.TextUpdate += new System.EventHandler(this.cb_AG_Nutricionista_TextUpdate);
-            this.cb_AG_Nutricionista.Click += new System.EventHandler(this.cb_AG_Nutricionista_Click);
+            this.cb_AG_Nutricionista.SelectedIndexChanged += new System.EventHandler(this.cb_AG_Nutricionista_SelectedIndexChanged);
             // 
             // btn_AG_PPesquisar
             // 

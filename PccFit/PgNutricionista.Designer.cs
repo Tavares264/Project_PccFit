@@ -93,7 +93,7 @@ namespace PccFit
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox4.Size = new System.Drawing.Size(1299, 558);
+            this.groupBox4.Size = new System.Drawing.Size(1249, 558);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados Pessoais";
@@ -114,7 +114,7 @@ namespace PccFit
             // 
             // txt_N_Numero
             // 
-            this.txt_N_Numero.Location = new System.Drawing.Point(913, 235);
+            this.txt_N_Numero.Location = new System.Drawing.Point(889, 238);
             this.txt_N_Numero.Name = "txt_N_Numero";
             this.txt_N_Numero.Size = new System.Drawing.Size(140, 27);
             this.txt_N_Numero.TabIndex = 7;
@@ -157,7 +157,7 @@ namespace PccFit
             // 
             // txt_N_Logradouro
             // 
-            this.txt_N_Logradouro.Location = new System.Drawing.Point(141, 239);
+            this.txt_N_Logradouro.Location = new System.Drawing.Point(162, 238);
             this.txt_N_Logradouro.Name = "txt_N_Logradouro";
             this.txt_N_Logradouro.Size = new System.Drawing.Size(563, 27);
             this.txt_N_Logradouro.TabIndex = 6;
@@ -179,7 +179,7 @@ namespace PccFit
             // btn_N_Pesquisar
             // 
             this.btn_N_Pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_N_Pesquisar.Location = new System.Drawing.Point(1108, 91);
+            this.btn_N_Pesquisar.Location = new System.Drawing.Point(1068, 93);
             this.btn_N_Pesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_N_Pesquisar.Name = "btn_N_Pesquisar";
             this.btn_N_Pesquisar.Size = new System.Drawing.Size(163, 32);
@@ -243,7 +243,7 @@ namespace PccFit
             // msk_N_Tel
             // 
             this.msk_N_Tel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_N_Tel.Location = new System.Drawing.Point(913, 167);
+            this.msk_N_Tel.Location = new System.Drawing.Point(889, 170);
             this.msk_N_Tel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.msk_N_Tel.Mask = "(00)00000-0000";
             this.msk_N_Tel.Name = "msk_N_Tel";
@@ -253,7 +253,7 @@ namespace PccFit
             // msk_N_Cpf
             // 
             this.msk_N_Cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.msk_N_Cpf.Location = new System.Drawing.Point(913, 94);
+            this.msk_N_Cpf.Location = new System.Drawing.Point(889, 97);
             this.msk_N_Cpf.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.msk_N_Cpf.Mask = "000,000,000-00";
             this.msk_N_Cpf.Name = "msk_N_Cpf";
@@ -264,7 +264,7 @@ namespace PccFit
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(820, 167);
+            this.label19.Location = new System.Drawing.Point(796, 170);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(87, 20);
             this.label19.TabIndex = 19;
@@ -284,7 +284,7 @@ namespace PccFit
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(827, 242);
+            this.label21.Location = new System.Drawing.Point(803, 245);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(80, 20);
             this.label21.TabIndex = 15;
@@ -304,7 +304,7 @@ namespace PccFit
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(856, 95);
+            this.label23.Location = new System.Drawing.Point(832, 98);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(51, 20);
             this.label23.TabIndex = 11;
@@ -363,7 +363,7 @@ namespace PccFit
             // btn_N_Atualizar
             // 
             this.btn_N_Atualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_N_Atualizar.Location = new System.Drawing.Point(915, 633);
+            this.btn_N_Atualizar.Location = new System.Drawing.Point(926, 633);
             this.btn_N_Atualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_N_Atualizar.Name = "btn_N_Atualizar";
             this.btn_N_Atualizar.Size = new System.Drawing.Size(275, 102);
@@ -375,7 +375,7 @@ namespace PccFit
             // btn_N_Excluir
             // 
             this.btn_N_Excluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_N_Excluir.Location = new System.Drawing.Point(525, 633);
+            this.btn_N_Excluir.Location = new System.Drawing.Point(476, 633);
             this.btn_N_Excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_N_Excluir.Name = "btn_N_Excluir";
             this.btn_N_Excluir.Size = new System.Drawing.Size(275, 102);
@@ -387,7 +387,7 @@ namespace PccFit
             // btn_N_Salvar
             // 
             this.btn_N_Salvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_N_Salvar.Location = new System.Drawing.Point(127, 633);
+            this.btn_N_Salvar.Location = new System.Drawing.Point(80, 633);
             this.btn_N_Salvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_N_Salvar.Name = "btn_N_Salvar";
             this.btn_N_Salvar.Size = new System.Drawing.Size(275, 102);
@@ -400,7 +400,7 @@ namespace PccFit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1330, 807);
+            this.ClientSize = new System.Drawing.Size(1282, 817);
             this.Controls.Add(this.btn_N_Atualizar);
             this.Controls.Add(this.btn_N_Excluir);
             this.Controls.Add(this.btn_N_Salvar);

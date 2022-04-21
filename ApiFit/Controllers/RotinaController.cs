@@ -13,35 +13,36 @@ using Newtonsoft.Json;
 
 namespace PccAPI.Controllers
 {
-    public class AgendaController : ApiController
+    public class RotinaController : ApiController
     {
-        private static List<Agenda> Coments = new List<Agenda>();
+        private static List<Rotina> Coments = new List<Rotina>();
         string myconn = ConfigurationManager.AppSettings["msconn"];
         MySqlDataReader reader;
 
-        //Nutricionista
-        //Paciente
-        //Id
-        //Id_nutricionista
-        //Id_paciente
-        //Dt_agenda
-        //Horario
-        //Descricao
-
-        //public string Post(string nome, string email, string comentario, string assunto)
+        //nutricionista
+        //nut_cpf
+        //paciente
+        //pac_cpf
+        //id
+        //id_nutricionista
+        //id_paciente
+        //item
+        //feito
+        //public string Post(string ncpf, string email, string comentario, string assunto)
         //{
         //    if (!string.IsNullOrEmpty(comentario) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(nome) && !string.IsNullOrEmpty(assunto))
         //    {
         //        try
         //        {
+        //            string querynut = "SELECT id from tb_nutricionista WHERE nut_cpf = @NCPF;";
+        //            string querynut = "SELECT id from tb_paciente WHERE nut_cpf = @PCPF;";
+
+
         //            string query = "INSERT INTO tb_comentarios (nome, email, comentario, assunto) values (@Nome, @Email, @Coment, @Assunto)";
         //            using (MySqlConnection conexao = new MySqlConnection(myconn))
         //            {
-        //                MySqlCommand command = new MySqlCommand(query, conexao);
-        //                command.Parameters.AddWithValue("@Nome", nome);
-        //                command.Parameters.AddWithValue("@Email", email);
-        //                command.Parameters.AddWithValue("@Coment", comentario);
-        //                command.Parameters.AddWithValue("@Assunto", assunto);
+        //                MySqlCommand commandcpf = new MySqlCommand(querycpf, conexao);
+        //                commandcpf.Parameters.AddWithValue("@NCPF", ncpf);
 
         //                conexao.Open();
         //                reader = command.ExecuteReader();
@@ -69,7 +70,7 @@ namespace PccAPI.Controllers
             {
                 try
                 {
-                    string query = "SELECT * FROM vw_agenda WHERE pac_cpf = @PCpf;";
+                    string query = "SELECT * FROM vw_rotina WHERE pac_cpf = @PCpf;";
                     using (MySqlConnection conexao = new MySqlConnection(myconn))
                     {
                         MySqlCommand command = new MySqlCommand(query, conexao);
@@ -83,10 +84,10 @@ namespace PccAPI.Controllers
                         while (reader.Read())
                         {
                             string Paciente = Convert.ToString(reader["paciente"]);
-                            string Dt_agenda = Convert.ToString(reader["dt_agenda"]);
-                            string Horario = Convert.ToString(reader["horario"]);
+                            string Item = Convert.ToString(reader["item"]);
+                            string Feito = Convert.ToString(reader["feito"]);
 
-                            list.Add(new { paciente = Paciente, dt_agenda = Dt_agenda, horario = Horario });
+                            list.Add(new { paciente = Paciente, item = Item, feito = Feito });
                         }
                         conexao.Close();
                         return JsonConvert.SerializeObject(list);
@@ -111,7 +112,7 @@ namespace PccAPI.Controllers
             {
                 try
                 {
-                    string query = "SELECT * FROM vw_agenda WHERE nut_cpf = @NCpf;";
+                    string query = "SELECT * FROM vw_rotina WHERE nut_cpf = @NCpf;";
                     using (MySqlConnection conexao = new MySqlConnection(myconn))
                     {
                         MySqlCommand command = new MySqlCommand(query, conexao);
@@ -125,10 +126,10 @@ namespace PccAPI.Controllers
                         while (reader.Read())
                         {
                             string Paciente = Convert.ToString(reader["paciente"]);
-                            string Dt_agenda = Convert.ToString(reader["dt_agenda"]);
-                            string Horario = Convert.ToString(reader["horario"]);
+                            string Item = Convert.ToString(reader["item"]);
+                            string Feito = Convert.ToString(reader["feito"]);
 
-                            list.Add(new { paciente = Paciente, dt_agenda = Dt_agenda, horario = Horario });
+                            list.Add(new { paciente = Paciente, item = Item, feito = Feito });
                         }
                         conexao.Close();
                         return JsonConvert.SerializeObject(list);
