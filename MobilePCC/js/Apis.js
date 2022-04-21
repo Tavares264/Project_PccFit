@@ -1,7 +1,8 @@
 var cpf;
 
 window.onload = function() {
-    console.log(cpf);
+    var NCpf = sessionStorage.getItem('cpf');
+    consultarNutricionista(NCpf);
 }
 
 function pegar(){
@@ -64,4 +65,28 @@ function Verificar(){
         window.location.replace("Index.html")
         sessionStorage.setItem('cpf', cpf);
     }
+}
+
+//Tasks
+
+function consultarNutricionista(NCpf){
+    console.log(NCpf);
+    var url = `https://localhost:44333/api/Agenda?NCpf=`+NCpf;
+    console.log(url)
+
+    $.get(url,data =>{
+        dados = JSON.parse(data)
+        var div = '';
+
+        $(dados).each(function (index) {
+            div += `<li class="events__item">
+            <div class="events__item--left">
+              <span class="events__name">Atendimento ${dados[index].paciente}</span>
+              <span class="events__date">${dados[index].dt_agenda}</span>
+            </div>
+            <span class="events__tag">${dados[index].horario}</span>
+          </li>`
+        });
+        document.getElementById("eventos").html =div;
+    })
 }
