@@ -19,48 +19,50 @@ namespace PccAPI.Controllers
         string myconn = ConfigurationManager.AppSettings["msconn"];
         MySqlDataReader reader;
 
-        //nutricionista
-        //nut_cpf
-        //paciente
-        //pac_cpf
-        //id
-        //id_nutricionista
-        //id_paciente
-        //item
-        //feito
-        //public string Post(string ncpf, string email, string comentario, string assunto)
-        //{
-        //    if (!string.IsNullOrEmpty(comentario) && !string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(nome) && !string.IsNullOrEmpty(assunto))
-        //    {
-        //        try
-        //        {
-        //            string querynut = "SELECT id from tb_nutricionista WHERE nut_cpf = @NCPF;";
-        //            string querynut = "SELECT id from tb_paciente WHERE nut_cpf = @PCPF;";
+
+        public string Post(string pcpf, string item)
+        {
+            if (!string.IsNullOrEmpty(pcpf) && !string.IsNullOrEmpty(item))
+            {
+                try
+                {
+                    string querypac = "SELECT id_paciente from vw_rotina WHERE pac_cpf = @PCPF;";
+                    string update = "UPDATE tb_rotina SET feito = 1 WHERE item = @ITEM AND id_paciente = @IDP;";
+
+                    using (MySqlConnection conexao = new MySqlConnection(myconn))
+                    {
+                        MySqlCommand command = new MySqlCommand(querypac, conexao);
+                        command.Parameters.AddWithValue("@PCPF", pcpf);
+
+                        conexao.Open();
+                        reader = command.ExecuteReader();
+
+                        reader.Read();
+                        string Id_Paciente = Convert.ToString(reader["id_paciente"]);
+                        conexao.Close();
+
+                        MySqlCommand commandup = new MySqlCommand(update, conexao);
+                        commandup.Parameters.AddWithValue("@IDP", Id_Paciente);
+                        commandup.Parameters.AddWithValue("@ITEM", item);
+
+                        conexao.Open();
+                        reader = commandup.ExecuteReader();
+                        conexao.Close();
 
 
-        //            string query = "INSERT INTO tb_comentarios (nome, email, comentario, assunto) values (@Nome, @Email, @Coment, @Assunto)";
-        //            using (MySqlConnection conexao = new MySqlConnection(myconn))
-        //            {
-        //                MySqlCommand commandcpf = new MySqlCommand(querycpf, conexao);
-        //                commandcpf.Parameters.AddWithValue("@NCPF", ncpf);
-
-        //                conexao.Open();
-        //                reader = command.ExecuteReader();
-        //                conexao.Close();
-
-        //                return @"{""Status"":""OK""}";
-        //            }
-        //        }
-        //        catch
-        //        {
-        //            return @"{""Status"":""ERRO""}";
-        //        }
-        //    }
-        //    else
-        //    {
-        //        return @"{""Status"":""Campos Vazios""}";
-        //    }
-        //}
+                        return @"{""Status"":""OK""}";
+                    }
+                }
+                catch
+                {
+                    return @"{""Status"":""ERRO""}";
+                }
+            }
+            else
+            {
+                return @"{""Status"":""Campos Vazios""}";
+            }
+        }
 
 
 

@@ -128,15 +128,16 @@ LEFT JOIN tb_paciente pac ON pac.id = ro.id_paciente;
 
 /*
 DELIMITER $
-CREATE TRIGGER acesso_nutri before insert
-ON tb_nutricionista
+CREATE TRIGGER acesso_nutri before update
+ON tb_rotina
 FOR EACH ROW
 BEGIN
-	set @senha = LEFT(new.cpf, 3);
+	set @feito = LEFT(new.cpf, 3);
 	insert into tb_login values (new.cpf, @senha, 'nutricionista');
 END $
 DELIMITER ;
 
+update tb_rotina set feito = 1 where item = "Academia" and id_paciente = 3;
 
 select * from tb_agenda;
 select * from tb_atendente;
@@ -146,6 +147,7 @@ select * from tb_login;
 select * from tb_nutricionista;
 select * from tb_paciente;
 select * from tb_rotina;
+select * from vw_rotina;
 select * from vw_agenda;
 desc vw_rotina;
 */

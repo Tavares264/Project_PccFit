@@ -224,6 +224,7 @@
             this.dtGridRotina.RowTemplate.Height = 24;
             this.dtGridRotina.Size = new System.Drawing.Size(1199, 350);
             this.dtGridRotina.TabIndex = 50;
+            this.dtGridRotina.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridRotina_CellDoubleClick);
             // 
             // PgRotina
             // 

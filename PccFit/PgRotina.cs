@@ -279,5 +279,14 @@ namespace PccFit
                 conexao.Close();
             }
         }
+
+        private void dtGridRotina_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_R_IDNutricionista.Text = dtGridRotina.Rows[e.RowIndex].Cells[0].Value.ToString();
+            cb_R_Nutricionista.Text = dtGridRotina.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_R_IDPaciente.Text = dtGridRotina.Rows[e.RowIndex].Cells[2].Value.ToString();
+            cb_R_Paciente.Text = dtGridRotina.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txt_R_Itens.Text = dtGridRotina.Rows[e.RowIndex].Cells[4].Value.ToString();
+        }
     }
 }
