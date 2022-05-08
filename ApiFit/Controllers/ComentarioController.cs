@@ -58,39 +58,39 @@ namespace PccAPI.Controllers
         {
             if (!string.IsNullOrEmpty(assunto))
             {
-                    try
+                try
+                {
+                    string query = "SELECT * FROM tb_comentarios WHERE assunto = @Assunto;";
+                    using (MySqlConnection conexao = new MySqlConnection(myconn))
                     {
-                        string query = "SELECT * FROM tb_comentarios WHERE assunto = @Assunto;";
-                        using (MySqlConnection conexao = new MySqlConnection(myconn))
+                        MySqlCommand command = new MySqlCommand(query, conexao);
+                        command.Parameters.AddWithValue("@Assunto", assunto);
+
+                        conexao.Open();
+                        reader = command.ExecuteReader();
+
+                        List<dynamic> list = new List<dynamic>();
+
+                    while (reader.Read())
                         {
-                            MySqlCommand command = new MySqlCommand(query, conexao);
-                            command.Parameters.AddWithValue("@Assunto", assunto);
 
-                            conexao.Open();
-                            reader = command.ExecuteReader();
+                            string Nome = Convert.ToString(reader["nome"]);
+                            string Email = Convert.ToString(reader["email"]);
+                            string Comentario = Convert.ToString(reader["comentario"]);
+                            string Assunto = Convert.ToString(reader["assunto"]);
 
-                            List<dynamic> list = new List<dynamic>();
-
-                        while (reader.Read())
-                            {
-
-                                string Nome = Convert.ToString(reader["nome"]);
-                                string Email = Convert.ToString(reader["email"]);
-                                string Comentario = Convert.ToString(reader["comentario"]);
-                                string Assunto = Convert.ToString(reader["assunto"]);
-
-                                list.Add(new { nome = Nome, email = Email, comentario = Comentario, assunto = Assunto });
-                            }
-                            conexao.Close();
-                            return JsonConvert.SerializeObject(list);
-                          
+                            list.Add(new { nome = Nome, email = Email, comentario = Comentario, assunto = Assunto });
                         }
+                        conexao.Close();
+                        return JsonConvert.SerializeObject(list);
+                          
                     }
-                    catch
-                    {
+                }
+                catch
+                {
                     
-                        return @"{""Status"":""ERRO""}";
-                    }
+                    return @"{""Status"":""ERRO""}";
+                }
             }
             else
             {
