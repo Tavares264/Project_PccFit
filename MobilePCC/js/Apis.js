@@ -95,7 +95,7 @@ function consultarNutricionistaN(NCpf){
             div += `<li class="events__item">
             <div class="events__item--left">
               <span class="events__name">Atendimento ${dados[index].paciente}</span>
-              <span class="events__date">${dados[index].dt_agenda}</span>
+              <span class="events__date">${(dados[index].dt_agenda).slice(0,10)}</span>
             </div>
             <span class="events__tag">${dados[index].horario}</span>
           </li>`
@@ -118,7 +118,7 @@ function consultarNutricionistaP(PCpf){
             div += `<li class="events__item">
             <div class="events__item--left">
               <span class="events__name">Consulta Dr. ${dados[index].nutricionista}</span>
-              <span class="events__date">${dados[index].dt_agenda}</span>
+              <span class="events__date">${(dados[index].dt_agenda).slice(0,10)}</span>
             </div>
             <span class="events__tag">${dados[index].horario}</span>
           </li>`
