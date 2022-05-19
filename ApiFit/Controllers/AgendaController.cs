@@ -82,11 +82,11 @@ namespace PccAPI.Controllers
 
                         while (reader.Read())
                         {
-                            string Paciente = Convert.ToString(reader["paciente"]);
+                            string Nutricionista = Convert.ToString(reader["nutricionista"]);
                             string Dt_agenda = Convert.ToString(reader["dt_agenda"]);
                             string Horario = Convert.ToString(reader["horario"]);
 
-                            list.Add(new { paciente = Paciente, dt_agenda = Dt_agenda, horario = Horario });
+                            list.Add(new { nutricionista = Nutricionista, dt_agenda = Dt_agenda, horario = Horario });
                         }
                         conexao.Close();
                         return JsonConvert.SerializeObject(list);

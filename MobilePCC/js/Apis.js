@@ -1,16 +1,27 @@
 var cpf;
 
 window.onload = function() {
-    var NCpf = sessionStorage.getItem('cpf');
-    consultarNutricionista(NCpf);
+    Cpf = sessionStorage.getItem('cpf');
+    if(sessionStorage.getItem('acesso') == 'atendente'){
+        consultarNutricionistaN(Cpf);
+        consultarTarefasN(Cpf);
+    }
+    if(sessionStorage.getItem('acesso') == 'nutricionista'){
+        consultarNutricionistaN(Cpf);
+        consultarTarefasN(Cpf);
+    }
+    if(sessionStorage.getItem('acesso') == 'paciente'){
+        consultarNutricionistaP(Cpf);
+        consultarTarefasP(Cpf);
+    }
 }
 
 function pegar(){
-    var url = "https://localhost:44333/api/Login";//Sua URL
+    var url = "https://localhost:44333/api/Login";
 
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", url, false);
-    xhttp.send();//A execução do script pára aqui até a requisição retornar do servidor
+    xhttp.send();
 
     console.log(xhttp.responseText);
 }
@@ -64,29 +75,109 @@ function Verificar(){
     else{
         window.location.replace("Index.html")
         sessionStorage.setItem('cpf', cpf);
+        sessionStorage.setItem('acesso', json['acesso']);
     }
 }
 
 //Tasks
 
-function consultarNutricionista(NCpf){
+function consultarNutricionistaN(NCpf){
     console.log(NCpf);
     var url = `https://localhost:44333/api/Agenda?NCpf=`+NCpf;
     console.log(url)
 
     $.get(url,data =>{
         dados = JSON.parse(data)
+        console.log(data);
         var div = '';
 
         $(dados).each(function (index) {
             div += `<li class="events__item">
             <div class="events__item--left">
               <span class="events__name">Atendimento ${dados[index].paciente}</span>
-              <span class="events__date">${dados[index].dt_agenda}</span>
+              <span class="events__date">${(dados[index].dt_agenda).slice(0,10)}</span>
             </div>
             <span class="events__tag">${dados[index].horario}</span>
           </li>`
         });
-        document.getElementById("eventos").html =div;
+        document.getElementById("eventos").innerHTML =div;
+    })
+}
+
+function consultarNutricionistaP(PCpf){
+    console.log(PCpf);
+    var url = `https://localhost:44333/api/Agenda?PCpf=`+PCpf;
+    console.log(url)
+
+    $.get(url,data =>{
+        dados = JSON.parse(data)
+        console.log(data);
+        var div = '';
+
+        $(dados).each(function (index) {
+            div += `<li class="events__item">
+            <div class="events__item--left">
+              <span class="events__name">Consulta Dr. ${dados[index].nutricionista}</span>
+              <span class="events__date">${(dados[index].dt_agenda).slice(0,10)}</span>
+            </div>
+            <span class="events__tag">${dados[index].horario}</span>
+          </li>`
+        });
+        document.getElementById("eventos").innerHTML =div;
+    })
+}
+
+function consultarTarefasN(NCpf){
+    console.log(NCpf);
+    var url = `https://localhost:44333/api/Rotina?NCpf=`+NCpf;
+    console.log(url);
+    var nome = "";
+
+    $.get(url,data =>{
+        dados = JSON.parse(data)
+        console.log(data);
+        var div = '';
+
+        $(dados).each(function (index) {
+            if(nome != `${dados[index].paciente}`){
+                div += `<h6>${dados[index].paciente}</h6>`
+            }
+            div += `<div class="d-flex align-items-center"><label><input type="checkbox" class="option-input radio"><span class="label-text">${dados[index].item}</span></label></div>`
+            nome = `${dados[index].paciente}`
+        });
+        document.getElementById("tasks").innerHTML =div;
+    })
+}
+
+function consultarTarefasP(PCpf){
+    console.log(PCpf);
+    var url = `https://localhost:44333/api/Rotina?PCpf=`+PCpf;
+    console.log(url)
+
+    $.get(url,data =>{
+        dados = JSON.parse(data)
+        console.log(data);
+        var div = '';
+        $(dados).each(function (index) {
+            item = dados[index].item;
+            if (dados[index].feito == "True"){
+                div += `<div class="d-flex align-items-center"><label><input type="checkbox" checked onclick="updateItem('${PCpf}','${item}')" class="option-input radio"><span class="label-text">${item}</span></label></div>`;
+            }
+            else{
+                div += `<div class="d-flex align-items-center"><label><input type="checkbox" onclick="updateItem('${PCpf}','${item}')" class="option-input radio"><span class="label-text">${item}</span></label></div>`;
+            }
+        });
+        document.getElementById("tasks").innerHTML =div;
+    })
+}
+
+function updateItem(PCpf, item){
+    console.log(PCpf);
+    console.log(item);
+    var url = `https://localhost:44333/api/Rotina?pcpf=`+PCpf+`&item=`+item;
+    console.log(url)
+    $.post(url,data =>{
+        dados = JSON.parse(data)
+        console.log(data);
     })
 }
