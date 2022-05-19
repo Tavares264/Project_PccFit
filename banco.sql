@@ -89,7 +89,7 @@ drop table if exists tb_comentarios;
 create table tb_comentarios(
 id int not null auto_increment,
 nome varchar(100),
-email varchar(50),
+email varchar(100),
 comentario text,
 assunto varchar(100),
 primary key(id)
@@ -137,17 +137,24 @@ BEGIN
 END $
 DELIMITER ;
 
-update tb_rotina set feito = 1 where item = "Academia" and id_paciente = 3;
+update tb_rotina set feito = 0 where item = "Academia" and id_paciente = 3;
 
 select * from tb_agenda;
 select * from tb_atendente;
-select * from tb_caixa;
 select * from tb_comentarios;
 select * from tb_login;
 select * from tb_nutricionista;
 select * from tb_paciente;
 select * from tb_rotina;
+desc tb_agenda;
+desc tb_atendente;
+desc tb_comentarios;
+desc tb_login;
+desc tb_nutricionista;
+desc tb_paciente;
+desc tb_rotina;
 select * from vw_rotina;
 select * from vw_agenda;
+desc tb_rotina;
 desc vw_rotina;
 */
