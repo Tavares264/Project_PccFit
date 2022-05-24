@@ -121,6 +121,7 @@ namespace PccFit
             // 
             // cb_N_Estado
             // 
+            this.cb_N_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cb_N_Estado.FormattingEnabled = true;
             this.cb_N_Estado.Items.AddRange(new object[] {
             "RO",

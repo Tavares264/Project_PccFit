@@ -58,9 +58,7 @@ namespace PccFit
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_NP_Pesquisar = new System.Windows.Forms.Button();
             this.txt_D_Id = new System.Windows.Forms.TextBox();
-            this.txt_D_Nome = new System.Windows.Forms.TextBox();
             this.msk_C_DtInicio = new System.Windows.Forms.MaskedTextBox();
             this.msk_C_DtFinal = new System.Windows.Forms.MaskedTextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -77,6 +75,7 @@ namespace PccFit
             this.btn_C_Atualizar = new System.Windows.Forms.Button();
             this.btn_C_Excluir = new System.Windows.Forms.Button();
             this.btn_C_Cadastrar = new System.Windows.Forms.Button();
+            this.cb_D_Nome = new System.Windows.Forms.ComboBox();
             this.cb_C_Estado.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -111,11 +110,11 @@ namespace PccFit
             this.cb_C_Estado.Controls.Add(this.label3);
             this.cb_C_Estado.Controls.Add(this.label2);
             this.cb_C_Estado.Controls.Add(this.label1);
-            this.cb_C_Estado.Location = new System.Drawing.Point(12, 11);
+            this.cb_C_Estado.Location = new System.Drawing.Point(15, 11);
             this.cb_C_Estado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_C_Estado.Name = "cb_C_Estado";
             this.cb_C_Estado.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cb_C_Estado.Size = new System.Drawing.Size(1313, 353);
+            this.cb_C_Estado.Size = new System.Drawing.Size(1233, 353);
             this.cb_C_Estado.TabIndex = 9;
             this.cb_C_Estado.TabStop = false;
             this.cb_C_Estado.Text = "Dados Pessoais";
@@ -179,6 +178,7 @@ namespace PccFit
             // 
             // cbc_C_Estado
             // 
+            this.cbc_C_Estado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbc_C_Estado.FormattingEnabled = true;
             this.cbc_C_Estado.Items.AddRange(new object[] {
             "RO",
@@ -405,35 +405,22 @@ namespace PccFit
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btn_NP_Pesquisar);
+            this.groupBox2.Controls.Add(this.cb_D_Nome);
             this.groupBox2.Controls.Add(this.txt_D_Id);
-            this.groupBox2.Controls.Add(this.txt_D_Nome);
             this.groupBox2.Controls.Add(this.msk_C_DtInicio);
             this.groupBox2.Controls.Add(this.msk_C_DtFinal);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Location = new System.Drawing.Point(15, 346);
+            this.groupBox2.Location = new System.Drawing.Point(15, 373);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(1317, 181);
+            this.groupBox2.Size = new System.Drawing.Size(1233, 181);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Nutricionista";
-            // 
-            // btn_NP_Pesquisar
-            // 
-            this.btn_NP_Pesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_NP_Pesquisar.Location = new System.Drawing.Point(1051, 116);
-            this.btn_NP_Pesquisar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_NP_Pesquisar.Name = "btn_NP_Pesquisar";
-            this.btn_NP_Pesquisar.Size = new System.Drawing.Size(163, 32);
-            this.btn_NP_Pesquisar.TabIndex = 19;
-            this.btn_NP_Pesquisar.Text = "Pesquisar";
-            this.btn_NP_Pesquisar.UseVisualStyleBackColor = true;
-            this.btn_NP_Pesquisar.Click += new System.EventHandler(this.btn_NP_Pesquisar_Click);
             // 
             // txt_D_Id
             // 
@@ -442,14 +429,6 @@ namespace PccFit
             this.txt_D_Id.Name = "txt_D_Id";
             this.txt_D_Id.Size = new System.Drawing.Size(193, 22);
             this.txt_D_Id.TabIndex = 15;
-            // 
-            // txt_D_Nome
-            // 
-            this.txt_D_Nome.Location = new System.Drawing.Point(462, 45);
-            this.txt_D_Nome.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_D_Nome.Name = "txt_D_Nome";
-            this.txt_D_Nome.Size = new System.Drawing.Size(563, 22);
-            this.txt_D_Nome.TabIndex = 16;
             // 
             // msk_C_DtInicio
             // 
@@ -521,11 +500,11 @@ namespace PccFit
             this.groupBox5.Controls.Add(this.label50);
             this.groupBox5.Controls.Add(this.label49);
             this.groupBox5.Controls.Add(this.label48);
-            this.groupBox5.Location = new System.Drawing.Point(16, 531);
+            this.groupBox5.Location = new System.Drawing.Point(15, 558);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox5.Size = new System.Drawing.Size(1316, 95);
+            this.groupBox5.Size = new System.Drawing.Size(1233, 95);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Quantidade de Consultas Mensais";
@@ -579,13 +558,13 @@ namespace PccFit
             this.label48.AutoSize = true;
             this.label48.Location = new System.Drawing.Point(93, 43);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(45, 17);
+            this.label48.Size = new System.Drawing.Size(42, 16);
             this.label48.TabIndex = 0;
             this.label48.Text = "Valor:";
             // 
             // btn_C_Atualizar
             // 
-            this.btn_C_Atualizar.Location = new System.Drawing.Point(933, 669);
+            this.btn_C_Atualizar.Location = new System.Drawing.Point(894, 669);
             this.btn_C_Atualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_C_Atualizar.Name = "btn_C_Atualizar";
             this.btn_C_Atualizar.Size = new System.Drawing.Size(275, 102);
@@ -596,7 +575,7 @@ namespace PccFit
             // 
             // btn_C_Excluir
             // 
-            this.btn_C_Excluir.Location = new System.Drawing.Point(537, 669);
+            this.btn_C_Excluir.Location = new System.Drawing.Point(503, 669);
             this.btn_C_Excluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_C_Excluir.Name = "btn_C_Excluir";
             this.btn_C_Excluir.Size = new System.Drawing.Size(275, 102);
@@ -607,7 +586,7 @@ namespace PccFit
             // 
             // btn_C_Cadastrar
             // 
-            this.btn_C_Cadastrar.Location = new System.Drawing.Point(137, 669);
+            this.btn_C_Cadastrar.Location = new System.Drawing.Point(79, 669);
             this.btn_C_Cadastrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_C_Cadastrar.Name = "btn_C_Cadastrar";
             this.btn_C_Cadastrar.Size = new System.Drawing.Size(275, 102);
@@ -615,6 +594,16 @@ namespace PccFit
             this.btn_C_Cadastrar.Text = "Cadastrar";
             this.btn_C_Cadastrar.UseVisualStyleBackColor = true;
             this.btn_C_Cadastrar.Click += new System.EventHandler(this.btn_C_Cadastrar_Click_1);
+            // 
+            // cb_D_Nome
+            // 
+            this.cb_D_Nome.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_D_Nome.FormattingEnabled = true;
+            this.cb_D_Nome.Location = new System.Drawing.Point(459, 47);
+            this.cb_D_Nome.Name = "cb_D_Nome";
+            this.cb_D_Nome.Size = new System.Drawing.Size(541, 24);
+            this.cb_D_Nome.TabIndex = 20;
+            this.cb_D_Nome.SelectedIndexChanged += new System.EventHandler(this.cb_D_Nome_SelectedIndexChanged);
             // 
             // PgCliente
             // 
@@ -629,6 +618,7 @@ namespace PccFit
             this.Controls.Add(this.cb_C_Estado);
             this.Name = "PgCliente";
             this.Text = "PgCliente";
+            this.Load += new System.EventHandler(this.PgCliente_Load);
             this.cb_C_Estado.ResumeLayout(false);
             this.cb_C_Estado.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -670,9 +660,7 @@ namespace PccFit
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btn_NP_Pesquisar;
         private System.Windows.Forms.TextBox txt_D_Id;
-        private System.Windows.Forms.TextBox txt_D_Nome;
         private System.Windows.Forms.MaskedTextBox msk_C_DtInicio;
         private System.Windows.Forms.MaskedTextBox msk_C_DtFinal;
         private System.Windows.Forms.Label label14;
@@ -689,5 +677,6 @@ namespace PccFit
         private System.Windows.Forms.Button btn_C_Atualizar;
         private System.Windows.Forms.Button btn_C_Excluir;
         private System.Windows.Forms.Button btn_C_Cadastrar;
+        private System.Windows.Forms.ComboBox cb_D_Nome;
     }
 }

@@ -16,6 +16,7 @@ namespace PccFit
         Conexao myconn = new Conexao();
         MySqlDataReader reader;
         MySqlDataReader reader2;
+        string query;
 
         public PgCliente()
         {
@@ -78,7 +79,7 @@ namespace PccFit
                     while (reader2.Read())
                     {
                         txt_D_Id.Text = Convert.ToString(reader2["id"]);
-                        txt_D_Nome.Text = Convert.ToString(reader2["nome"]);
+                        cb_D_Nome.Text = Convert.ToString(reader2["nome"]);
                     }
                 }
 
@@ -256,13 +257,13 @@ namespace PccFit
                         msk_C_DtInicio.Text = null;
                         msk_C_DtFinal.Text = null;
                         txt_D_Id.Text = null;
-                        txt_D_Nome.Text = null;
+                        cb_D_Nome.Text = null;
                         txt_D_Valor.Text = null;
                         txt_D_Quantidade.Text = null;
                         txt_D_Objetivo.Text = null;
                         txt_C_Altura.Text = null;
                         txt_C_Peso.Text = null;
-                        msk_C_DtNascimento = null;
+                        msk_C_DtNascimento.Text = null;
 
                         MessageBox.Show("O PACIENTE FOI CADASTRADO");
                     }
@@ -298,12 +299,12 @@ namespace PccFit
                 while (reader.Read())
                 {
                     txt_D_Id.Text = Convert.ToString(reader["id"]);
-                    txt_D_Nome.Text = Convert.ToString(reader["nome"]);
+                    cb_D_Nome.Text = Convert.ToString(reader["nome"]);
                 }
             }
-            else if (txt_D_Nome.Text != "")
+            else if (cb_D_Nome.Text != "")
             {
-                string nome = txt_D_Nome.Text;
+                string nome = cb_D_Nome.Text;
 
                 string sqlquery = "SELECT id, nome FROM tb_nutricionista WHERE nome = '" + nome + "';";
 
@@ -318,7 +319,7 @@ namespace PccFit
                 while (reader.Read())
                 {
                     txt_D_Id.Text = Convert.ToString(reader["id"]);
-                    txt_D_Nome.Text = Convert.ToString(reader["nome"]);
+                    cb_D_Nome.Text = Convert.ToString(reader["nome"]);
                 }
                 conexao.Close();
             }
@@ -363,7 +364,7 @@ namespace PccFit
                         msk_C_DtInicio.Text = null;
                         msk_C_DtFinal.Text = null;
                         txt_D_Id.Text = null;
-                        txt_D_Nome.Text = null;
+                        cb_D_Nome.Text = null;
                         txt_D_Valor.Text = null;
                         txt_D_Quantidade.Text = null;
                         txt_D_Objetivo.Text = null;
@@ -542,7 +543,7 @@ namespace PccFit
                         msk_C_DtInicio.Text = null;
                         msk_C_DtFinal.Text = null;
                         txt_D_Id.Text = null;
-                        txt_D_Nome.Text = null;
+                        cb_D_Nome.Text = null;
                         txt_D_Valor.Text = null;
                         txt_D_Quantidade.Text = null;
                         txt_D_Objetivo.Text = null;
@@ -557,6 +558,54 @@ namespace PccFit
                 {
                     MessageBox.Show("ERRO AO ATUALIZAR INFORMAÇÕES");
                 }
+            }
+        }
+
+        private void cb_D_Nome_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+            {
+                query = "SELECT id FROM tb_nutricionista where nome = @Nome;";
+
+                MySqlCommand command = new MySqlCommand(query, conexao);
+
+                command.Parameters.AddWithValue("@Nome", cb_D_Nome.Text);
+
+                conexao.Open();
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txt_D_Id.Text = Convert.ToString(reader["id"]);
+                }
+
+                conexao.Close();
+            }
+        }
+
+        private void PgCliente_Load(object sender, EventArgs e)
+        {
+            using (MySqlConnection conexao = new MySqlConnection(myconn.conectar()))
+            {
+                conexao.Open();
+
+                query = "SELECT id, nome FROM tb_nutricionista;";
+
+                MySqlCommand command = new MySqlCommand(query, conexao);
+
+
+                MySqlDataAdapter returnVal = new MySqlDataAdapter(command);
+                DataTable dtgrid = new DataTable();
+
+                returnVal.Fill(dtgrid);
+
+                cb_D_Nome.DataSource = dtgrid;
+                cb_D_Nome.ValueMember = "nome";
+                cb_D_Nome.DisplayMember = "descricao";
+                cb_D_Nome.SelectedItem = "";
+                cb_D_Nome.Refresh();
+
+                conexao.Close();
             }
         }
     }

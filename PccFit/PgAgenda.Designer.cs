@@ -137,7 +137,7 @@ namespace PccFit
             this.btn_AG_Excluir.Name = "btn_AG_Excluir";
             this.btn_AG_Excluir.Size = new System.Drawing.Size(237, 47);
             this.btn_AG_Excluir.TabIndex = 25;
-            this.btn_AG_Excluir.Text = "Excluir";
+            this.btn_AG_Excluir.Text = "Desmarcar";
             this.btn_AG_Excluir.UseVisualStyleBackColor = true;
             this.btn_AG_Excluir.Click += new System.EventHandler(this.btn_AG_Excluir_Click);
             // 

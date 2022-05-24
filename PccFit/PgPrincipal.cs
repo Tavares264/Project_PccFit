@@ -84,19 +84,19 @@ namespace PccFit
             OpenForm.Show();
         }
 
-        private void btnRotina_Click(object sender, EventArgs e)
-        {
-            OpenForm?.Close();
+        //private void btnRotina_Click(object sender, EventArgs e)
+        //{
+        //    OpenForm?.Close();
 
-            OpenForm = new PgRotina
-            {
-                TopLevel = false,
-                FormBorderStyle = FormBorderStyle.None,
-                Dock = DockStyle.Fill
-            };
+        //    OpenForm = new PgRotina
+        //    {
+        //        TopLevel = false,
+        //        FormBorderStyle = FormBorderStyle.None,
+        //        Dock = DockStyle.Fill
+        //    };
 
-            PanelPrincipal.Controls.Add(OpenForm);
-            OpenForm.Show();
-        }
+        //    PanelPrincipal.Controls.Add(OpenForm);
+        //    OpenForm.Show();
+        //}
     }
 }
