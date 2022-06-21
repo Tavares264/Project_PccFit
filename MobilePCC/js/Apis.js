@@ -142,7 +142,12 @@ function consultarTarefasN(NCpf){
             if(nome != `${dados[index].paciente}`){
                 div += `<h6>${dados[index].paciente}</h6>`
             }
-            div += `<div class="d-flex align-items-center"><label><input type="checkbox" class="option-input radio"><span class="label-text">${dados[index].item}</span></label></div>`
+            if (dados[index].feito == "True"){
+                div += `<div class="d-flex align-items-center"><label><input type="checkbox" checked disable class="option-input radio"><span class="label-text">${dados[index].item}</span></label></div>`;
+            }
+            else{
+                div += `<div class="d-flex align-items-center"><label><input type="checkbox" disable class="option-input radio"><span class="label-text">${dados[index].item}</span></label></div>`;
+            }
             nome = `${dados[index].paciente}`
         });
         document.getElementById("tasks").innerHTML =div;
